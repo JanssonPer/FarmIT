@@ -8,6 +8,8 @@ namespace FarmITApp.Model
 {
     class Cow : Animal
     {
-
+        private int amountPowerfeed;
+        private int amountHay = 0;
+        private int amountOats = 0;
     }
 }
