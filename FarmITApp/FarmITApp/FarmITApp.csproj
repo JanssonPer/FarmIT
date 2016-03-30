@@ -33,8 +33,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,7 +54,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DatabaseAccessLayer\StoredProcedures.cs" />
+    <Compile Include="DatabaseAccessLayer\Dal.cs" />
+    <Compile Include="EntityFramework\Animals.cs">
+      <DependentUpon>EntityFramework.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Boxes.cs">
+      <DependentUpon>EntityFramework.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Buildings.cs">
+      <DependentUpon>EntityFramework.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\EntityFramework.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityFramework.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\EntityFramework.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityFramework.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\EntityFramework.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityFramework.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Foods.cs">
+      <DependentUpon>EntityFramework.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\sysdiagrams.cs">
+      <DependentUpon>EntityFramework.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\Animal.cs" />
     <Compile Include="Model\Box.cs" />
     <Compile Include="Model\Building.cs" />
@@ -75,6 +113,15 @@
     <EmbeddedResource Include="View\Form.resx">
       <DependentUpon>Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EntityDeploy Include="EntityFramework\EntityFramework.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EntityFramework.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="App.Config" />
+    <None Include="EntityFramework\EntityFramework.edmx.diagram">
+      <DependentUpon>EntityFramework.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -88,8 +135,21 @@
   <ItemGroup>
     <None Include="View\App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="DatabaseAccessLayer\" />
+    <Content Include="EntityFramework\EntityFramework.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EntityFramework.edmx</DependentUpon>
+      <LastGenOutput>EntityFramework.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="EntityFramework\EntityFramework.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EntityFramework.edmx</DependentUpon>
+      <LastGenOutput>EntityFramework.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
