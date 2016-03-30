@@ -14,36 +14,25 @@ namespace FarmITApp.Model
         private String statusAnimal;
         private Box box;
 
-        public string Name
-        {
-            get
-            {
-                return name;
+        public string Name{
+            get {return name;
             }
-            set
-            {
-                name = value;
+            set {name = value;
             }
         }
-        public string Age
-        {
-            get
-            {
+        public string Age{
+            get{
                 return age;
             }
-            set
-            {
+            set{
                 age = value;
             }
         }
-        public string StatusAnimal
-        {
-            get
-            {
+        public string StatusAnimal{
+            get{
                 return statusAnimal;
             }
-            set
-            {
+            set{
                 statusAnimal = value;
             }
         }
