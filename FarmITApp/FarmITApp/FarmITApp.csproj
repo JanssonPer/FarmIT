@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatabaseAccessLayer\StoredProcedures.cs" />
     <Compile Include="Model\Animal.cs" />
     <Compile Include="Model\Box.cs" />
     <Compile Include="Model\Building.cs" />
@@ -84,9 +85,7 @@
   <ItemGroup>
     <None Include="View\App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DatabaseAccessLayer\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
