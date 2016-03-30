@@ -11,7 +11,7 @@ namespace FarmITApp.Model
         private string buildingName;
         private List<Box> boxId;
 
-        public List<Box> boxList
+        public List<Box> BoxList
         {
             get
             {
