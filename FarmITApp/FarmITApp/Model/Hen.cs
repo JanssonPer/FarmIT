@@ -8,8 +8,18 @@ namespace FarmITApp.Model
 {
     public class Hen : Animal
     {
-        private int amountPowerfeed = 0;
-        private int amountHay = 0;
         private int amountOats;
+        public int AmountOats
+        {
+            get
+            {
+                return amountOats;
+            }
+            set
+            {
+                amountOats = value;
+            }
+
+        }
     }
 }

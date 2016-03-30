@@ -10,6 +10,30 @@ namespace FarmITApp.Model
     {
         private int amountPowerfeed;
         private int amountHay;
-        private int amountOats = 0;
+
+        public int AmountPowerfeed
+        {
+            get
+            {
+                return amountPowerfeed;
+            }
+            set
+            {
+                amountPowerfeed = value;
+            }
+
+        }
+        public int AmountHay
+        {
+            get
+            {
+                return amountHay;
+            }
+            set
+            {
+                amountHay= value;
+            }
+
+        }
     }
 }
