@@ -8,5 +8,8 @@ namespace FarmITApp.Model
 {
     public class Food
     {
+        private long foodId;
+        private string foodType;
+        private int amount;
     }
 }
