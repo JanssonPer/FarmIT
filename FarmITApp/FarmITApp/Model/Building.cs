@@ -9,9 +9,9 @@ namespace FarmITApp.Model
     public class Building
     {
         private string buildingName;
-        private ICollection<Box> boxId;
+        private List<Box> boxId;
 
-        public ICollection<Box> boxList
+        public List<Box> BoxList
         {
             get
             {
@@ -22,6 +22,9 @@ namespace FarmITApp.Model
                 boxId = value;
             }
         }
-        
+        public void AddBoxToBuilding(Box box)
+        {
+            boxId.Add(box);
+        }
     }
 }
