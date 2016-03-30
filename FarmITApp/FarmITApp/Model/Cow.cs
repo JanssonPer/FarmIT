@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace FarmITApp.Model
 {
-    class Building
+    class Cow : Animal
     {
-        
+
     }
 }

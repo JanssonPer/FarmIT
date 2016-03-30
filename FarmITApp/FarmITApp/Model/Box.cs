@@ -8,5 +8,15 @@ namespace FarmITApp.Model
 {
     class Box
     {
+        private string boxId;
+
+        public String BoxId{
+            get{
+                return boxId;
+            }
+            set{
+                boxId = value;
+            }
+        }
     }
 }

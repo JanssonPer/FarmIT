@@ -49,6 +49,7 @@
     <Compile Include="Model\Animal.cs" />
     <Compile Include="Model\Box.cs" />
     <Compile Include="Model\Building.cs" />
+    <Compile Include="Model\Cow.cs" />
     <Compile Include="Model\Food.cs" />
     <Compile Include="View\Form1.cs">
       <SubType>Form</SubType>

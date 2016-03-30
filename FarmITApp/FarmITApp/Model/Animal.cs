@@ -8,16 +8,21 @@ namespace FarmITApp.Model
 {
     public abstract class Animal
     {
-        private long idAnimal;
+        private long animalId;
         private String name;
         private String age;
-        private String statusAnimal;
-        private Box box;
+        private String animalStatus;
+        private int amountPowerfeed;
+        private int amountHay;
+        private int amountOats;
+        private Box boxid;
 
         public string Name{
-            get {return name;
+            get {
+                return name;
             }
-            set {name = value;
+            set {
+                name = value;
             }
         }
         public string Age{
@@ -28,25 +33,15 @@ namespace FarmITApp.Model
                 age = value;
             }
         }
-        public string StatusAnimal{
+        public string AnimalStatus{
             get{
-                return statusAnimal;
+                return animalStatus;
             }
             set{
-                statusAnimal = value;
+                animalStatus = value;
             }
         }
-        public Box 
-        {
-            get
-            {
-                return box;
-            }
-    set
-            {
-                box = value;
-            }
-        }
+        public virtual Box BoxId { get; set; }
 
     }
 }
