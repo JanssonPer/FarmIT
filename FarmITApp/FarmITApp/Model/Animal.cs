@@ -9,9 +9,9 @@ namespace FarmITApp.Model
     public abstract class Animal
     {
         private long animalId;
-        private String name;
-        private String age;
-        private String animalStatus;
+        private string name;
+        private string age;
+        private string animalStatus;
         private int amountPowerfeed;
         private int amountHay;
         private int amountOats;

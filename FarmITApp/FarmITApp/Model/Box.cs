@@ -10,7 +10,7 @@ namespace FarmITApp.Model
     {
         private string boxId;
 
-        public String BoxId{
+        public string BoxId{
             get{
                 return boxId;
             }
