@@ -55,9 +55,7 @@
     <Compile Include="Model\Hen.cs" />
     <Compile Include="Model\Horse.cs" />
     <Compile Include="Model\Pig.cs" />
-    <Compile Include="View\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="View\Form1.cs" />
     <Compile Include="View\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
