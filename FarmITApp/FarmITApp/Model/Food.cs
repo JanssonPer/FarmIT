@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FarmITApp.Model
 {
-    class Food
+    public class Food
     {
     }
 }

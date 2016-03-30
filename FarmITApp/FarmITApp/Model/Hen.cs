@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FarmITApp.Model
 {
-    class Hen : Animal
+    public class Hen : Animal
     {
         private int amountPowerfeed = 0;
         private int amountHay = 0;
