@@ -15,33 +15,50 @@ namespace FarmITApp.Model
         private int amountPowerfeed;
         private int amountHay;
         private int amountOats;
-        private Box boxid;
+        private Box boxId;
 
-        public string Name{
-            get {
+        public string Name
+        {
+            get
+            {
                 return name;
             }
-            set {
+            set
+            {
                 name = value;
             }
         }
-        public string Age{
-            get{
+        public string Age
+        {
+            get
+            {
                 return age;
             }
-            set{
+            set
+            {
                 age = value;
             }
         }
-        public string AnimalStatus{
-            get{
+        public string AnimalStatus
+        {
+            get
+            {
                 return animalStatus;
             }
-            set{
+            set
+            {
                 animalStatus = value;
             }
         }
-        public virtual Box BoxId { get; set; }
-
+        public Box BoxId{
+            get
+            {
+                return boxId;
+            }
+            set
+            {
+                boxId = value;
+            }
+        }
     }
 }

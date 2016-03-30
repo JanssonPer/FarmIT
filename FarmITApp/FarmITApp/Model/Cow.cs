@@ -6,10 +6,20 @@ using System.Threading.Tasks;
 
 namespace FarmITApp.Model
 {
-    class Cow : Animal
+   public class Cow : Animal
     {
         private int amountPowerfeed;
-        private int amountHay = 0;
-        private int amountOats = 0;
+        public int AmountPowerfeed
+        {
+            get
+            {
+                return amountPowerfeed;
+            }
+            set
+            {
+                amountPowerfeed = value;
+            }
+
+        }
     }
 }
