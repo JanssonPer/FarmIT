@@ -10,8 +10,10 @@ namespace FarmITApp.DatabaseAccessLayer
     class Dal
     {
 
-        LabEntities context = new LabEntities();
+        LabEntity context = new LabEntity();
 
+
+        // Get Methods 
         public Animals GetAnimal(long id)
         {
             try
@@ -25,6 +27,36 @@ namespace FarmITApp.DatabaseAccessLayer
                 return null;
             }
             
+        }
+
+        public Foods GetFoods(long id)
+        {
+            try
+            {
+                Foods f = context.Foods.SingleOrDefault(r => r.IdFood == id);
+                return f;
+            }
+            catch
+            {
+                //Exception
+                return null;
+            }
+
+        }
+
+        public Boxes GetBox(String id)
+        {
+            try
+            {
+                Boxes b = context.Boxes.SingleOrDefault(r => r.IdBox == id);
+                return b;
+            }
+            catch
+            {
+                //Exception
+                return null;
+            }
+
         }
 
         public List<Animals> GetAllAnimals()
@@ -71,12 +103,13 @@ namespace FarmITApp.DatabaseAccessLayer
 
         }
 
+        //Add Methods
+
         public void AddAnimal(Animals a)
         {
             try
             {
                 List<Animals> list = context.Animals.Where(r => r.IdAnimal == a.IdAnimal).ToList();
-                
 
                 if (list.Count > 0)
                 {
@@ -92,6 +125,73 @@ namespace FarmITApp.DatabaseAccessLayer
 
         }
 
+        // Remove methods
+
+        public void RemoveAnimal(Animals a)
+        {
+            try
+            {
+                List<Animals> list = context.Animals.Where(r => r.IdAnimal == a.IdAnimal).ToList();
+
+                if (list.Count > 0)
+                {
+                    context.Animals.Remove(a);
+                    context.SaveChanges();
+                }
+            }
+            catch
+            {
+                //Exception
+                context.Animals.Remove(a);
+            }
+
+        }
+
+        //Update Methods
+
+        public void UpdateAnimal(Animals a)
+        {
+            try
+            {
+                Animals oldAnimal = GetAnimal(a.IdAnimal);
+
+                if (oldAnimal != null)
+                {
+                    context.Entry(oldAnimal).CurrentValues.SetValues(a);
+                    context.SaveChanges();
+                   
+                }
+            }
+            catch 
+            {
+                //Exception
+                context.Animals.Remove(a);
+
+            }
+
+        }
+
+        public void UpdateBox(Boxes b)
+        {
+            try
+            {
+                Boxes oldBox = GetBox(b.IdBox);
+
+                if (oldBox != null)
+                {
+                    context.Entry(oldBox).CurrentValues.SetValues(b);
+                    context.SaveChanges();
+
+                }
+            }
+            catch
+            {
+                //Exception
+                context.Boxes.Remove(b);
+
+            }
+
+        }
 
     }
 }
