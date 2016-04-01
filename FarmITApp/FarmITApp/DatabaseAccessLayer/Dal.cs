@@ -192,6 +192,32 @@ namespace FarmITApp.DatabaseAccessLayer
             }
 
         }
+        //Feed Animals
+
+        public void AddFoodAmount(Foods f)
+        {
+            try
+            {
+                Foods oldFood = GetFoods(f.IdFood);
+
+                if (oldFood != null)
+
+                    f.Amount += oldFood.Amount;
+
+
+                {
+                    context.Entry(oldFood).CurrentValues.SetValues(f);
+                    context.SaveChanges();
+                }
+            }
+            catch
+            {
+                //Exception
+                context.Foods.Remove(f);
+
+            }
+
+        }
 
     }
 }
