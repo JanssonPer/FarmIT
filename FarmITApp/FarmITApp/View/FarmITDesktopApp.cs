@@ -123,6 +123,26 @@ namespace FarmITApp.View
             }
 
         }
-        
+
+        private void button_Update_Click(object sender, EventArgs e)
+        {
+            
+           Animals a= dal.GetAnimal(((long)(System.Convert.ChangeType(textBox_FindById.Text, typeof(long)))));
+           Console.WriteLine(a.Name);
+        }
+
+        private void dataGridView_Animals_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+           if(e.RowIndex >= 0)
+            {
+                
+                DataGridViewRow row = dataGridView_Animals.Rows[e.RowIndex];
+                textBox_FindById.Text = row.Cells[0].Value.ToString();
+                
+            }
+
+
+        }
+
     }
 }
