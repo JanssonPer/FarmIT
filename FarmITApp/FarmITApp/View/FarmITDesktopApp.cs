@@ -49,18 +49,7 @@ namespace FarmITApp.View
 
         }
 
-        private void searchByIdToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.animalsTableAdapter.SearchById(this.farmITDataSet.Animals);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }   
+       
         private void button3_Click(object sender, EventArgs e)
         {
             try
@@ -134,5 +123,7 @@ namespace FarmITApp.View
             }
 
         }
+
+      
     }
 }
