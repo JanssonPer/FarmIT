@@ -23,7 +23,7 @@ namespace FarmITApp.View
             foodTwo.Hide();
             
             chart_Food.Series["Food"].Points.AddXY("Powerfeed", 1000);
-            chart_Food.Series["Food"].Points.AddXY("Hay", 1000);
+            chart_Food.Series["Food"].Points.AddXY("Hay", 900);
             chart_Food.Series["Food"].Points.AddXY("Oats", 1000);
         }
 
