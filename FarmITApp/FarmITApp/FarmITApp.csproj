@@ -56,48 +56,45 @@
   <ItemGroup>
     <Compile Include="DatabaseAccessLayer\Dal.cs" />
     <Compile Include="EntityFramework\Animals.cs">
-      <DependentUpon>EntityFramework.tt</DependentUpon>
+      <DependentUpon>EntityDataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="EntityFramework\Boxes.cs">
-      <DependentUpon>EntityFramework.tt</DependentUpon>
+      <DependentUpon>EntityDataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="EntityFramework\Buildings.cs">
-      <DependentUpon>EntityFramework.tt</DependentUpon>
+      <DependentUpon>EntityDataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="EntityFramework\EntityFramework.Context.cs">
+    <Compile Include="EntityFramework\EntityDataModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>EntityFramework.Context.tt</DependentUpon>
+      <DependentUpon>EntityDataModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="EntityFramework\EntityFramework.cs">
+    <Compile Include="EntityFramework\EntityDataModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>EntityFramework.tt</DependentUpon>
+      <DependentUpon>EntityDataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="EntityFramework\EntityFramework.Designer.cs">
+    <Compile Include="EntityFramework\EntityDataModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>EntityFramework.edmx</DependentUpon>
+      <DependentUpon>EntityDataModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="EntityFramework\Foods.cs">
-      <DependentUpon>EntityFramework.tt</DependentUpon>
+      <DependentUpon>EntityDataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="EntityFramework\sysdiagrams.cs">
-      <DependentUpon>EntityFramework.tt</DependentUpon>
+      <DependentUpon>EntityDataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Animal.cs" />
-    <Compile Include="Model\Box.cs" />
-    <Compile Include="Model\Building.cs" />
-    <Compile Include="Model\Cow.cs" />
-    <Compile Include="Model\Food.cs" />
-    <Compile Include="Model\Hen.cs" />
-    <Compile Include="Model\Horse.cs" />
-    <Compile Include="Model\Pig.cs" />
-    <Compile Include="View\Form.cs">
+    <Compile Include="FarmITDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FarmITDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View\FarmITDesktopApp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Form.Designer.cs">
-      <DependentUpon>Form.cs</DependentUpon>
+    <Compile Include="View\FarmITDesktopApp.Designer.cs">
+      <DependentUpon>FarmITDesktopApp.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -110,16 +107,26 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\Form.resx">
-      <DependentUpon>Form.cs</DependentUpon>
+    <EmbeddedResource Include="View\FarmITDesktopApp.resx">
+      <DependentUpon>FarmITDesktopApp.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="EntityFramework\EntityFramework.edmx">
+    <EntityDeploy Include="EntityFramework\EntityDataModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>EntityFramework.Designer.cs</LastGenOutput>
+      <LastGenOutput>EntityDataModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="App.Config" />
-    <None Include="EntityFramework\EntityFramework.edmx.diagram">
-      <DependentUpon>EntityFramework.edmx</DependentUpon>
+    <None Include="EntityFramework\EntityDataModel.edmx.diagram">
+      <DependentUpon>EntityDataModel.edmx</DependentUpon>
+    </None>
+    <None Include="FarmITDataSet.xsc">
+      <DependentUpon>FarmITDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FarmITDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FarmITDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FarmITDataSet.xss">
+      <DependentUpon>FarmITDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -133,19 +140,18 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="View\App.config" />
+    <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="EntityFramework\EntityFramework.Context.tt">
+    <Content Include="EntityFramework\EntityDataModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EntityFramework.edmx</DependentUpon>
-      <LastGenOutput>EntityFramework.Context.cs</LastGenOutput>
+      <DependentUpon>EntityDataModel.edmx</DependentUpon>
+      <LastGenOutput>EntityDataModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="EntityFramework\EntityFramework.tt">
+    <Content Include="EntityFramework\EntityDataModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EntityFramework.edmx</DependentUpon>
-      <LastGenOutput>EntityFramework.cs</LastGenOutput>
+      <DependentUpon>EntityDataModel.edmx</DependentUpon>
+      <LastGenOutput>EntityDataModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
