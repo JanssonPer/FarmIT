@@ -109,6 +109,30 @@ namespace FarmITApp.View
             }
         }
 
-      
+        private void resetToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.animalsTableAdapter.Reset(this.farmITDataSet.Animals);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void resetToolStripButton_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                this.animalsTableAdapter.Reset(this.farmITDataSet.Animals);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
     }
 }

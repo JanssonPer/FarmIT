@@ -2823,7 +2823,7 @@ SELECT TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerFeed, AmountO
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[6];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerFeed, AmountOf" +
@@ -2845,23 +2845,9 @@ SELECT TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerFeed, AmountO
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdAnimal", global::System.Data.SqlDbType.BigInt, 8, global::System.Data.ParameterDirection.Input, 0, 0, "IdAnimal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "SELECT TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerFeed, AmountOf" +
-                "Hay, AmountOfOats, IdBox FROM dbo.Animals where idAnimal like \'%%\'";
+            this._commandCollection[3].CommandText = "SELECT        TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerFeed, A" +
+                "mountOfHay, AmountOfOats, IdBox\r\nFROM            Animals";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[4].Connection = this.Connection;
-            this._commandCollection[4].CommandText = "SELECT        TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerFeed, A" +
-                "mountOfHay, AmountOfOats, IdBox\r\nFROM            Animals\r\nWHERE        (Name LIK" +
-                "E @Name + \'%\')";
-            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.VarChar, 255, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[5].Connection = this.Connection;
-            this._commandCollection[5].CommandText = "SELECT        TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerFeed, A" +
-                "mountOfHay, AmountOfOats, IdBox\r\nFROM            Animals\r\nWHERE        (Name LIK" +
-                "E @Name + \'%%\')";
-            this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.VarChar, 255, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2925,46 +2911,8 @@ SELECT TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerFeed, AmountO
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int SearchById(FarmITDataSet.AnimalsDataTable dataTable) {
+        public virtual int Reset(FarmITDataSet.AnimalsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[3];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int SearchByName(FarmITDataSet.AnimalsDataTable dataTable, string Name) {
-            this.Adapter.SelectCommand = this.CommandCollection[4];
-            if ((Name == null)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Name));
-            }
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int SearchByName1(FarmITDataSet.AnimalsDataTable dataTable, string Name) {
-            this.Adapter.SelectCommand = this.CommandCollection[5];
-            if ((Name == null)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Name));
-            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
