@@ -19,6 +19,12 @@ namespace FarmITApp.View
         public FarmITDesktopApp()
         {
             InitializeComponent();
+            text_FoodTwo.Hide();
+            foodTwo.Hide();
+            
+            chart_Food.Series["Food"].Points.AddXY("Powerfeed", 1000);
+            chart_Food.Series["Food"].Points.AddXY("Hay", 1000);
+            chart_Food.Series["Food"].Points.AddXY("Oats", 1000);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -81,11 +87,10 @@ namespace FarmITApp.View
 
         private void box_Type_SelectedIndexChanged(object sender, EventArgs e)
         {
-            text_FoodTwo.Hide();
-            foodTwo.Hide();
+            
             if (box_Type.Text.Equals("Horse"))
             {
-                food.Text = "PowerFeed";
+                food.Text = "Powerfeed";
                 foodTwo.Text = "Hay";
                 foodTwo.Show();
                 text_FoodTwo.Show();
@@ -103,5 +108,7 @@ namespace FarmITApp.View
                 foodTwo.Hide();
             }
         }
+
+      
     }
 }
