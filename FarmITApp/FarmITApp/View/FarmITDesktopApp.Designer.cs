@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.button_Reset = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.foodTwo = new System.Windows.Forms.Label();
@@ -101,14 +101,14 @@
             this.foodsTableAdapter = new FarmITApp.FarmITDataSetTableAdapters.FoodsTableAdapter();
             this.buildingsTableAdapter = new FarmITApp.FarmITDataSetTableAdapters.BuildingsTableAdapter();
             this.textBox_UId = new System.Windows.Forms.TextBox();
-            this.textBox_UStatus = new System.Windows.Forms.TextBox();
             this.textBox_UType = new System.Windows.Forms.TextBox();
             this.textBox_UName = new System.Windows.Forms.TextBox();
             this.textBox_UAge = new System.Windows.Forms.TextBox();
             this.textBox_UFood = new System.Windows.Forms.TextBox();
             this.textBox_UFoodTwo = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_UBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.textBox_UStatus = new System.Windows.Forms.ComboBox();
             this.tabMenu.SuspendLayout();
             this.tabPage_Info.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_Food)).BeginInit();
@@ -337,37 +337,37 @@
             this.chart_Food.BorderlineColor = System.Drawing.Color.Violet;
             this.chart_Food.BorderSkin.BorderColor = System.Drawing.Color.BlanchedAlmond;
             this.chart_Food.BorderSkin.PageColor = System.Drawing.Color.Violet;
-            chartArea2.AlignmentOrientation = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.None;
-            chartArea2.AlignmentStyle = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentStyles.None;
-            chartArea2.Area3DStyle.Inclination = 20;
-            chartArea2.Area3DStyle.IsRightAngleAxes = false;
-            chartArea2.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
-            chartArea2.Area3DStyle.Rotation = 20;
-            chartArea2.Area3DStyle.WallWidth = 1;
-            chartArea2.AxisX.MajorGrid.Enabled = false;
-            chartArea2.AxisY.MajorGrid.Enabled = false;
-            chartArea2.AxisY.Maximum = 1000D;
-            chartArea2.AxisY.ScaleBreakStyle.LineColor = System.Drawing.Color.Transparent;
-            chartArea2.AxisY.ScaleBreakStyle.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
-            chartArea2.BackColor = System.Drawing.Color.Transparent;
-            chartArea2.BackImageTransparentColor = System.Drawing.Color.BurlyWood;
-            chartArea2.BackImageWrapMode = System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.Scaled;
-            chartArea2.BackSecondaryColor = System.Drawing.Color.CornflowerBlue;
-            chartArea2.BorderColor = System.Drawing.Color.Transparent;
-            chartArea2.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
-            chartArea2.Name = "ChartArea1";
-            this.chart_Food.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart_Food.Legends.Add(legend2);
+            chartArea3.AlignmentOrientation = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.None;
+            chartArea3.AlignmentStyle = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentStyles.None;
+            chartArea3.Area3DStyle.Inclination = 20;
+            chartArea3.Area3DStyle.IsRightAngleAxes = false;
+            chartArea3.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
+            chartArea3.Area3DStyle.Rotation = 20;
+            chartArea3.Area3DStyle.WallWidth = 1;
+            chartArea3.AxisX.MajorGrid.Enabled = false;
+            chartArea3.AxisY.MajorGrid.Enabled = false;
+            chartArea3.AxisY.Maximum = 1000D;
+            chartArea3.AxisY.ScaleBreakStyle.LineColor = System.Drawing.Color.Transparent;
+            chartArea3.AxisY.ScaleBreakStyle.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+            chartArea3.BackColor = System.Drawing.Color.Transparent;
+            chartArea3.BackImageTransparentColor = System.Drawing.Color.BurlyWood;
+            chartArea3.BackImageWrapMode = System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.Scaled;
+            chartArea3.BackSecondaryColor = System.Drawing.Color.CornflowerBlue;
+            chartArea3.BorderColor = System.Drawing.Color.Transparent;
+            chartArea3.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea3.Name = "ChartArea1";
+            this.chart_Food.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chart_Food.Legends.Add(legend3);
             this.chart_Food.Location = new System.Drawing.Point(224, 77);
             this.chart_Food.Name = "chart_Food";
             this.chart_Food.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chart_Food.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.DarkSeaGreen};
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Food";
-            this.chart_Food.Series.Add(series2);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Food";
+            this.chart_Food.Series.Add(series3);
             this.chart_Food.Size = new System.Drawing.Size(501, 310);
             this.chart_Food.TabIndex = 0;
             this.chart_Food.Text = "chart_Food";
@@ -410,12 +410,12 @@
             // 
             this.tabPage1.AutoScroll = true;
             this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.tabPage1.Controls.Add(this.textBox_UStatus);
             this.tabPage1.Controls.Add(this.textBox_UFoodTwo);
             this.tabPage1.Controls.Add(this.textBox_UFood);
             this.tabPage1.Controls.Add(this.textBox_UAge);
             this.tabPage1.Controls.Add(this.textBox_UName);
             this.tabPage1.Controls.Add(this.textBox_UType);
-            this.tabPage1.Controls.Add(this.textBox_UStatus);
             this.tabPage1.Controls.Add(this.textBox_UId);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.UFoodTwo);
@@ -433,7 +433,7 @@
             this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.dataGridView_Animals);
             this.tabPage1.Controls.Add(this.label9);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.textBox_UBox);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -532,7 +532,7 @@
             this.resetToolStripButton});
             this.resetToolStrip.Location = new System.Drawing.Point(6, 371);
             this.resetToolStrip.Name = "resetToolStrip";
-            this.resetToolStrip.Size = new System.Drawing.Size(78, 25);
+            this.resetToolStrip.Size = new System.Drawing.Size(109, 25);
             this.resetToolStrip.TabIndex = 3;
             this.resetToolStrip.Text = "resetToolStrip";
             // 
@@ -597,6 +597,8 @@
             // 
             // dataGridView_Animals
             // 
+            this.dataGridView_Animals.AllowUserToAddRows = false;
+            this.dataGridView_Animals.AllowUserToDeleteRows = false;
             this.dataGridView_Animals.AutoGenerateColumns = false;
             this.dataGridView_Animals.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Animals.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -612,6 +614,7 @@
             this.dataGridView_Animals.DataSource = this.animalsBindingSource;
             this.dataGridView_Animals.Location = new System.Drawing.Point(9, 70);
             this.dataGridView_Animals.Name = "dataGridView_Animals";
+            this.dataGridView_Animals.ReadOnly = true;
             this.dataGridView_Animals.Size = new System.Drawing.Size(646, 290);
             this.dataGridView_Animals.TabIndex = 0;
             this.dataGridView_Animals.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Animals_CellClick);
@@ -831,13 +834,6 @@
             this.textBox_UId.Size = new System.Drawing.Size(100, 20);
             this.textBox_UId.TabIndex = 22;
             // 
-            // textBox_UStatus
-            // 
-            this.textBox_UStatus.Location = new System.Drawing.Point(786, 109);
-            this.textBox_UStatus.Name = "textBox_UStatus";
-            this.textBox_UStatus.Size = new System.Drawing.Size(100, 20);
-            this.textBox_UStatus.TabIndex = 23;
-            // 
             // textBox_UType
             // 
             this.textBox_UType.Location = new System.Drawing.Point(786, 149);
@@ -873,21 +869,34 @@
             this.textBox_UFoodTwo.Size = new System.Drawing.Size(100, 20);
             this.textBox_UFoodTwo.TabIndex = 28;
             // 
-            // textBox1
+            // textBox_UBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(786, 265);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 30;
+            this.textBox_UBox.Location = new System.Drawing.Point(786, 265);
+            this.textBox_UBox.Name = "textBox_UBox";
+            this.textBox_UBox.Size = new System.Drawing.Size(100, 20);
+            this.textBox_UBox.TabIndex = 30;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(700, 268);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(26, 13);
+            this.label9.Size = new System.Drawing.Size(34, 13);
             this.label9.TabIndex = 29;
-            this.label9.Text = "Age";
+            this.label9.Text = "IdBox";
+            // 
+            // textBox_UStatus
+            // 
+            this.textBox_UStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.textBox_UStatus.FormattingEnabled = true;
+            this.textBox_UStatus.Items.AddRange(new object[] {
+            "Healthy",
+            "Sick",
+            "Gluefactory"});
+            this.textBox_UStatus.Location = new System.Drawing.Point(786, 109);
+            this.textBox_UStatus.Name = "textBox_UStatus";
+            this.textBox_UStatus.Size = new System.Drawing.Size(100, 21);
+            this.textBox_UStatus.TabIndex = 31;
             // 
             // FarmITDesktopApp
             // 
@@ -1001,9 +1010,9 @@
         private System.Windows.Forms.TextBox textBox_UAge;
         private System.Windows.Forms.TextBox textBox_UName;
         private System.Windows.Forms.TextBox textBox_UType;
-        private System.Windows.Forms.TextBox textBox_UStatus;
         private System.Windows.Forms.TextBox textBox_UId;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_UBox;
+        private System.Windows.Forms.ComboBox textBox_UStatus;
     }
 }

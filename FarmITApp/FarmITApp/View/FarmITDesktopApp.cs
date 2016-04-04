@@ -138,9 +138,10 @@ namespace FarmITApp.View
                 textBox_FindById.Text = row.Cells[0].Value.ToString();
                 textBox_UId.Text = row.Cells[0].Value.ToString();
                 textBox_UType.Text = row.Cells[1].Value.ToString();
-                textBox_UId.Text = row.Cells[2].Value.ToString();
-                textBox_UId.Text = row.Cells[3].Value.ToString();
-                textBox_UId.Text = row.Cells[4].Value.ToString();
+                textBox_UAge.Text = row.Cells[2].Value.ToString();
+                textBox_UName.Text = row.Cells[3].Value.ToString();
+                textBox_UStatus.Text = row.Cells[4].Value.ToString();
+                textBox_UBox.Text = row.Cells[8].Value.ToString();
                 if (textBox_UType.Text.Equals("Horse"))
                 {
                     textBox_UFood.Text = row.Cells[5].Value.ToString();
@@ -177,6 +178,15 @@ namespace FarmITApp.View
             {
                 textBox_Message.Text = "You just deleted an animal";
                 textBox_Message.Show();
+                try
+                {
+                    this.animalsTableAdapter.Reset(this.farmITDataSet.Animals);
+                }
+                catch (System.Exception ex)
+                {
+                    System.Windows.Forms.MessageBox.Show(ex.Message);
+                }
+
             }
             else if(remove == DialogResult.No) {
                 textBox_Message.Text = "No Animal deleted "; 
