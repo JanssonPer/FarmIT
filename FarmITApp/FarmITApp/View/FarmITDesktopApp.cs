@@ -14,7 +14,7 @@ namespace FarmITApp.View
 {
     public partial class FarmITDesktopApp : Form
     {
-        Dal controller = new Dal();
+        Dal dal = new Dal();
 
         public FarmITDesktopApp()
         {
@@ -124,42 +124,9 @@ namespace FarmITApp.View
 
         private void button_Update_Click(object sender, EventArgs e)
         {
-            try {   
-                Animals a= controller.GetAnimal(((long)(System.Convert.ChangeType(textBox_FindById.Text, typeof(long)))));
-                a.Age = textBox_UAge.Text;
-                a.Name = textBox_UName.Text;
-                a.TypeAnimal = textBox_UType.Text;
-                a.StatusAnimal = textBox_UStatus.Text;
-                a.IdBox = textBox_UBox.Text;
-                if (a.TypeAnimal.Equals("Horse"))
-                {
-                a.AmountOfPowerFeed = int.Parse(textBox_UFood.Text);
-                a.amountOfHay = int.Parse(textBox_UFoodTwo.Text);
-                }
-                else if (a.TypeAnimal.Equals("Hen"))
-                {
-                    a.AmountOfOats = int.Parse(textBox_UFood.Text);
-                }
-                else
-                {
-                a.AmountOfPowerFeed = int.Parse(textBox_UFood.Text);
-                }
-
-                controller.UpdateAnimal(a);
-                    try
-                    {
-                        this.animalsTableAdapter.Reset(this.farmITDataSet.Animals);
-                    }
-                    catch (System.Exception ex)
-                    {
-                        System.Windows.Forms.MessageBox.Show(ex.Message);
-                    }
-            }
-            catch
-            {
-
-            }
             
+           Animals a= dal.GetAnimal(((long)(System.Convert.ChangeType(textBox_FindById.Text, typeof(long)))));
+           Console.WriteLine(a.Name);
         }
 
         private void dataGridView_Animals_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -171,10 +138,9 @@ namespace FarmITApp.View
                 textBox_FindById.Text = row.Cells[0].Value.ToString();
                 textBox_UId.Text = row.Cells[0].Value.ToString();
                 textBox_UType.Text = row.Cells[1].Value.ToString();
-                textBox_UAge.Text = row.Cells[2].Value.ToString();
-                textBox_UName.Text = row.Cells[3].Value.ToString();
-                textBox_UStatus.Text = row.Cells[4].Value.ToString();
-                textBox_UBox.Text = row.Cells[8].Value.ToString();
+                textBox_UId.Text = row.Cells[2].Value.ToString();
+                textBox_UId.Text = row.Cells[3].Value.ToString();
+                textBox_UId.Text = row.Cells[4].Value.ToString();
                 if (textBox_UType.Text.Equals("Horse"))
                 {
                     textBox_UFood.Text = row.Cells[5].Value.ToString();
@@ -211,15 +177,6 @@ namespace FarmITApp.View
             {
                 textBox_Message.Text = "You just deleted an animal";
                 textBox_Message.Show();
-                try
-                {
-                    this.animalsTableAdapter.Reset(this.farmITDataSet.Animals);
-                }
-                catch (System.Exception ex)
-                {
-                    System.Windows.Forms.MessageBox.Show(ex.Message);
-                }
-
             }
             else if(remove == DialogResult.No) {
                 textBox_Message.Text = "No Animal deleted "; 
