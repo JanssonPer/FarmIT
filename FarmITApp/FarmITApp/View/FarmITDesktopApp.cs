@@ -175,7 +175,7 @@ namespace FarmITApp.View
                 textBox_UAge.Text = row.Cells[2].Value.ToString();
                 textBox_UName.Text = row.Cells[3].Value.ToString();
                 textBox_UStatus.Text = row.Cells[4].Value.ToString();
-                textBox_UBox.Text = row.Cells[8].Value.ToString();
+                textBox_UIdBox.Text = row.Cells[8].Value.ToString();
                 if (textBox_UType.Text.Equals("Horse"))
                 {
                     textBox_UFood.Text = row.Cells[5].Value.ToString();
