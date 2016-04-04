@@ -58,12 +58,13 @@
             this.label7 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox_UBox = new System.Windows.Forms.TextBox();
             this.textBox_UFoodTwo = new System.Windows.Forms.TextBox();
             this.textBox_UFood = new System.Windows.Forms.TextBox();
             this.textBox_UAge = new System.Windows.Forms.TextBox();
             this.textBox_UName = new System.Windows.Forms.TextBox();
             this.textBox_UType = new System.Windows.Forms.TextBox();
-            this.textBox_UStatus = new System.Windows.Forms.TextBox();
             this.textBox_UId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.UFoodTwo = new System.Windows.Forms.Label();
@@ -79,7 +80,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.textBox_FindById = new System.Windows.Forms.TextBox();
             this.combo_FindType = new System.Windows.Forms.ComboBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.dataGridView_Animals = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -107,6 +107,7 @@
             this.animalsTableAdapter = new FarmITApp.FarmITDataSetTableAdapters.AnimalsTableAdapter();
             this.foodsTableAdapter = new FarmITApp.FarmITDataSetTableAdapters.FoodsTableAdapter();
             this.buildingsTableAdapter = new FarmITApp.FarmITDataSetTableAdapters.BuildingsTableAdapter();
+            this.textBox_UStatus = new System.Windows.Forms.ComboBox();
             this.tabMenu.SuspendLayout();
             this.tabPage_Info.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_Food)).BeginInit();
@@ -408,12 +409,14 @@
             // 
             this.tabPage1.AutoScroll = true;
             this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.tabPage1.Controls.Add(this.textBox_UStatus);
+            this.tabPage1.Controls.Add(this.label9);
+            this.tabPage1.Controls.Add(this.textBox_UBox);
             this.tabPage1.Controls.Add(this.textBox_UFoodTwo);
             this.tabPage1.Controls.Add(this.textBox_UFood);
             this.tabPage1.Controls.Add(this.textBox_UAge);
             this.tabPage1.Controls.Add(this.textBox_UName);
             this.tabPage1.Controls.Add(this.textBox_UType);
-            this.tabPage1.Controls.Add(this.textBox_UStatus);
             this.tabPage1.Controls.Add(this.textBox_UId);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.UFoodTwo);
@@ -428,7 +431,6 @@
             this.tabPage1.Controls.Add(this.button4);
             this.tabPage1.Controls.Add(this.textBox_FindById);
             this.tabPage1.Controls.Add(this.combo_FindType);
-            this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.dataGridView_Animals);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -437,12 +439,29 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Animals";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(700, 266);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(34, 13);
+            this.label9.TabIndex = 30;
+            this.label9.Text = "IdBox";
+            // 
+            // textBox_UBox
+            // 
+            this.textBox_UBox.Location = new System.Drawing.Point(786, 263);
+            this.textBox_UBox.Name = "textBox_UBox";
+            this.textBox_UBox.Size = new System.Drawing.Size(100, 20);
+            this.textBox_UBox.TabIndex = 29;
+            // 
             // textBox_UFoodTwo
             // 
             this.textBox_UFoodTwo.Location = new System.Drawing.Point(786, 340);
             this.textBox_UFoodTwo.Name = "textBox_UFoodTwo";
             this.textBox_UFoodTwo.Size = new System.Drawing.Size(100, 20);
             this.textBox_UFoodTwo.TabIndex = 28;
+            this.textBox_UFoodTwo.Visible = false;
             // 
             // textBox_UFood
             // 
@@ -467,20 +486,15 @@
             // 
             // textBox_UType
             // 
+            this.textBox_UType.Enabled = false;
             this.textBox_UType.Location = new System.Drawing.Point(786, 149);
             this.textBox_UType.Name = "textBox_UType";
             this.textBox_UType.Size = new System.Drawing.Size(100, 20);
             this.textBox_UType.TabIndex = 24;
             // 
-            // textBox_UStatus
-            // 
-            this.textBox_UStatus.Location = new System.Drawing.Point(786, 109);
-            this.textBox_UStatus.Name = "textBox_UStatus";
-            this.textBox_UStatus.Size = new System.Drawing.Size(100, 20);
-            this.textBox_UStatus.TabIndex = 23;
-            // 
             // textBox_UId
             // 
+            this.textBox_UId.Enabled = false;
             this.textBox_UId.Location = new System.Drawing.Point(786, 70);
             this.textBox_UId.Name = "textBox_UId";
             this.textBox_UId.Size = new System.Drawing.Size(100, 20);
@@ -629,19 +643,12 @@
             this.combo_FindType.Name = "combo_FindType";
             this.combo_FindType.Size = new System.Drawing.Size(97, 21);
             this.combo_FindType.TabIndex = 5;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(112, 43);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 21);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Find Type";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.combo_FindType.SelectedIndexChanged += new System.EventHandler(this.combo_FindType_SelectedIndexChanged);
             // 
             // dataGridView_Animals
             // 
+            this.dataGridView_Animals.AllowUserToAddRows = false;
+            this.dataGridView_Animals.AllowUserToDeleteRows = false;
             this.dataGridView_Animals.AutoGenerateColumns = false;
             this.dataGridView_Animals.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Animals.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -657,6 +664,7 @@
             this.dataGridView_Animals.DataSource = this.animalsBindingSource;
             this.dataGridView_Animals.Location = new System.Drawing.Point(9, 70);
             this.dataGridView_Animals.Name = "dataGridView_Animals";
+            this.dataGridView_Animals.ReadOnly = true;
             this.dataGridView_Animals.Size = new System.Drawing.Size(646, 290);
             this.dataGridView_Animals.TabIndex = 0;
             this.dataGridView_Animals.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Animals_CellClick);
@@ -667,6 +675,7 @@
             this.dataGridViewTextBoxColumn3.DataPropertyName = "IdAnimal";
             this.dataGridViewTextBoxColumn3.HeaderText = "IdAnimal";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -674,6 +683,7 @@
             this.dataGridViewTextBoxColumn2.DataPropertyName = "TypeAnimal";
             this.dataGridViewTextBoxColumn2.HeaderText = "Type";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -681,6 +691,7 @@
             this.dataGridViewTextBoxColumn4.DataPropertyName = "Age";
             this.dataGridViewTextBoxColumn4.HeaderText = "Age";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -688,6 +699,7 @@
             this.dataGridViewTextBoxColumn5.DataPropertyName = "Name";
             this.dataGridViewTextBoxColumn5.HeaderText = "Name";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn6
             // 
@@ -695,6 +707,7 @@
             this.dataGridViewTextBoxColumn6.DataPropertyName = "StatusAnimal";
             this.dataGridViewTextBoxColumn6.HeaderText = "Status";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn7
             // 
@@ -702,6 +715,7 @@
             this.dataGridViewTextBoxColumn7.DataPropertyName = "AmountOfPowerFeed";
             this.dataGridViewTextBoxColumn7.HeaderText = "PowerFeed";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn8
             // 
@@ -709,6 +723,7 @@
             this.dataGridViewTextBoxColumn8.DataPropertyName = "AmountOfHay";
             this.dataGridViewTextBoxColumn8.HeaderText = "Hay";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn9
             // 
@@ -716,6 +731,7 @@
             this.dataGridViewTextBoxColumn9.DataPropertyName = "AmountOfOats";
             this.dataGridViewTextBoxColumn9.HeaderText = "Oats";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn10
             // 
@@ -723,6 +739,7 @@
             this.dataGridViewTextBoxColumn10.DataPropertyName = "IdBox";
             this.dataGridViewTextBoxColumn10.HeaderText = "IdBox";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
             // 
             // animalsBindingSource
             // 
@@ -869,6 +886,19 @@
             // 
             this.buildingsTableAdapter.ClearBeforeFill = true;
             // 
+            // textBox_UStatus
+            // 
+            this.textBox_UStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.textBox_UStatus.FormattingEnabled = true;
+            this.textBox_UStatus.Items.AddRange(new object[] {
+            "Healthy",
+            "Sick",
+            "Gluefactory"});
+            this.textBox_UStatus.Location = new System.Drawing.Point(786, 109);
+            this.textBox_UStatus.Name = "textBox_UStatus";
+            this.textBox_UStatus.Size = new System.Drawing.Size(100, 21);
+            this.textBox_UStatus.TabIndex = 31;
+            // 
             // FarmITDesktopApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -959,7 +989,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn idBuildingDataGridViewTextBoxColumn1;
         private System.Windows.Forms.ComboBox combo_FindType;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox_FindById;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TabPage tabPage_Info;
@@ -981,7 +1010,9 @@
         private System.Windows.Forms.TextBox textBox_UAge;
         private System.Windows.Forms.TextBox textBox_UName;
         private System.Windows.Forms.TextBox textBox_UType;
-        private System.Windows.Forms.TextBox textBox_UStatus;
         private System.Windows.Forms.TextBox textBox_UId;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox_UBox;
+        private System.Windows.Forms.ComboBox textBox_UStatus;
     }
 }

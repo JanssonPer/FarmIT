@@ -19,7 +19,19 @@ namespace FarmITApp.View
         public FarmITDesktopApp()
         {
             InitializeComponent();
-
+            try
+            {
+                Animals a = controller.GetAnimal(1);
+                Console.WriteLine(a.Name);
+                Foods pf = controller.GetFood(1);
+                
+                Console.WriteLine(pf.Amount);
+            }
+            catch
+            {
+                Console.WriteLine("ej funnit");
+            }
+           
             chart_Food.Series["Food"].Points.AddXY("Powerfeed", 1000);
             chart_Food.Series["Food"].Points.AddXY("Hay", 900);
             chart_Food.Series["Food"].Points.AddXY("Oats", 1000);
@@ -48,17 +60,7 @@ namespace FarmITApp.View
         }
 
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.animalsTableAdapter.Find_Type(this.farmITDataSet.Animals, combo_FindType.Text);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-        }
+        
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -131,11 +133,11 @@ namespace FarmITApp.View
                 a.Name = textBox_UName.Text;
                 a.TypeAnimal = textBox_UType.Text;
                 a.StatusAnimal = textBox_UStatus.Text;
-                a.IdBox =
+                a.IdBox = textBox_UBox.Text;
                 if (a.TypeAnimal.Equals("Horse"))
                 {
                     a.AmountOfPowerFeed = int.Parse(textBox_UFood.Text);
-                    a.amountOfHay = int.Parse(textBox_UFoodTwo.Text);
+                    a.AmountOfHay = int.Parse(textBox_UFoodTwo.Text);
                 }
                 else if (a.TypeAnimal.Equals("Hen"))
                 {
@@ -167,7 +169,6 @@ namespace FarmITApp.View
         {
             if (e.RowIndex >= 0)
             {
-
                 DataGridViewRow row = dataGridView_Animals.Rows[e.RowIndex];
                 textBox_FindById.Text = row.Cells[0].Value.ToString();
                 textBox_UId.Text = row.Cells[0].Value.ToString();
@@ -175,7 +176,7 @@ namespace FarmITApp.View
                 textBox_UAge.Text = row.Cells[2].Value.ToString();
                 textBox_UName.Text = row.Cells[3].Value.ToString();
                 textBox_UStatus.Text = row.Cells[4].Value.ToString();
-                textBox_UIdBox.Text = row.Cells[8].Value.ToString();
+                textBox_UBox.Text = row.Cells[8].Value.ToString();
                 if (textBox_UType.Text.Equals("Horse"))
                 {
                     textBox_UFood.Text = row.Cells[5].Value.ToString();
@@ -234,6 +235,18 @@ namespace FarmITApp.View
             textBox_FoodTwo.Text = "";
             textBox_Name.Text = "";
             textBox_Age.Text = "";
+        }
+
+        private void combo_FindType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                this.animalsTableAdapter.Find_Type(this.farmITDataSet.Animals, combo_FindType.Text);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
         }
     }
 }
