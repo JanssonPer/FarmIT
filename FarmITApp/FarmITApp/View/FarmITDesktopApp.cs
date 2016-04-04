@@ -19,8 +19,6 @@ namespace FarmITApp.View
         public FarmITDesktopApp()
         {
             InitializeComponent();
-            text_FoodTwo.Hide();
-            foodTwo.Hide();
             
             chart_Food.Series["Food"].Points.AddXY("Powerfeed", 1000);
             chart_Food.Series["Food"].Points.AddXY("Hay", 900);
@@ -77,23 +75,23 @@ namespace FarmITApp.View
         private void box_Type_SelectedIndexChanged(object sender, EventArgs e)
         {
             
-            if (box_Type.Text.Equals("Horse"))
+            if (textBox_Type.Text.Equals("Horse"))
             {
                 food.Text = "Powerfeed";
                 foodTwo.Text = "Hay";
                 foodTwo.Show();
-                text_FoodTwo.Show();
+                textBox_FoodTwo.Show();
             }
-            else if (box_Type.Text.Equals("Hen"))
+            else if (textBox_Type.Text.Equals("Hen"))
             {
                 food.Text = "Oats";
                 foodTwo.Hide();
-                text_FoodTwo.Hide();
+                textBox_FoodTwo.Hide();
             }
             else
             {
                 food.Text = "Powerfeed";
-                text_FoodTwo.Hide();
+                textBox_FoodTwo.Hide();
                 foodTwo.Hide();
             }
         }
@@ -146,13 +144,15 @@ namespace FarmITApp.View
 
         private void button_Remove_Click(object sender, EventArgs e)
         {
-            DialogResult remove = MessageBox.Show("Do you really love me?", "Delete", MessageBoxButtons.YesNo);
+            DialogResult remove = MessageBox.Show("Do you really want to delete an animal?", "Delete", MessageBoxButtons.YesNo);
             if(remove== DialogResult.Yes)
             {
-                Console.WriteLine(" YES I LOVE YOU");
+                textBox_Message.Text = "You just deleted an animal";
+                
             }else if(remove == DialogResult.No) {
 
-                Console.WriteLine(" NO I DONT LOVE YOU");
+
+                textBox_Message.Text = "No Animal deleted "; ;
 
             }
 
