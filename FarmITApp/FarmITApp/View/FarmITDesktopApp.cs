@@ -14,12 +14,12 @@ namespace FarmITApp.View
 {
     public partial class FarmITDesktopApp : Form
     {
-        Dal dal = new Dal();
+        Dal controller = new Dal();
 
         public FarmITDesktopApp()
         {
             InitializeComponent();
-            
+
             chart_Food.Series["Food"].Points.AddXY("Powerfeed", 1000);
             chart_Food.Series["Food"].Points.AddXY("Hay", 900);
             chart_Food.Series["Food"].Points.AddXY("Oats", 1000);
@@ -27,7 +27,7 @@ namespace FarmITApp.View
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
 
         }
 
@@ -47,7 +47,7 @@ namespace FarmITApp.View
 
         }
 
-       
+
         private void button3_Click(object sender, EventArgs e)
         {
             try
@@ -74,7 +74,7 @@ namespace FarmITApp.View
 
         private void box_Type_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
             if (textBox_Type.Text.Equals("Horse"))
             {
                 food.Text = "Powerfeed";
@@ -124,23 +124,58 @@ namespace FarmITApp.View
 
         private void button_Update_Click(object sender, EventArgs e)
         {
-            
-           Animals a= dal.GetAnimal(((long)(System.Convert.ChangeType(textBox_FindById.Text, typeof(long)))));
-           Console.WriteLine(a.Name);
+            try
+            {
+                Animals a = controller.GetAnimal(((long)(System.Convert.ChangeType(textBox_FindById.Text, typeof(long)))));
+                a.Age = textBox_UAge.Text;
+                a.Name = textBox_UName.Text;
+                a.TypeAnimal = textBox_UType.Text;
+                a.StatusAnimal = textBox_UStatus.Text;
+                a.IdBox =
+                if (a.TypeAnimal.Equals("Horse"))
+                {
+                    a.AmountOfPowerFeed = int.Parse(textBox_UFood.Text);
+                    a.amountOfHay = int.Parse(textBox_UFoodTwo.Text);
+                }
+                else if (a.TypeAnimal.Equals("Hen"))
+                {
+                    a.AmountOfOats = int.Parse(textBox_UFood.Text);
+                }
+                else
+                {
+                    a.AmountOfPowerFeed = int.Parse(textBox_UFood.Text);
+                }
+
+                controller.UpdateAnimal(a);
+                try
+                {
+                    this.animalsTableAdapter.Reset(this.farmITDataSet.Animals);
+                }
+                catch (System.Exception ex)
+                {
+                    System.Windows.Forms.MessageBox.Show(ex.Message);
+                }
+            }
+            catch
+            {
+
+            }
+
         }
 
         private void dataGridView_Animals_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-           if(e.RowIndex >= 0)
+            if (e.RowIndex >= 0)
             {
-                
+
                 DataGridViewRow row = dataGridView_Animals.Rows[e.RowIndex];
                 textBox_FindById.Text = row.Cells[0].Value.ToString();
                 textBox_UId.Text = row.Cells[0].Value.ToString();
                 textBox_UType.Text = row.Cells[1].Value.ToString();
-                textBox_UId.Text = row.Cells[2].Value.ToString();
-                textBox_UId.Text = row.Cells[3].Value.ToString();
-                textBox_UId.Text = row.Cells[4].Value.ToString();
+                textBox_UAge.Text = row.Cells[2].Value.ToString();
+                textBox_UName.Text = row.Cells[3].Value.ToString();
+                textBox_UStatus.Text = row.Cells[4].Value.ToString();
+                textBox_UBox.Text = row.Cells[8].Value.ToString();
                 if (textBox_UType.Text.Equals("Horse"))
                 {
                     textBox_UFood.Text = row.Cells[5].Value.ToString();
@@ -173,13 +208,23 @@ namespace FarmITApp.View
         private void button_Remove_Click(object sender, EventArgs e)
         {
             DialogResult remove = MessageBox.Show("Do you really want to delete an animal?", "Delete", MessageBoxButtons.YesNo);
-            if(remove== DialogResult.Yes)
+            if (remove == DialogResult.Yes)
             {
                 textBox_Message.Text = "You just deleted an animal";
                 textBox_Message.Show();
+                try
+                {
+                    this.animalsTableAdapter.Reset(this.farmITDataSet.Animals);
+                }
+                catch (System.Exception ex)
+                {
+                    System.Windows.Forms.MessageBox.Show(ex.Message);
+                }
+
             }
-            else if(remove == DialogResult.No) {
-                textBox_Message.Text = "No Animal deleted "; 
+            else if (remove == DialogResult.No)
+            {
+                textBox_Message.Text = "No Animal deleted ";
                 textBox_Message.Show();
             }
         }
