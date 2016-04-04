@@ -144,5 +144,18 @@ namespace FarmITApp.View
 
         }
 
+        private void button_Remove_Click(object sender, EventArgs e)
+        {
+            DialogResult remove = MessageBox.Show("Do you really love me?", "Delete", MessageBoxButtons.YesNo);
+            if(remove== DialogResult.Yes)
+            {
+                Console.WriteLine(" YES I LOVE YOU");
+            }else if(remove == DialogResult.No) {
+
+                Console.WriteLine(" NO I DONT LOVE YOU");
+
+            }
+
+        }
     }
 }
