@@ -10,7 +10,7 @@ namespace FarmITApp.DatabaseAccessLayer
     class Dal
     {
 
-        LabEntity context = new LabEntity();
+        LabEntities context = new LabEntities();
 
 
         // Get Methods 
