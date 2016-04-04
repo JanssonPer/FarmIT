@@ -124,14 +124,42 @@ namespace FarmITApp.View
 
         private void button_Update_Click(object sender, EventArgs e)
         {
-            
-           Animals a= controller.GetAnimal(((long)(System.Convert.ChangeType(textBox_FindById.Text, typeof(long)))));
-            a.Age = textBox_UAge.Text;
-            a.Name = textBox_UName.Text;
-            a.StatusAnimal = textBox_UStatus.Text;
-            a.IdBox = textBox_UBox.Text;
-            a.AmountOfPowerFeed = textBox_UFood.Text;
+            try {   
+                Animals a= controller.GetAnimal(((long)(System.Convert.ChangeType(textBox_FindById.Text, typeof(long)))));
+                a.Age = textBox_UAge.Text;
+                a.Name = textBox_UName.Text;
+                a.TypeAnimal = textBox_UType.Text;
+                a.StatusAnimal = textBox_UStatus.Text;
+                a.IdBox = textBox_UBox.Text;
+                if (a.TypeAnimal.Equals("Horse"))
+                {
+                a.AmountOfPowerFeed = int.Parse(textBox_UFood.Text);
+                a.amountOfHay = int.Parse(textBox_UFoodTwo.Text);
+                }
+                else if (a.TypeAnimal.Equals("Hen"))
+                {
+                    a.AmountOfOats = int.Parse(textBox_UFood.Text);
+                }
+                else
+                {
+                a.AmountOfPowerFeed = int.Parse(textBox_UFood.Text);
+                }
 
+                controller.UpdateAnimal(a);
+                    try
+                    {
+                        this.animalsTableAdapter.Reset(this.farmITDataSet.Animals);
+                    }
+                    catch (System.Exception ex)
+                    {
+                        System.Windows.Forms.MessageBox.Show(ex.Message);
+                    }
+            }
+            catch
+            {
+
+            }
+            
         }
 
         private void dataGridView_Animals_CellClick(object sender, DataGridViewCellEventArgs e)

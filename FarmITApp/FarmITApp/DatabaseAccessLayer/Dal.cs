@@ -218,9 +218,6 @@ namespace FarmITApp.DatabaseAccessLayer
             }
 
         }
-
-        }
-
-
+        
     }
 }
