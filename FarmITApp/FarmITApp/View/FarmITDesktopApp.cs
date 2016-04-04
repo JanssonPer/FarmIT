@@ -21,6 +21,7 @@ namespace FarmITApp.View
             InitializeComponent();
             try
             {
+                combo_FindType.Text = "Cow";
                 Animals a = controller.GetAnimal(1);
                 Console.WriteLine(a.Name);
                 Foods pf = controller.GetFood(1);
@@ -169,6 +170,7 @@ namespace FarmITApp.View
         {
             if (e.RowIndex >= 0)
             {
+                button_Update.Show();
                 DataGridViewRow row = dataGridView_Animals.Rows[e.RowIndex];
                 textBox_FindById.Text = row.Cells[0].Value.ToString();
                 textBox_UId.Text = row.Cells[0].Value.ToString();

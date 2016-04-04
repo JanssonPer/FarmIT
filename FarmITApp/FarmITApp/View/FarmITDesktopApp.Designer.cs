@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.button_Reset = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.foodTwo = new System.Windows.Forms.Label();
@@ -336,37 +336,37 @@
             this.chart_Food.BorderlineColor = System.Drawing.Color.Violet;
             this.chart_Food.BorderSkin.BorderColor = System.Drawing.Color.BlanchedAlmond;
             this.chart_Food.BorderSkin.PageColor = System.Drawing.Color.Violet;
-            chartArea1.AlignmentOrientation = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.None;
-            chartArea1.AlignmentStyle = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentStyles.None;
-            chartArea1.Area3DStyle.Inclination = 20;
-            chartArea1.Area3DStyle.IsRightAngleAxes = false;
-            chartArea1.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
-            chartArea1.Area3DStyle.Rotation = 20;
-            chartArea1.Area3DStyle.WallWidth = 1;
-            chartArea1.AxisX.MajorGrid.Enabled = false;
-            chartArea1.AxisY.MajorGrid.Enabled = false;
-            chartArea1.AxisY.Maximum = 1000D;
-            chartArea1.AxisY.ScaleBreakStyle.LineColor = System.Drawing.Color.Transparent;
-            chartArea1.AxisY.ScaleBreakStyle.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
-            chartArea1.BackColor = System.Drawing.Color.Transparent;
-            chartArea1.BackImageTransparentColor = System.Drawing.Color.BurlyWood;
-            chartArea1.BackImageWrapMode = System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.Scaled;
-            chartArea1.BackSecondaryColor = System.Drawing.Color.CornflowerBlue;
-            chartArea1.BorderColor = System.Drawing.Color.Transparent;
-            chartArea1.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
-            chartArea1.Name = "ChartArea1";
-            this.chart_Food.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart_Food.Legends.Add(legend1);
+            chartArea5.AlignmentOrientation = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.None;
+            chartArea5.AlignmentStyle = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentStyles.None;
+            chartArea5.Area3DStyle.Inclination = 20;
+            chartArea5.Area3DStyle.IsRightAngleAxes = false;
+            chartArea5.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
+            chartArea5.Area3DStyle.Rotation = 20;
+            chartArea5.Area3DStyle.WallWidth = 1;
+            chartArea5.AxisX.MajorGrid.Enabled = false;
+            chartArea5.AxisY.MajorGrid.Enabled = false;
+            chartArea5.AxisY.Maximum = 1000D;
+            chartArea5.AxisY.ScaleBreakStyle.LineColor = System.Drawing.Color.Transparent;
+            chartArea5.AxisY.ScaleBreakStyle.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+            chartArea5.BackColor = System.Drawing.Color.Transparent;
+            chartArea5.BackImageTransparentColor = System.Drawing.Color.BurlyWood;
+            chartArea5.BackImageWrapMode = System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.Scaled;
+            chartArea5.BackSecondaryColor = System.Drawing.Color.CornflowerBlue;
+            chartArea5.BorderColor = System.Drawing.Color.Transparent;
+            chartArea5.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea5.Name = "ChartArea1";
+            this.chart_Food.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chart_Food.Legends.Add(legend5);
             this.chart_Food.Location = new System.Drawing.Point(224, 77);
             this.chart_Food.Name = "chart_Food";
             this.chart_Food.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chart_Food.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.DarkSeaGreen};
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Food";
-            this.chart_Food.Series.Add(series1);
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Food";
+            this.chart_Food.Series.Add(series5);
             this.chart_Food.Size = new System.Drawing.Size(501, 310);
             this.chart_Food.TabIndex = 0;
             this.chart_Food.Text = "chart_Food";
@@ -582,6 +582,7 @@
             this.button_Update.TabIndex = 8;
             this.button_Update.Text = "Update";
             this.button_Update.UseVisualStyleBackColor = true;
+            this.button_Update.Visible = false;
             this.button_Update.Click += new System.EventHandler(this.button_Update_Click);
             // 
             // resetToolStrip
@@ -632,6 +633,7 @@
             // 
             // combo_FindType
             // 
+            this.combo_FindType.DisplayMember = "Cow";
             this.combo_FindType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combo_FindType.FormattingEnabled = true;
             this.combo_FindType.Items.AddRange(new object[] {
@@ -891,12 +893,13 @@
             this.textBox_UStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.textBox_UStatus.FormattingEnabled = true;
             this.textBox_UStatus.Items.AddRange(new object[] {
+            "Gluefactory",
             "Healthy",
-            "Sick",
-            "Gluefactory"});
+            "Sick"});
             this.textBox_UStatus.Location = new System.Drawing.Point(786, 109);
             this.textBox_UStatus.Name = "textBox_UStatus";
             this.textBox_UStatus.Size = new System.Drawing.Size(100, 21);
+            this.textBox_UStatus.Sorted = true;
             this.textBox_UStatus.TabIndex = 31;
             // 
             // FarmITDesktopApp
