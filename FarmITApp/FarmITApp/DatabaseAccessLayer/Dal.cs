@@ -199,11 +199,10 @@ namespace FarmITApp.DatabaseAccessLayer
             try
             {
                 Foods oldFood = GetFoods(f.IdFood);
-          
+               
 
                 if (oldFood != null)
-
-                    f.Amount += oldFood.Amount;
+                f.Amount += oldFood.Amount;
 
 
                 {
