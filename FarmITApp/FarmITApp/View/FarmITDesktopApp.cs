@@ -14,7 +14,7 @@ namespace FarmITApp.View
 {
     public partial class FarmITDesktopApp : Form
     {
-        Dal dal = new Dal();
+        Dal controller = new Dal();
 
         public FarmITDesktopApp()
         {
@@ -125,8 +125,13 @@ namespace FarmITApp.View
         private void button_Update_Click(object sender, EventArgs e)
         {
             
-           Animals a= dal.GetAnimal(((long)(System.Convert.ChangeType(textBox_FindById.Text, typeof(long)))));
-           Console.WriteLine(a.Name);
+           Animals a= controller.GetAnimal(((long)(System.Convert.ChangeType(textBox_FindById.Text, typeof(long)))));
+            a.Age = textBox_UAge.Text;
+            a.Name = textBox_UName.Text;
+            a.StatusAnimal = textBox_UStatus.Text;
+            a.IdBox = textBox_UBox.Text;
+            a.AmountOfPowerFeed = textBox_UFood.Text;
+
         }
 
         private void dataGridView_Animals_CellClick(object sender, DataGridViewCellEventArgs e)
