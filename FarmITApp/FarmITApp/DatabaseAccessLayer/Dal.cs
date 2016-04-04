@@ -29,7 +29,7 @@ namespace FarmITApp.DatabaseAccessLayer
             
         }
 
-        public Foods GetFoods(long id)
+        public Foods GetFood(long id)
         {
             try
             {
@@ -198,7 +198,7 @@ namespace FarmITApp.DatabaseAccessLayer
         {
             try
             {
-                Foods oldFood = GetFoods(f.IdFood);
+                Foods oldFood = GetFood(f.IdFood);
                
 
                 if (oldFood != null)
@@ -218,6 +218,32 @@ namespace FarmITApp.DatabaseAccessLayer
             }
 
         }
+
+        public void FeedAllAnimals(Foods f)
+        {
+            try
+            {
+                Foods oldFood = GetFood(f.IdFood);
+
+
+                if (oldFood != null)
+                    f.Amount += oldFood.Amount;
+
+
+                {
+                    context.Entry(oldFood).CurrentValues.SetValues(f);
+                    context.SaveChanges();
+                }
+            }
+            catch
+            {
+                //Exception
+                context.Foods.Remove(f);
+
+            }
+
+        }
+
 
     }
 }
