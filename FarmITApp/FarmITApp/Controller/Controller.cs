@@ -86,7 +86,7 @@ namespace FarmITApp.Controller
                     if (a.TypeAnimal.Equals("Horse"))
                     {
                         totalPowerfeed += (int)a.AmountOfPowerFeed;
-                        totalHay += (int)a.amountOfHay;
+                        totalHay += (int)a.AmountOfHay;
                     }
                     else if (a.TypeAnimal.Equals("Hen"))
                     {
