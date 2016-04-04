@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.button_Reset = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.foodTwo = new System.Windows.Forms.Label();
@@ -93,6 +93,13 @@
             this.animalsTableAdapter = new FarmITApp.FarmITDataSetTableAdapters.AnimalsTableAdapter();
             this.foodsTableAdapter = new FarmITApp.FarmITDataSetTableAdapters.FoodsTableAdapter();
             this.buildingsTableAdapter = new FarmITApp.FarmITDataSetTableAdapters.BuildingsTableAdapter();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.tabMenu.SuspendLayout();
             this.tabPage_Info.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_Food)).BeginInit();
@@ -114,7 +121,7 @@
             // 
             // button_Reset
             // 
-            this.button_Reset.Location = new System.Drawing.Point(180, 325);
+            this.button_Reset.Location = new System.Drawing.Point(381, 351);
             this.button_Reset.Name = "button_Reset";
             this.button_Reset.Size = new System.Drawing.Size(75, 23);
             this.button_Reset.TabIndex = 16;
@@ -124,7 +131,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(284, 325);
+            this.button1.Location = new System.Drawing.Point(485, 351);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 15;
@@ -135,7 +142,7 @@
             // foodTwo
             // 
             this.foodTwo.AutoSize = true;
-            this.foodTwo.Location = new System.Drawing.Point(177, 296);
+            this.foodTwo.Location = new System.Drawing.Point(378, 322);
             this.foodTwo.Name = "foodTwo";
             this.foodTwo.Size = new System.Drawing.Size(52, 13);
             this.foodTwo.TabIndex = 14;
@@ -144,7 +151,7 @@
             // 
             // textBox_FoodTwo
             // 
-            this.textBox_FoodTwo.Location = new System.Drawing.Point(238, 293);
+            this.textBox_FoodTwo.Location = new System.Drawing.Point(439, 319);
             this.textBox_FoodTwo.Name = "textBox_FoodTwo";
             this.textBox_FoodTwo.Size = new System.Drawing.Size(121, 20);
             this.textBox_FoodTwo.TabIndex = 13;
@@ -153,7 +160,7 @@
             // food
             // 
             this.food.AutoSize = true;
-            this.food.Location = new System.Drawing.Point(177, 260);
+            this.food.Location = new System.Drawing.Point(378, 286);
             this.food.Name = "food";
             this.food.Size = new System.Drawing.Size(31, 13);
             this.food.TabIndex = 12;
@@ -162,7 +169,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(177, 218);
+            this.label6.Location = new System.Drawing.Point(378, 244);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(26, 13);
             this.label6.TabIndex = 11;
@@ -171,7 +178,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(177, 178);
+            this.label5.Location = new System.Drawing.Point(378, 204);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 10;
@@ -180,7 +187,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(177, 140);
+            this.label4.Location = new System.Drawing.Point(378, 166);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(16, 13);
             this.label4.TabIndex = 9;
@@ -189,7 +196,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(177, 100);
+            this.label3.Location = new System.Drawing.Point(378, 126);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 8;
@@ -197,21 +204,21 @@
             // 
             // textBox_Name
             // 
-            this.textBox_Name.Location = new System.Drawing.Point(238, 175);
+            this.textBox_Name.Location = new System.Drawing.Point(439, 201);
             this.textBox_Name.Name = "textBox_Name";
             this.textBox_Name.Size = new System.Drawing.Size(121, 20);
             this.textBox_Name.TabIndex = 7;
             // 
             // textBox_Age
             // 
-            this.textBox_Age.Location = new System.Drawing.Point(238, 215);
+            this.textBox_Age.Location = new System.Drawing.Point(439, 241);
             this.textBox_Age.Name = "textBox_Age";
             this.textBox_Age.Size = new System.Drawing.Size(121, 20);
             this.textBox_Age.TabIndex = 6;
             // 
             // textBox_Food
             // 
-            this.textBox_Food.Location = new System.Drawing.Point(238, 257);
+            this.textBox_Food.Location = new System.Drawing.Point(439, 283);
             this.textBox_Food.Name = "textBox_Food";
             this.textBox_Food.Size = new System.Drawing.Size(121, 20);
             this.textBox_Food.TabIndex = 5;
@@ -225,7 +232,7 @@
             "Healthy",
             "Sick",
             "Gluefactory"});
-            this.textBox_Status.Location = new System.Drawing.Point(238, 97);
+            this.textBox_Status.Location = new System.Drawing.Point(439, 123);
             this.textBox_Status.Name = "textBox_Status";
             this.textBox_Status.Size = new System.Drawing.Size(121, 21);
             this.textBox_Status.TabIndex = 4;
@@ -240,7 +247,7 @@
             "Pig",
             "Horse",
             "Hen"});
-            this.textBox_Type.Location = new System.Drawing.Point(238, 57);
+            this.textBox_Type.Location = new System.Drawing.Point(439, 83);
             this.textBox_Type.Name = "textBox_Type";
             this.textBox_Type.Size = new System.Drawing.Size(121, 21);
             this.textBox_Type.TabIndex = 3;
@@ -249,7 +256,7 @@
             // textBox_Id
             // 
             this.textBox_Id.BackColor = System.Drawing.Color.White;
-            this.textBox_Id.Location = new System.Drawing.Point(238, 137);
+            this.textBox_Id.Location = new System.Drawing.Point(439, 163);
             this.textBox_Id.Name = "textBox_Id";
             this.textBox_Id.Size = new System.Drawing.Size(121, 20);
             this.textBox_Id.TabIndex = 2;
@@ -257,7 +264,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(198, 14);
+            this.label2.Location = new System.Drawing.Point(399, 40);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(161, 25);
             this.label2.TabIndex = 1;
@@ -266,7 +273,7 @@
             // type
             // 
             this.type.AutoSize = true;
-            this.type.Location = new System.Drawing.Point(177, 60);
+            this.type.Location = new System.Drawing.Point(378, 86);
             this.type.Name = "type";
             this.type.Size = new System.Drawing.Size(31, 13);
             this.type.TabIndex = 0;
@@ -276,7 +283,7 @@
             // 
             this.textBox_Message.AutoSize = true;
             this.textBox_Message.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Message.Location = new System.Drawing.Point(227, 502);
+            this.textBox_Message.Location = new System.Drawing.Point(449, 536);
             this.textBox_Message.Name = "textBox_Message";
             this.textBox_Message.Size = new System.Drawing.Size(74, 20);
             this.textBox_Message.TabIndex = 1;
@@ -291,7 +298,7 @@
             this.tabMenu.Location = new System.Drawing.Point(12, 12);
             this.tabMenu.Name = "tabMenu";
             this.tabMenu.SelectedIndex = 0;
-            this.tabMenu.Size = new System.Drawing.Size(612, 487);
+            this.tabMenu.Size = new System.Drawing.Size(1024, 502);
             this.tabMenu.TabIndex = 2;
             // 
             // tabPage_Info
@@ -301,7 +308,7 @@
             this.tabPage_Info.Controls.Add(this.chart_Food);
             this.tabPage_Info.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Info.Name = "tabPage_Info";
-            this.tabPage_Info.Size = new System.Drawing.Size(604, 461);
+            this.tabPage_Info.Size = new System.Drawing.Size(1016, 476);
             this.tabPage_Info.TabIndex = 2;
             this.tabPage_Info.Text = "Information";
             // 
@@ -309,7 +316,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label8.Location = new System.Drawing.Point(240, 30);
+            this.label8.Location = new System.Drawing.Point(400, 18);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(131, 25);
             this.label8.TabIndex = 1;
@@ -321,37 +328,37 @@
             this.chart_Food.BorderlineColor = System.Drawing.Color.Violet;
             this.chart_Food.BorderSkin.BorderColor = System.Drawing.Color.BlanchedAlmond;
             this.chart_Food.BorderSkin.PageColor = System.Drawing.Color.Violet;
-            chartArea3.AlignmentOrientation = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.None;
-            chartArea3.AlignmentStyle = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentStyles.None;
-            chartArea3.Area3DStyle.Inclination = 20;
-            chartArea3.Area3DStyle.IsRightAngleAxes = false;
-            chartArea3.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
-            chartArea3.Area3DStyle.Rotation = 20;
-            chartArea3.Area3DStyle.WallWidth = 1;
-            chartArea3.AxisX.MajorGrid.Enabled = false;
-            chartArea3.AxisY.MajorGrid.Enabled = false;
-            chartArea3.AxisY.Maximum = 1000D;
-            chartArea3.AxisY.ScaleBreakStyle.LineColor = System.Drawing.Color.Transparent;
-            chartArea3.AxisY.ScaleBreakStyle.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
-            chartArea3.BackColor = System.Drawing.Color.Transparent;
-            chartArea3.BackImageTransparentColor = System.Drawing.Color.BurlyWood;
-            chartArea3.BackImageWrapMode = System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.Scaled;
-            chartArea3.BackSecondaryColor = System.Drawing.Color.CornflowerBlue;
-            chartArea3.BorderColor = System.Drawing.Color.Transparent;
-            chartArea3.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
-            chartArea3.Name = "ChartArea1";
-            this.chart_Food.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart_Food.Legends.Add(legend3);
-            this.chart_Food.Location = new System.Drawing.Point(53, 39);
+            chartArea1.AlignmentOrientation = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.None;
+            chartArea1.AlignmentStyle = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentStyles.None;
+            chartArea1.Area3DStyle.Inclination = 20;
+            chartArea1.Area3DStyle.IsRightAngleAxes = false;
+            chartArea1.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
+            chartArea1.Area3DStyle.Rotation = 20;
+            chartArea1.Area3DStyle.WallWidth = 1;
+            chartArea1.AxisX.MajorGrid.Enabled = false;
+            chartArea1.AxisY.MajorGrid.Enabled = false;
+            chartArea1.AxisY.Maximum = 1000D;
+            chartArea1.AxisY.ScaleBreakStyle.LineColor = System.Drawing.Color.Transparent;
+            chartArea1.AxisY.ScaleBreakStyle.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+            chartArea1.BackColor = System.Drawing.Color.Transparent;
+            chartArea1.BackImageTransparentColor = System.Drawing.Color.BurlyWood;
+            chartArea1.BackImageWrapMode = System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.Scaled;
+            chartArea1.BackSecondaryColor = System.Drawing.Color.CornflowerBlue;
+            chartArea1.BorderColor = System.Drawing.Color.Transparent;
+            chartArea1.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea1.Name = "ChartArea1";
+            this.chart_Food.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart_Food.Legends.Add(legend1);
+            this.chart_Food.Location = new System.Drawing.Point(224, 77);
             this.chart_Food.Name = "chart_Food";
             this.chart_Food.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chart_Food.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.DarkSeaGreen};
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Food";
-            this.chart_Food.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Food";
+            this.chart_Food.Series.Add(series1);
             this.chart_Food.Size = new System.Drawing.Size(501, 310);
             this.chart_Food.TabIndex = 0;
             this.chart_Food.Text = "chart_Food";
@@ -364,7 +371,7 @@
             this.tabPage_Find.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Find.Name = "tabPage_Find";
             this.tabPage_Find.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Find.Size = new System.Drawing.Size(604, 461);
+            this.tabPage_Find.Size = new System.Drawing.Size(1016, 476);
             this.tabPage_Find.TabIndex = 0;
             this.tabPage_Find.Text = "Find";
             // 
@@ -372,7 +379,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label7.Location = new System.Drawing.Point(253, 2);
+            this.label7.Location = new System.Drawing.Point(457, 3);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(50, 25);
             this.label7.TabIndex = 3;
@@ -387,13 +394,20 @@
             this.tabControl1.Location = new System.Drawing.Point(6, 19);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(593, 433);
+            this.tabControl1.Size = new System.Drawing.Size(999, 443);
             this.tabControl1.TabIndex = 4;
             // 
             // tabPage1
             // 
             this.tabPage1.AutoScroll = true;
             this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.label9);
+            this.tabPage1.Controls.Add(this.label10);
+            this.tabPage1.Controls.Add(this.label11);
+            this.tabPage1.Controls.Add(this.label12);
+            this.tabPage1.Controls.Add(this.label13);
+            this.tabPage1.Controls.Add(this.label14);
             this.tabPage1.Controls.Add(this.button_Remove);
             this.tabPage1.Controls.Add(this.button_Update);
             this.tabPage1.Controls.Add(this.resetToolStrip);
@@ -405,13 +419,13 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(585, 407);
+            this.tabPage1.Size = new System.Drawing.Size(991, 417);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Animals";
             // 
             // button_Remove
             // 
-            this.button_Remove.Location = new System.Drawing.Point(124, 371);
+            this.button_Remove.Location = new System.Drawing.Point(127, 373);
             this.button_Remove.Name = "button_Remove";
             this.button_Remove.Size = new System.Drawing.Size(75, 23);
             this.button_Remove.TabIndex = 9;
@@ -421,7 +435,7 @@
             // 
             // button_Update
             // 
-            this.button_Update.Location = new System.Drawing.Point(504, 371);
+            this.button_Update.Location = new System.Drawing.Point(892, 371);
             this.button_Update.Name = "button_Update";
             this.button_Update.Size = new System.Drawing.Size(75, 23);
             this.button_Update.TabIndex = 8;
@@ -434,7 +448,7 @@
             this.resetToolStrip.Dock = System.Windows.Forms.DockStyle.None;
             this.resetToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.resetToolStripButton});
-            this.resetToolStrip.Location = new System.Drawing.Point(3, 369);
+            this.resetToolStrip.Location = new System.Drawing.Point(6, 371);
             this.resetToolStrip.Name = "resetToolStrip";
             this.resetToolStrip.Size = new System.Drawing.Size(78, 25);
             this.resetToolStrip.TabIndex = 3;
@@ -450,7 +464,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(109, 6);
+            this.button4.Location = new System.Drawing.Point(112, 8);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 20);
             this.button4.TabIndex = 7;
@@ -470,7 +484,7 @@
             "3001",
             "3002"});
             this.textBox_FindById.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.textBox_FindById.Location = new System.Drawing.Point(6, 6);
+            this.textBox_FindById.Location = new System.Drawing.Point(9, 8);
             this.textBox_FindById.Name = "textBox_FindById";
             this.textBox_FindById.Size = new System.Drawing.Size(97, 20);
             this.textBox_FindById.TabIndex = 6;
@@ -484,14 +498,14 @@
             "Pig",
             "Horse",
             "Hen"});
-            this.combo_FindType.Location = new System.Drawing.Point(6, 41);
+            this.combo_FindType.Location = new System.Drawing.Point(9, 43);
             this.combo_FindType.Name = "combo_FindType";
             this.combo_FindType.Size = new System.Drawing.Size(97, 21);
             this.combo_FindType.TabIndex = 5;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(109, 41);
+            this.button3.Location = new System.Drawing.Point(112, 43);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 21);
             this.button3.TabIndex = 4;
@@ -514,9 +528,9 @@
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10});
             this.dataGridView_Animals.DataSource = this.animalsBindingSource;
-            this.dataGridView_Animals.Location = new System.Drawing.Point(3, 76);
+            this.dataGridView_Animals.Location = new System.Drawing.Point(9, 70);
             this.dataGridView_Animals.Name = "dataGridView_Animals";
-            this.dataGridView_Animals.Size = new System.Drawing.Size(576, 290);
+            this.dataGridView_Animals.Size = new System.Drawing.Size(646, 290);
             this.dataGridView_Animals.TabIndex = 0;
             this.dataGridView_Animals.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Animals_CellClick);
             // 
@@ -599,7 +613,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(585, 407);
+            this.tabPage3.Size = new System.Drawing.Size(991, 417);
             this.tabPage3.TabIndex = 1;
             this.tabPage3.Text = "Food";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -650,7 +664,7 @@
             this.tabPage4.Controls.Add(this.dataGridView3);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(585, 407);
+            this.tabPage4.Size = new System.Drawing.Size(991, 417);
             this.tabPage4.TabIndex = 2;
             this.tabPage4.Text = "Buildings";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -683,7 +697,7 @@
             // 
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(585, 407);
+            this.tabPage5.Size = new System.Drawing.Size(991, 417);
             this.tabPage5.TabIndex = 3;
             this.tabPage5.Text = "Boxes";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -712,7 +726,7 @@
             this.tabPage_Create.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Create.Name = "tabPage_Create";
             this.tabPage_Create.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Create.Size = new System.Drawing.Size(604, 461);
+            this.tabPage_Create.Size = new System.Drawing.Size(1016, 476);
             this.tabPage_Create.TabIndex = 1;
             this.tabPage_Create.Text = "Create";
             // 
@@ -728,12 +742,76 @@
             // 
             this.buildingsTableAdapter.ClearBeforeFill = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(700, 173);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(31, 13);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Type";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(700, 329);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(52, 13);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "FoodTwo";
+            this.label9.Visible = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(700, 293);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(31, 13);
+            this.label10.TabIndex = 20;
+            this.label10.Text = "Food";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(700, 251);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(26, 13);
+            this.label11.TabIndex = 19;
+            this.label11.Text = "Age";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(700, 211);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(35, 13);
+            this.label12.TabIndex = 18;
+            this.label12.Text = "Name";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(700, 94);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(16, 13);
+            this.label13.TabIndex = 17;
+            this.label13.Text = "Id";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(700, 133);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(37, 13);
+            this.label14.TabIndex = 16;
+            this.label14.Text = "Status";
+            // 
             // FarmITDesktopApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(634, 561);
+            this.ClientSize = new System.Drawing.Size(1052, 573);
             this.Controls.Add(this.tabMenu);
             this.Controls.Add(this.textBox_Message);
             this.Name = "FarmITDesktopApp";
@@ -828,5 +906,12 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button_Update;
         private System.Windows.Forms.Button button_Remove;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
     }
 }
