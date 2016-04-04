@@ -148,14 +148,19 @@ namespace FarmITApp.View
             if(remove== DialogResult.Yes)
             {
                 textBox_Message.Text = "You just deleted an animal";
-                
-            }else if(remove == DialogResult.No) {
-
-
-                textBox_Message.Text = "No Animal deleted "; ;
-
+                textBox_Message.Show();
             }
-
+            else if(remove == DialogResult.No) {
+                textBox_Message.Text = "No Animal deleted "; 
+                textBox_Message.Show();
+            }
+        }
+        private void button_Reset_Click(object sender, EventArgs e)
+        {
+            textBox_Food.Text = "";
+            textBox_FoodTwo.Text = "";
+            textBox_Name.Text = "";
+            textBox_Age.Text = "";
         }
     }
 }
