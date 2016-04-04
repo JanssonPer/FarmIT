@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.button_Reset = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.foodTwo = new System.Windows.Forms.Label();
@@ -58,6 +58,13 @@
             this.label7 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.UFoodTwo = new System.Windows.Forms.Label();
+            this.UFood = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.button_Remove = new System.Windows.Forms.Button();
             this.button_Update = new System.Windows.Forms.Button();
             this.resetToolStrip = new System.Windows.Forms.ToolStrip();
@@ -93,13 +100,15 @@
             this.animalsTableAdapter = new FarmITApp.FarmITDataSetTableAdapters.AnimalsTableAdapter();
             this.foodsTableAdapter = new FarmITApp.FarmITDataSetTableAdapters.FoodsTableAdapter();
             this.buildingsTableAdapter = new FarmITApp.FarmITDataSetTableAdapters.BuildingsTableAdapter();
-            this.label1 = new System.Windows.Forms.Label();
+            this.textBox_UId = new System.Windows.Forms.TextBox();
+            this.textBox_UStatus = new System.Windows.Forms.TextBox();
+            this.textBox_UType = new System.Windows.Forms.TextBox();
+            this.textBox_UName = new System.Windows.Forms.TextBox();
+            this.textBox_UAge = new System.Windows.Forms.TextBox();
+            this.textBox_UFood = new System.Windows.Forms.TextBox();
+            this.textBox_UFoodTwo = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.tabMenu.SuspendLayout();
             this.tabPage_Info.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_Food)).BeginInit();
@@ -328,37 +337,37 @@
             this.chart_Food.BorderlineColor = System.Drawing.Color.Violet;
             this.chart_Food.BorderSkin.BorderColor = System.Drawing.Color.BlanchedAlmond;
             this.chart_Food.BorderSkin.PageColor = System.Drawing.Color.Violet;
-            chartArea1.AlignmentOrientation = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.None;
-            chartArea1.AlignmentStyle = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentStyles.None;
-            chartArea1.Area3DStyle.Inclination = 20;
-            chartArea1.Area3DStyle.IsRightAngleAxes = false;
-            chartArea1.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
-            chartArea1.Area3DStyle.Rotation = 20;
-            chartArea1.Area3DStyle.WallWidth = 1;
-            chartArea1.AxisX.MajorGrid.Enabled = false;
-            chartArea1.AxisY.MajorGrid.Enabled = false;
-            chartArea1.AxisY.Maximum = 1000D;
-            chartArea1.AxisY.ScaleBreakStyle.LineColor = System.Drawing.Color.Transparent;
-            chartArea1.AxisY.ScaleBreakStyle.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
-            chartArea1.BackColor = System.Drawing.Color.Transparent;
-            chartArea1.BackImageTransparentColor = System.Drawing.Color.BurlyWood;
-            chartArea1.BackImageWrapMode = System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.Scaled;
-            chartArea1.BackSecondaryColor = System.Drawing.Color.CornflowerBlue;
-            chartArea1.BorderColor = System.Drawing.Color.Transparent;
-            chartArea1.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
-            chartArea1.Name = "ChartArea1";
-            this.chart_Food.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart_Food.Legends.Add(legend1);
+            chartArea2.AlignmentOrientation = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.None;
+            chartArea2.AlignmentStyle = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentStyles.None;
+            chartArea2.Area3DStyle.Inclination = 20;
+            chartArea2.Area3DStyle.IsRightAngleAxes = false;
+            chartArea2.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
+            chartArea2.Area3DStyle.Rotation = 20;
+            chartArea2.Area3DStyle.WallWidth = 1;
+            chartArea2.AxisX.MajorGrid.Enabled = false;
+            chartArea2.AxisY.MajorGrid.Enabled = false;
+            chartArea2.AxisY.Maximum = 1000D;
+            chartArea2.AxisY.ScaleBreakStyle.LineColor = System.Drawing.Color.Transparent;
+            chartArea2.AxisY.ScaleBreakStyle.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+            chartArea2.BackColor = System.Drawing.Color.Transparent;
+            chartArea2.BackImageTransparentColor = System.Drawing.Color.BurlyWood;
+            chartArea2.BackImageWrapMode = System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.Scaled;
+            chartArea2.BackSecondaryColor = System.Drawing.Color.CornflowerBlue;
+            chartArea2.BorderColor = System.Drawing.Color.Transparent;
+            chartArea2.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea2.Name = "ChartArea1";
+            this.chart_Food.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart_Food.Legends.Add(legend2);
             this.chart_Food.Location = new System.Drawing.Point(224, 77);
             this.chart_Food.Name = "chart_Food";
             this.chart_Food.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chart_Food.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.DarkSeaGreen};
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Food";
-            this.chart_Food.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Food";
+            this.chart_Food.Series.Add(series2);
             this.chart_Food.Size = new System.Drawing.Size(501, 310);
             this.chart_Food.TabIndex = 0;
             this.chart_Food.Text = "chart_Food";
@@ -401,9 +410,16 @@
             // 
             this.tabPage1.AutoScroll = true;
             this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.tabPage1.Controls.Add(this.textBox_UFoodTwo);
+            this.tabPage1.Controls.Add(this.textBox_UFood);
+            this.tabPage1.Controls.Add(this.textBox_UAge);
+            this.tabPage1.Controls.Add(this.textBox_UName);
+            this.tabPage1.Controls.Add(this.textBox_UType);
+            this.tabPage1.Controls.Add(this.textBox_UStatus);
+            this.tabPage1.Controls.Add(this.textBox_UId);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.label9);
-            this.tabPage1.Controls.Add(this.label10);
+            this.tabPage1.Controls.Add(this.UFoodTwo);
+            this.tabPage1.Controls.Add(this.UFood);
             this.tabPage1.Controls.Add(this.label11);
             this.tabPage1.Controls.Add(this.label12);
             this.tabPage1.Controls.Add(this.label13);
@@ -416,12 +432,78 @@
             this.tabPage1.Controls.Add(this.combo_FindType);
             this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.dataGridView_Animals);
+            this.tabPage1.Controls.Add(this.label9);
+            this.tabPage1.Controls.Add(this.textBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(991, 417);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Animals";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(700, 152);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(31, 13);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Type";
+            // 
+            // UFoodTwo
+            // 
+            this.UFoodTwo.AutoSize = true;
+            this.UFoodTwo.Location = new System.Drawing.Point(700, 343);
+            this.UFoodTwo.Name = "UFoodTwo";
+            this.UFoodTwo.Size = new System.Drawing.Size(52, 13);
+            this.UFoodTwo.TabIndex = 21;
+            this.UFoodTwo.Text = "FoodTwo";
+            this.UFoodTwo.Visible = false;
+            // 
+            // UFood
+            // 
+            this.UFood.AutoSize = true;
+            this.UFood.Location = new System.Drawing.Point(700, 304);
+            this.UFood.Name = "UFood";
+            this.UFood.Size = new System.Drawing.Size(31, 13);
+            this.UFood.TabIndex = 20;
+            this.UFood.Text = "Food";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(700, 230);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(26, 13);
+            this.label11.TabIndex = 19;
+            this.label11.Text = "Age";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(700, 190);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(35, 13);
+            this.label12.TabIndex = 18;
+            this.label12.Text = "Name";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(700, 73);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(16, 13);
+            this.label13.TabIndex = 17;
+            this.label13.Text = "Id";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(700, 112);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(37, 13);
+            this.label14.TabIndex = 16;
+            this.label14.Text = "Status";
             // 
             // button_Remove
             // 
@@ -742,69 +824,70 @@
             // 
             this.buildingsTableAdapter.ClearBeforeFill = true;
             // 
-            // label1
+            // textBox_UId
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(700, 173);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 13);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Type";
+            this.textBox_UId.Location = new System.Drawing.Point(786, 70);
+            this.textBox_UId.Name = "textBox_UId";
+            this.textBox_UId.Size = new System.Drawing.Size(100, 20);
+            this.textBox_UId.TabIndex = 22;
+            // 
+            // textBox_UStatus
+            // 
+            this.textBox_UStatus.Location = new System.Drawing.Point(786, 109);
+            this.textBox_UStatus.Name = "textBox_UStatus";
+            this.textBox_UStatus.Size = new System.Drawing.Size(100, 20);
+            this.textBox_UStatus.TabIndex = 23;
+            // 
+            // textBox_UType
+            // 
+            this.textBox_UType.Location = new System.Drawing.Point(786, 149);
+            this.textBox_UType.Name = "textBox_UType";
+            this.textBox_UType.Size = new System.Drawing.Size(100, 20);
+            this.textBox_UType.TabIndex = 24;
+            // 
+            // textBox_UName
+            // 
+            this.textBox_UName.Location = new System.Drawing.Point(786, 187);
+            this.textBox_UName.Name = "textBox_UName";
+            this.textBox_UName.Size = new System.Drawing.Size(100, 20);
+            this.textBox_UName.TabIndex = 25;
+            // 
+            // textBox_UAge
+            // 
+            this.textBox_UAge.Location = new System.Drawing.Point(786, 227);
+            this.textBox_UAge.Name = "textBox_UAge";
+            this.textBox_UAge.Size = new System.Drawing.Size(100, 20);
+            this.textBox_UAge.TabIndex = 26;
+            // 
+            // textBox_UFood
+            // 
+            this.textBox_UFood.Location = new System.Drawing.Point(786, 301);
+            this.textBox_UFood.Name = "textBox_UFood";
+            this.textBox_UFood.Size = new System.Drawing.Size(100, 20);
+            this.textBox_UFood.TabIndex = 27;
+            // 
+            // textBox_UFoodTwo
+            // 
+            this.textBox_UFoodTwo.Location = new System.Drawing.Point(786, 340);
+            this.textBox_UFoodTwo.Name = "textBox_UFoodTwo";
+            this.textBox_UFoodTwo.Size = new System.Drawing.Size(100, 20);
+            this.textBox_UFoodTwo.TabIndex = 28;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(786, 265);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 30;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(700, 329);
+            this.label9.Location = new System.Drawing.Point(700, 268);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(52, 13);
-            this.label9.TabIndex = 21;
-            this.label9.Text = "FoodTwo";
-            this.label9.Visible = false;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(700, 293);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(31, 13);
-            this.label10.TabIndex = 20;
-            this.label10.Text = "Food";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(700, 251);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(26, 13);
-            this.label11.TabIndex = 19;
-            this.label11.Text = "Age";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(700, 211);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(35, 13);
-            this.label12.TabIndex = 18;
-            this.label12.Text = "Name";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(700, 94);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(16, 13);
-            this.label13.TabIndex = 17;
-            this.label13.Text = "Id";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(700, 133);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(37, 13);
-            this.label14.TabIndex = 16;
-            this.label14.Text = "Status";
+            this.label9.Size = new System.Drawing.Size(26, 13);
+            this.label9.TabIndex = 29;
+            this.label9.Text = "Age";
             // 
             // FarmITDesktopApp
             // 
@@ -907,11 +990,20 @@
         private System.Windows.Forms.Button button_Update;
         private System.Windows.Forms.Button button_Remove;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label UFoodTwo;
+        private System.Windows.Forms.Label UFood;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBox_UFoodTwo;
+        private System.Windows.Forms.TextBox textBox_UFood;
+        private System.Windows.Forms.TextBox textBox_UAge;
+        private System.Windows.Forms.TextBox textBox_UName;
+        private System.Windows.Forms.TextBox textBox_UType;
+        private System.Windows.Forms.TextBox textBox_UStatus;
+        private System.Windows.Forms.TextBox textBox_UId;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

@@ -136,7 +136,35 @@ namespace FarmITApp.View
                 
                 DataGridViewRow row = dataGridView_Animals.Rows[e.RowIndex];
                 textBox_FindById.Text = row.Cells[0].Value.ToString();
-                
+                textBox_UId.Text = row.Cells[0].Value.ToString();
+                textBox_UType.Text = row.Cells[1].Value.ToString();
+                textBox_UId.Text = row.Cells[2].Value.ToString();
+                textBox_UId.Text = row.Cells[3].Value.ToString();
+                textBox_UId.Text = row.Cells[4].Value.ToString();
+                if (textBox_UType.Text.Equals("Horse"))
+                {
+                    textBox_UFood.Text = row.Cells[5].Value.ToString();
+                    textBox_UFoodTwo.Text = row.Cells[6].Value.ToString();
+                    food.Text = "Powerfeed";
+                    UFoodTwo.Text = "Hay";
+                    UFoodTwo.Show();
+                    textBox_UFoodTwo.Show();
+                }
+                else if (textBox_UType.Text.Equals("Hen"))
+                {
+                    textBox_UFood.Text = row.Cells[7].Value.ToString();
+                    UFood.Text = "Oats";
+                    UFoodTwo.Hide();
+                    textBox_UFoodTwo.Hide();
+                }
+                else
+                {
+                    textBox_UFood.Text = row.Cells[5].Value.ToString();
+                    UFood.Text = "Powerfeed";
+                    textBox_UFoodTwo.Hide();
+                    UFoodTwo.Hide();
+                }
+
             }
 
 
