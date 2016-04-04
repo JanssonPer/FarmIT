@@ -26,6 +26,38 @@ namespace FarmITApp.Controller
                 return null;
             }
         }
-        
+
+        public Foods GetFood(String id)
+        {
+            try
+            {
+                long id1 = ((long)(System.Convert.ChangeType(id, typeof(long))));
+                return dal.GetFood(id1);
+            }
+            catch
+            {
+                //Exception
+                return null;
+            }
+
+        }
+
+        public Boxes GetBox(String id)
+        {
+            try
+            {
+                return dal.GetBox(id);
+            }
+            catch
+            {
+                //Exception
+                return null;
+            }
+        }
+
+        public List<Animals> GetAllAnimals()
+        {
+        }
+
     }
 }
