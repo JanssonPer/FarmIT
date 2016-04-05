@@ -81,6 +81,28 @@ namespace FarmITApp.DatabaseAccessLayer
 
         }
 
+        public List<Foods> GetAllFoods()
+        {
+            try
+            {
+                List<Foods> list = context.Foods.ToList();
+                if (list.Count > 0)
+                {
+                    return list;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch
+            {
+                //Exception
+                return null;
+            }
+
+        }
+
         public List<Animals> GetAllAnimalsWhere(string status)
         {
             try
@@ -216,50 +238,6 @@ namespace FarmITApp.DatabaseAccessLayer
                 context.Foods.Remove(f);
 
             }
-
-        }
-
-        public void FeedAllAnimals(Foods f)
-        {
-            try
-            {
-                List<Animals> list = GetAllAnimals();
-
-                Foods powerfeed = GetFood(1);
-                Foods oats = GetFood(2);
-                Foods hay = GetFood(3);
-
-                int totalPowerfeed = 0;
-                int totalOats = 0;
-                int totalHay = 0;
-
-                foreach (Animals a in list)
-                {
-                    if (a.TypeAnimal.Equals("Horse"))
-                    {
-                        totalPowerfeed += (int)a.AmountOfPowerFeed;
-                        totalHay += (int)a.AmountOfHay;
-                    }
-                    else if (a.TypeAnimal.Equals("Hen"))
-                    {
-                        totalOats += (int)a.AmountOfOats;
-                    }
-                    else
-                    {
-                        totalPowerfeed += (int)a.AmountOfPowerFeed;
-                    }
-                    powerfeed.Amount = (int)powerfeed.Amount - totalPowerfeed;
-                    oats.Amount = (int)oats.Amount - totalOats;
-                    hay.Amount = (int)hay.Amount - totalHay;
-                }
-            }
-            catch
-            {
-                //Exception
-                context.Foods.Remove(f);
-
-            }
-
         }
     }
 }
