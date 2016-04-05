@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using FarmITApp.EntityFramework;
+using FarmITApp.EntityFrameworkV2;
 using FarmITApp.DatabaseAccessLayer;
 
 namespace FarmITApp.Controller
@@ -13,7 +13,7 @@ namespace FarmITApp.Controller
         Dal dal = new Dal();
 
         //Get methods
-        public Animals GetAnimal(String id)
+        public Animal GetAnimal(String id)
         {
             try
             {
@@ -27,7 +27,7 @@ namespace FarmITApp.Controller
             }
         }
 
-        public Foods GetFood(String id)
+        public Food GetFood(String id)
         {
             try
             {
@@ -41,7 +41,7 @@ namespace FarmITApp.Controller
             }
         }
 
-        public Boxes GetBox(String id)
+        public Box GetBox(String id)
         {
             try
             {
@@ -54,7 +54,7 @@ namespace FarmITApp.Controller
             }
         }
 
-        public List<Animals> GetAllAnimals()
+        public List<Animal> GetAllAnimals()
         {
             try
             {
@@ -68,24 +68,24 @@ namespace FarmITApp.Controller
         }
 
         //Feed methods
-        public void FeedAllAnimals(Foods f)
+        public void FeedAllAnimals(Food f)
         {
             
-                List<Animals> list = dal.GetAllAnimals();
+                List<Animal> list = dal.GetAllAnimals();
 
-                Foods powerfeed = dal.GetFood(1);
-                Foods oats = dal.GetFood(2);
-                Foods hay = dal.GetFood(3);
+                Food powerfeed = dal.GetFood(1);
+                Food oats = dal.GetFood(2);
+                Food hay = dal.GetFood(3);
 
                 int totalPowerfeed = 0;
                 int totalOats = 0;
                 int totalHay = 0;
 
-                foreach (Animals a in list)
+                foreach (Animal a in list)
                 {
                     if (a.TypeAnimal.Equals("Horse"))
                     {
-                        totalPowerfeed += (int)a.AmountOfPowerFeed;
+                        totalPowerfeed += (int)a.AmountOfPowerfeed;
                         totalHay += (int)a.AmountOfHay;
                     }
                     else if (a.TypeAnimal.Equals("Hen"))
@@ -94,7 +94,7 @@ namespace FarmITApp.Controller
                     }
                     else
                     {
-                        totalPowerfeed += (int)a.AmountOfPowerFeed;
+                        totalPowerfeed += (int)a.AmountOfPowerfeed;
                     }
                     powerfeed.Amount = (int)powerfeed.Amount - totalPowerfeed;
                     oats.Amount = (int)oats.Amount - totalOats;

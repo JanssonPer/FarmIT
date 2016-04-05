@@ -3,22 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using FarmITApp.EntityFramework;
+using FarmITApp.EntityFrameworkV2;
 
 namespace FarmITApp.DatabaseAccessLayer
 {
     class Dal
     {
 
-        LabEntities context = new LabEntities();
+        FarmEntities context = new FarmEntities();
 
 
         // Get Methods 
-        public Animals GetAnimal(long id)
+        public Animal GetAnimal(long id)
         {
             try
             {
-                Animals a = context.Animals.SingleOrDefault(r => r.IdAnimal == id);
+                Animal a = context.Animal.SingleOrDefault(r => r.IdAnimal == id);
                 return a;
             }
             catch
@@ -29,11 +29,11 @@ namespace FarmITApp.DatabaseAccessLayer
 
         }
 
-        public Foods GetFood(long id)
+        public Food GetFood(long id)
         {
             try
             {
-                Foods f = context.Foods.SingleOrDefault(r => r.IdFood == id);
+                Food f = context.Food.SingleOrDefault(r => r.IdFood == id);
                 return f;
             }
             catch
@@ -44,11 +44,11 @@ namespace FarmITApp.DatabaseAccessLayer
 
         }
 
-        public Boxes GetBox(String id)
+        public Box GetBox(String id)
         {
             try
             {
-                Boxes b = context.Boxes.SingleOrDefault(r => r.IdBox == id);
+                Box b = context.Box.SingleOrDefault(r => r.IdBox == id);
                 return b;
             }
             catch
@@ -59,11 +59,11 @@ namespace FarmITApp.DatabaseAccessLayer
 
         }
 
-        public List<Animals> GetAllAnimals()
+        public List<Animal> GetAllAnimals()
         {
             try
             {
-                List<Animals> list = context.Animals.ToList();
+                List<Animal> list = context.Animal.ToList();
                 if (list.Count > 0)
                 {
                     return list;
@@ -81,11 +81,11 @@ namespace FarmITApp.DatabaseAccessLayer
 
         }
 
-        public List<Foods> GetAllFood()
+        public List<Food> GetAllFood()
         {
             try
             {
-                List<Foods> list = context.Foods.ToList();
+                List<Food> list = context.Food.ToList();
                 if (list.Count > 0)
                 {
                     return list;
@@ -103,11 +103,11 @@ namespace FarmITApp.DatabaseAccessLayer
 
         }
 
-        public List<Animals> GetAllAnimalsWhere(string status)
+        public List<Animal> GetAllAnimalsWhere(string status)
         {
             try
             {
-                List<Animals> list = context.Animals.Where(r => r.StatusAnimal == status).ToList();
+                List<Animal> list = context.Animal.Where(r => r.StatusAnimal == status).ToList();
                 if (list.Count > 0)
                 {
                     return list;
@@ -127,55 +127,55 @@ namespace FarmITApp.DatabaseAccessLayer
 
         //Add Methods
 
-        public void AddAnimal(Animals a)
+        public void AddAnimal(Animal a)
         {
             try
             {
-                List<Animals> list = context.Animals.Where(r => r.IdAnimal == a.IdAnimal).ToList();
+                List<Animal> list = context.Animal.Where(r => r.IdAnimal == a.IdAnimal).ToList();
 
                 if (list.Count > 0)
                 {
-                    context.Animals.Add(a);
+                    context.Animal.Add(a);
                     context.SaveChanges();
                 }
             }
             catch
             {
                 //Exception
-                context.Animals.Remove(a);
+                context.Animal.Remove(a);
             }
 
         }
 
         // Remove methods
 
-        public void RemoveAnimal(Animals a)
+        public void RemoveAnimal(Animal a)
         {
             try
             {
-                List<Animals> list = context.Animals.Where(r => r.IdAnimal == a.IdAnimal).ToList();
+                List<Animal> list = context.Animal.Where(r => r.IdAnimal == a.IdAnimal).ToList();
 
                 if (list.Count > 0)
                 {
-                    context.Animals.Remove(a);
+                    context.Animal.Remove(a);
                     context.SaveChanges();
                 }
             }
             catch
             {
                 //Exception
-                context.Animals.Remove(a);
+                context.Animal.Remove(a);
             }
 
         }
 
         //Update Methods
 
-        public void UpdateAnimal(Animals a)
+        public void UpdateAnimal(Animal a)
         {
             try
             {
-                Animals oldAnimal = GetAnimal(a.IdAnimal);
+                Animal oldAnimal = GetAnimal(a.IdAnimal);
 
                 if (oldAnimal != null)
                 {
@@ -187,17 +187,17 @@ namespace FarmITApp.DatabaseAccessLayer
             catch
             {
                 //Exception
-                context.Animals.Remove(a);
+                context.Animal.Remove(a);
 
             }
 
         }
 
-        public void UpdateBox(Boxes b)
+        public void UpdateBox(Box b)
         {
             try
             {
-                Boxes oldBox = GetBox(b.IdBox);
+                Box oldBox = GetBox(b.IdBox);
 
                 if (oldBox != null)
                 {
@@ -209,18 +209,18 @@ namespace FarmITApp.DatabaseAccessLayer
             catch
             {
                 //Exception
-                context.Boxes.Remove(b);
+                context.Box.Remove(b);
 
             }
 
         }
         //Feed Animals
 
-        public void AddFoodAmount(Foods f)
+        public void AddFoodAmount(Food f)
         {
             try
             {
-                Foods oldFood = GetFood(f.IdFood);
+                Food oldFood = GetFood(f.IdFood);
 
 
                 if (oldFood != null)
@@ -235,7 +235,7 @@ namespace FarmITApp.DatabaseAccessLayer
             catch
             {
                 //Exception
-                context.Foods.Remove(f);
+                context.Food.Remove(f);
 
             }
         }

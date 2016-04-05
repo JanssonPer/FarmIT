@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FarmITApp.EntityFramework;
+using FarmITApp.EntityFrameworkV2;
 
 namespace FarmITApp.View
 {
@@ -22,8 +22,12 @@ namespace FarmITApp.View
             try
             {
                 combo_FindType.Text = "Cow";
-                List<Foods> listFoods = controller
-                Foods pf = controller.GetFood(1);
+                List<Food> listFood = controller.GetAllFood();
+                foreach(Food f in listFood){
+                    Console.WriteLine(f.TypeFood); 
+
+                }
+                Food pf = controller.GetFood(1);
                 Console.WriteLine(pf.Amount);
             }
             catch
@@ -49,13 +53,10 @@ namespace FarmITApp.View
 
         private void FarmITDesktopApp_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'farmITDataSet.Buildings' table. You can move, or remove it, as needed.
-            this.buildingsTableAdapter.Fill(this.farmITDataSet.Buildings);
-            // TODO: This line of code loads data into the 'farmITDataSet.Foods' table. You can move, or remove it, as needed.
-            this.foodsTableAdapter.Fill(this.farmITDataSet.Foods);
-            // TODO: This line of code loads data into the 'farmITDataSet.Animals' table. You can move, or remove it, as needed.
-            this.animalsTableAdapter.Fill(this.farmITDataSet.Animals);
-
+            // TODO: This line of code loads data into the 'farmITDataSet.Food' table. You can move, or remove it, as needed.
+            this.foodTableAdapter.Fill(this.farmITDataSet.Food);
+            // TODO: This line of code loads data into the 'farmITDataSet.Animal' table. You can move, or remove it, as needed.
+            this.animalTableAdapter.Fill(this.farmITDataSet.Animal);
         }
 
 
@@ -65,7 +66,7 @@ namespace FarmITApp.View
         {
             try
             {
-                this.animalsTableAdapter.FindById(this.farmITDataSet.Animals, ((long)(System.Convert.ChangeType(textBox_FindById.Text, typeof(long)))));
+                this.animalTableAdapter.FindById(this.farmITDataSet.Animal, ((long)(System.Convert.ChangeType(textBox_FindById.Text, typeof(long)))));
             }
             catch (System.Exception ex)
             {
@@ -101,7 +102,7 @@ namespace FarmITApp.View
         {
             try
             {
-                this.animalsTableAdapter.Reset(this.farmITDataSet.Animals);
+                this.animalTableAdapter.Reset(this.farmITDataSet.Animal);
             }
             catch (System.Exception ex)
             {
@@ -114,7 +115,7 @@ namespace FarmITApp.View
         {
             try
             {
-                this.animalsTableAdapter.Reset(this.farmITDataSet.Animals);
+                this.animalTableAdapter.Reset(this.farmITDataSet.Animal);
             }
             catch (System.Exception ex)
             {
@@ -127,7 +128,7 @@ namespace FarmITApp.View
         {
             try
             {
-                Animals a = controller.GetAnimal(((long)(System.Convert.ChangeType(textBox_FindById.Text, typeof(long)))));
+                Animal a = controller.GetAnimal(((long)(System.Convert.ChangeType(textBox_FindById.Text, typeof(long)))));
                 a.Age = textBox_UAge.Text;
                 a.Name = textBox_UName.Text;
                 a.TypeAnimal = textBox_UType.Text;
@@ -135,7 +136,7 @@ namespace FarmITApp.View
                 a.IdBox = textBox_UBox.Text;
                 if (a.TypeAnimal.Equals("Horse"))
                 {
-                    a.AmountOfPowerFeed = int.Parse(textBox_UFood.Text);
+                    a.AmountOfPowerfeed = int.Parse(textBox_UFood.Text);
                     a.AmountOfHay = int.Parse(textBox_UFoodTwo.Text);
                 }
                 else if (a.TypeAnimal.Equals("Hen"))
@@ -144,13 +145,14 @@ namespace FarmITApp.View
                 }
                 else
                 {
-                    a.AmountOfPowerFeed = int.Parse(textBox_UFood.Text);
+                    a.AmountOfPowerfeed = int.Parse(textBox_UFood.Text);
                 }
 
                 controller.UpdateAnimal(a);
+                
                 try
                 {
-                    this.animalsTableAdapter.Reset(this.farmITDataSet.Animals);
+                    this.animalTableAdapter.Reset(this.farmITDataSet.Animal);
                 }
                 catch (System.Exception ex)
                 {
@@ -213,11 +215,11 @@ namespace FarmITApp.View
 
                 textBox_Message.Text = "You just deleted an animal";
                 textBox_Message.Show();
-                Animals a = controller.GetAnimal(long.Parse(textBox_UId.Text));
+                Animal a = controller.GetAnimal(long.Parse(textBox_UId.Text));
                 controller.RemoveAnimal(a);
                 try
                 {
-                    this.animalsTableAdapter.Reset(this.farmITDataSet.Animals);
+                    this.animalTableAdapter.Reset(this.farmITDataSet.Animal);
                 }
                 catch (System.Exception ex)
                 {
@@ -243,12 +245,13 @@ namespace FarmITApp.View
         {
             try
             {
-                this.animalsTableAdapter.Find_Type(this.farmITDataSet.Animals, combo_FindType.Text);
+                this.animalTableAdapter.Find_Type(this.farmITDataSet.Animal, combo_FindType.Text);
             }
             catch (System.Exception ex)
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
         }
+        
     }
 }
