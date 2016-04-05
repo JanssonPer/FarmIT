@@ -81,7 +81,7 @@ namespace FarmITApp.DatabaseAccessLayer
 
         }
 
-        public List<Foods> GetAllFoods()
+        public List<Foods> GetAllFood()
         {
             try
             {
