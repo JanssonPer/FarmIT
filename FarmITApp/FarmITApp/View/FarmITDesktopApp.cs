@@ -172,7 +172,6 @@ namespace FarmITApp.View
             {
                 button_Update.Show();
                 DataGridViewRow row = dataGridView_Animals.Rows[e.RowIndex];
-                textBox_FindById.Text = row.Cells[0].Value.ToString();
                 textBox_UId.Text = row.Cells[0].Value.ToString();
                 textBox_UType.Text = row.Cells[1].Value.ToString();
                 textBox_UAge.Text = row.Cells[2].Value.ToString();
@@ -213,8 +212,11 @@ namespace FarmITApp.View
             DialogResult remove = MessageBox.Show("Do you really want to delete an animal?", "Delete", MessageBoxButtons.YesNo);
             if (remove == DialogResult.Yes)
             {
+
                 textBox_Message.Text = "You just deleted an animal";
                 textBox_Message.Show();
+                Animals a = controller.GetAnimal(long.Parse(textBox_UId.Text));
+                controller.RemoveAnimal(a);
                 try
                 {
                     this.animalsTableAdapter.Reset(this.farmITDataSet.Animals);
