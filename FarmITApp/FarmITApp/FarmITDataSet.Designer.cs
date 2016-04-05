@@ -24,15 +24,15 @@ namespace FarmITApp {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class FarmITDataSet : global::System.Data.DataSet {
         
-        private AnimalsDataTable tableAnimals;
+        private AnimalDataTable tableAnimal;
         
-        private BoxesDataTable tableBoxes;
+        private BoxDataTable tableBox;
         
-        private BuildingsDataTable tableBuildings;
+        private BuildingDataTable tableBuilding;
         
-        private EatsDataTable tableEats;
+        private EatDataTable tableEat;
         
-        private FoodsDataTable tableFoods;
+        private FoodDataTable tableFood;
         
         private global::System.Data.DataRelation relationFK_o70uifc6d9hbo0cnkdgdbwfts;
         
@@ -70,20 +70,20 @@ namespace FarmITApp {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Animals"] != null)) {
-                    base.Tables.Add(new AnimalsDataTable(ds.Tables["Animals"]));
+                if ((ds.Tables["Animal"] != null)) {
+                    base.Tables.Add(new AnimalDataTable(ds.Tables["Animal"]));
                 }
-                if ((ds.Tables["Boxes"] != null)) {
-                    base.Tables.Add(new BoxesDataTable(ds.Tables["Boxes"]));
+                if ((ds.Tables["Box"] != null)) {
+                    base.Tables.Add(new BoxDataTable(ds.Tables["Box"]));
                 }
-                if ((ds.Tables["Buildings"] != null)) {
-                    base.Tables.Add(new BuildingsDataTable(ds.Tables["Buildings"]));
+                if ((ds.Tables["Building"] != null)) {
+                    base.Tables.Add(new BuildingDataTable(ds.Tables["Building"]));
                 }
-                if ((ds.Tables["Eats"] != null)) {
-                    base.Tables.Add(new EatsDataTable(ds.Tables["Eats"]));
+                if ((ds.Tables["Eat"] != null)) {
+                    base.Tables.Add(new EatDataTable(ds.Tables["Eat"]));
                 }
-                if ((ds.Tables["Foods"] != null)) {
-                    base.Tables.Add(new FoodsDataTable(ds.Tables["Foods"]));
+                if ((ds.Tables["Food"] != null)) {
+                    base.Tables.Add(new FoodDataTable(ds.Tables["Food"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -107,9 +107,9 @@ namespace FarmITApp {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public AnimalsDataTable Animals {
+        public AnimalDataTable Animal {
             get {
-                return this.tableAnimals;
+                return this.tableAnimal;
             }
         }
         
@@ -117,9 +117,9 @@ namespace FarmITApp {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public BoxesDataTable Boxes {
+        public BoxDataTable Box {
             get {
-                return this.tableBoxes;
+                return this.tableBox;
             }
         }
         
@@ -127,9 +127,9 @@ namespace FarmITApp {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public BuildingsDataTable Buildings {
+        public BuildingDataTable Building {
             get {
-                return this.tableBuildings;
+                return this.tableBuilding;
             }
         }
         
@@ -137,9 +137,9 @@ namespace FarmITApp {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public EatsDataTable Eats {
+        public EatDataTable Eat {
             get {
-                return this.tableEats;
+                return this.tableEat;
             }
         }
         
@@ -147,9 +147,9 @@ namespace FarmITApp {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public FoodsDataTable Foods {
+        public FoodDataTable Food {
             get {
-                return this.tableFoods;
+                return this.tableFood;
             }
         }
         
@@ -220,20 +220,20 @@ namespace FarmITApp {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Animals"] != null)) {
-                    base.Tables.Add(new AnimalsDataTable(ds.Tables["Animals"]));
+                if ((ds.Tables["Animal"] != null)) {
+                    base.Tables.Add(new AnimalDataTable(ds.Tables["Animal"]));
                 }
-                if ((ds.Tables["Boxes"] != null)) {
-                    base.Tables.Add(new BoxesDataTable(ds.Tables["Boxes"]));
+                if ((ds.Tables["Box"] != null)) {
+                    base.Tables.Add(new BoxDataTable(ds.Tables["Box"]));
                 }
-                if ((ds.Tables["Buildings"] != null)) {
-                    base.Tables.Add(new BuildingsDataTable(ds.Tables["Buildings"]));
+                if ((ds.Tables["Building"] != null)) {
+                    base.Tables.Add(new BuildingDataTable(ds.Tables["Building"]));
                 }
-                if ((ds.Tables["Eats"] != null)) {
-                    base.Tables.Add(new EatsDataTable(ds.Tables["Eats"]));
+                if ((ds.Tables["Eat"] != null)) {
+                    base.Tables.Add(new EatDataTable(ds.Tables["Eat"]));
                 }
-                if ((ds.Tables["Foods"] != null)) {
-                    base.Tables.Add(new FoodsDataTable(ds.Tables["Foods"]));
+                if ((ds.Tables["Food"] != null)) {
+                    base.Tables.Add(new FoodDataTable(ds.Tables["Food"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -268,34 +268,34 @@ namespace FarmITApp {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableAnimals = ((AnimalsDataTable)(base.Tables["Animals"]));
+            this.tableAnimal = ((AnimalDataTable)(base.Tables["Animal"]));
             if ((initTable == true)) {
-                if ((this.tableAnimals != null)) {
-                    this.tableAnimals.InitVars();
+                if ((this.tableAnimal != null)) {
+                    this.tableAnimal.InitVars();
                 }
             }
-            this.tableBoxes = ((BoxesDataTable)(base.Tables["Boxes"]));
+            this.tableBox = ((BoxDataTable)(base.Tables["Box"]));
             if ((initTable == true)) {
-                if ((this.tableBoxes != null)) {
-                    this.tableBoxes.InitVars();
+                if ((this.tableBox != null)) {
+                    this.tableBox.InitVars();
                 }
             }
-            this.tableBuildings = ((BuildingsDataTable)(base.Tables["Buildings"]));
+            this.tableBuilding = ((BuildingDataTable)(base.Tables["Building"]));
             if ((initTable == true)) {
-                if ((this.tableBuildings != null)) {
-                    this.tableBuildings.InitVars();
+                if ((this.tableBuilding != null)) {
+                    this.tableBuilding.InitVars();
                 }
             }
-            this.tableEats = ((EatsDataTable)(base.Tables["Eats"]));
+            this.tableEat = ((EatDataTable)(base.Tables["Eat"]));
             if ((initTable == true)) {
-                if ((this.tableEats != null)) {
-                    this.tableEats.InitVars();
+                if ((this.tableEat != null)) {
+                    this.tableEat.InitVars();
                 }
             }
-            this.tableFoods = ((FoodsDataTable)(base.Tables["Foods"]));
+            this.tableFood = ((FoodDataTable)(base.Tables["Food"]));
             if ((initTable == true)) {
-                if ((this.tableFoods != null)) {
-                    this.tableFoods.InitVars();
+                if ((this.tableFood != null)) {
+                    this.tableFood.InitVars();
                 }
             }
             this.relationFK_o70uifc6d9hbo0cnkdgdbwfts = this.Relations["FK_o70uifc6d9hbo0cnkdgdbwfts"];
@@ -312,61 +312,61 @@ namespace FarmITApp {
             this.Namespace = "http://tempuri.org/FarmITDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableAnimals = new AnimalsDataTable();
-            base.Tables.Add(this.tableAnimals);
-            this.tableBoxes = new BoxesDataTable();
-            base.Tables.Add(this.tableBoxes);
-            this.tableBuildings = new BuildingsDataTable();
-            base.Tables.Add(this.tableBuildings);
-            this.tableEats = new EatsDataTable();
-            base.Tables.Add(this.tableEats);
-            this.tableFoods = new FoodsDataTable();
-            base.Tables.Add(this.tableFoods);
+            this.tableAnimal = new AnimalDataTable();
+            base.Tables.Add(this.tableAnimal);
+            this.tableBox = new BoxDataTable();
+            base.Tables.Add(this.tableBox);
+            this.tableBuilding = new BuildingDataTable();
+            base.Tables.Add(this.tableBuilding);
+            this.tableEat = new EatDataTable();
+            base.Tables.Add(this.tableEat);
+            this.tableFood = new FoodDataTable();
+            base.Tables.Add(this.tableFood);
             this.relationFK_o70uifc6d9hbo0cnkdgdbwfts = new global::System.Data.DataRelation("FK_o70uifc6d9hbo0cnkdgdbwfts", new global::System.Data.DataColumn[] {
-                        this.tableBoxes.IdBoxColumn}, new global::System.Data.DataColumn[] {
-                        this.tableAnimals.IdBoxColumn}, false);
+                        this.tableBox.IdBoxColumn}, new global::System.Data.DataColumn[] {
+                        this.tableAnimal.IdBoxColumn}, false);
             this.Relations.Add(this.relationFK_o70uifc6d9hbo0cnkdgdbwfts);
             this.relationFK_dd931cgstt6jb67x2gt5qj3xa = new global::System.Data.DataRelation("FK_dd931cgstt6jb67x2gt5qj3xa", new global::System.Data.DataColumn[] {
-                        this.tableBuildings.IdBuildingColumn}, new global::System.Data.DataColumn[] {
-                        this.tableBoxes.IdBuildingColumn}, false);
+                        this.tableBuilding.IdBuildingColumn}, new global::System.Data.DataColumn[] {
+                        this.tableBox.IdBuildingColumn}, false);
             this.Relations.Add(this.relationFK_dd931cgstt6jb67x2gt5qj3xa);
             this.relationFK_2tpds16mm2l88n3s1f869rodi = new global::System.Data.DataRelation("FK_2tpds16mm2l88n3s1f869rodi", new global::System.Data.DataColumn[] {
-                        this.tableFoods.IdFoodColumn}, new global::System.Data.DataColumn[] {
-                        this.tableEats.IdFoodColumn}, false);
+                        this.tableFood.IdFoodColumn}, new global::System.Data.DataColumn[] {
+                        this.tableEat.IdFoodColumn}, false);
             this.Relations.Add(this.relationFK_2tpds16mm2l88n3s1f869rodi);
             this.relationFK_qt8cyyohj81abywvvtui1kxgv = new global::System.Data.DataRelation("FK_qt8cyyohj81abywvvtui1kxgv", new global::System.Data.DataColumn[] {
-                        this.tableAnimals.IdAnimalColumn}, new global::System.Data.DataColumn[] {
-                        this.tableEats.IdAnimalColumn}, false);
+                        this.tableAnimal.IdAnimalColumn}, new global::System.Data.DataColumn[] {
+                        this.tableEat.IdAnimalColumn}, false);
             this.Relations.Add(this.relationFK_qt8cyyohj81abywvvtui1kxgv);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeAnimals() {
+        private bool ShouldSerializeAnimal() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeBoxes() {
+        private bool ShouldSerializeBox() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeBuildings() {
+        private bool ShouldSerializeBuilding() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeEats() {
+        private bool ShouldSerializeEat() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeFoods() {
+        private bool ShouldSerializeFood() {
             return false;
         }
         
@@ -426,26 +426,26 @@ namespace FarmITApp {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void AnimalsRowChangeEventHandler(object sender, AnimalsRowChangeEvent e);
+        public delegate void AnimalRowChangeEventHandler(object sender, AnimalRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void BoxesRowChangeEventHandler(object sender, BoxesRowChangeEvent e);
+        public delegate void BoxRowChangeEventHandler(object sender, BoxRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void BuildingsRowChangeEventHandler(object sender, BuildingsRowChangeEvent e);
+        public delegate void BuildingRowChangeEventHandler(object sender, BuildingRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void EatsRowChangeEventHandler(object sender, EatsRowChangeEvent e);
+        public delegate void EatRowChangeEventHandler(object sender, EatRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void FoodsRowChangeEventHandler(object sender, FoodsRowChangeEvent e);
+        public delegate void FoodRowChangeEventHandler(object sender, FoodRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class AnimalsDataTable : global::System.Data.TypedTableBase<AnimalsRow> {
+        public partial class AnimalDataTable : global::System.Data.TypedTableBase<AnimalRow> {
             
             private global::System.Data.DataColumn columnTypeAnimal;
             
@@ -457,7 +457,7 @@ namespace FarmITApp {
             
             private global::System.Data.DataColumn columnStatusAnimal;
             
-            private global::System.Data.DataColumn columnAmountOfPowerFeed;
+            private global::System.Data.DataColumn columnAmountOfPowerfeed;
             
             private global::System.Data.DataColumn columnAmountOfHay;
             
@@ -467,8 +467,8 @@ namespace FarmITApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public AnimalsDataTable() {
-                this.TableName = "Animals";
+            public AnimalDataTable() {
+                this.TableName = "Animal";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -476,7 +476,7 @@ namespace FarmITApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal AnimalsDataTable(global::System.Data.DataTable table) {
+            internal AnimalDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -493,7 +493,7 @@ namespace FarmITApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected AnimalsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected AnimalDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -540,9 +540,9 @@ namespace FarmITApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn AmountOfPowerFeedColumn {
+            public global::System.Data.DataColumn AmountOfPowerfeedColumn {
                 get {
-                    return this.columnAmountOfPowerFeed;
+                    return this.columnAmountOfPowerfeed;
                 }
             }
             
@@ -581,63 +581,63 @@ namespace FarmITApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public AnimalsRow this[int index] {
+            public AnimalRow this[int index] {
                 get {
-                    return ((AnimalsRow)(this.Rows[index]));
+                    return ((AnimalRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event AnimalsRowChangeEventHandler AnimalsRowChanging;
+            public event AnimalRowChangeEventHandler AnimalRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event AnimalsRowChangeEventHandler AnimalsRowChanged;
+            public event AnimalRowChangeEventHandler AnimalRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event AnimalsRowChangeEventHandler AnimalsRowDeleting;
+            public event AnimalRowChangeEventHandler AnimalRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event AnimalsRowChangeEventHandler AnimalsRowDeleted;
+            public event AnimalRowChangeEventHandler AnimalRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddAnimalsRow(AnimalsRow row) {
+            public void AddAnimalRow(AnimalRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public AnimalsRow AddAnimalsRow(string TypeAnimal, long IdAnimal, string Age, string Name, string StatusAnimal, int AmountOfPowerFeed, int AmountOfHay, int AmountOfOats, BoxesRow parentBoxesRowByFK_o70uifc6d9hbo0cnkdgdbwfts) {
-                AnimalsRow rowAnimalsRow = ((AnimalsRow)(this.NewRow()));
+            public AnimalRow AddAnimalRow(string TypeAnimal, long IdAnimal, string Age, string Name, string StatusAnimal, int AmountOfPowerfeed, int AmountOfHay, int AmountOfOats, BoxRow parentBoxRowByFK_o70uifc6d9hbo0cnkdgdbwfts) {
+                AnimalRow rowAnimalRow = ((AnimalRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         TypeAnimal,
                         IdAnimal,
                         Age,
                         Name,
                         StatusAnimal,
-                        AmountOfPowerFeed,
+                        AmountOfPowerfeed,
                         AmountOfHay,
                         AmountOfOats,
                         null};
-                if ((parentBoxesRowByFK_o70uifc6d9hbo0cnkdgdbwfts != null)) {
-                    columnValuesArray[8] = parentBoxesRowByFK_o70uifc6d9hbo0cnkdgdbwfts[0];
+                if ((parentBoxRowByFK_o70uifc6d9hbo0cnkdgdbwfts != null)) {
+                    columnValuesArray[8] = parentBoxRowByFK_o70uifc6d9hbo0cnkdgdbwfts[0];
                 }
-                rowAnimalsRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowAnimalsRow);
-                return rowAnimalsRow;
+                rowAnimalRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowAnimalRow);
+                return rowAnimalRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public AnimalsRow FindByIdAnimal(long IdAnimal) {
-                return ((AnimalsRow)(this.Rows.Find(new object[] {
+            public AnimalRow FindByIdAnimal(long IdAnimal) {
+                return ((AnimalRow)(this.Rows.Find(new object[] {
                             IdAnimal})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                AnimalsDataTable cln = ((AnimalsDataTable)(base.Clone()));
+                AnimalDataTable cln = ((AnimalDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -645,7 +645,7 @@ namespace FarmITApp {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new AnimalsDataTable();
+                return new AnimalDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -656,7 +656,7 @@ namespace FarmITApp {
                 this.columnAge = base.Columns["Age"];
                 this.columnName = base.Columns["Name"];
                 this.columnStatusAnimal = base.Columns["StatusAnimal"];
-                this.columnAmountOfPowerFeed = base.Columns["AmountOfPowerFeed"];
+                this.columnAmountOfPowerfeed = base.Columns["AmountOfPowerfeed"];
                 this.columnAmountOfHay = base.Columns["AmountOfHay"];
                 this.columnAmountOfOats = base.Columns["AmountOfOats"];
                 this.columnIdBox = base.Columns["IdBox"];
@@ -675,8 +675,8 @@ namespace FarmITApp {
                 base.Columns.Add(this.columnName);
                 this.columnStatusAnimal = new global::System.Data.DataColumn("StatusAnimal", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnStatusAnimal);
-                this.columnAmountOfPowerFeed = new global::System.Data.DataColumn("AmountOfPowerFeed", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAmountOfPowerFeed);
+                this.columnAmountOfPowerfeed = new global::System.Data.DataColumn("AmountOfPowerfeed", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAmountOfPowerfeed);
                 this.columnAmountOfHay = new global::System.Data.DataColumn("AmountOfHay", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAmountOfHay);
                 this.columnAmountOfOats = new global::System.Data.DataColumn("AmountOfOats", typeof(int), null, global::System.Data.MappingType.Element);
@@ -697,28 +697,28 @@ namespace FarmITApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public AnimalsRow NewAnimalsRow() {
-                return ((AnimalsRow)(this.NewRow()));
+            public AnimalRow NewAnimalRow() {
+                return ((AnimalRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new AnimalsRow(builder);
+                return new AnimalRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(AnimalsRow);
+                return typeof(AnimalRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.AnimalsRowChanged != null)) {
-                    this.AnimalsRowChanged(this, new AnimalsRowChangeEvent(((AnimalsRow)(e.Row)), e.Action));
+                if ((this.AnimalRowChanged != null)) {
+                    this.AnimalRowChanged(this, new AnimalRowChangeEvent(((AnimalRow)(e.Row)), e.Action));
                 }
             }
             
@@ -726,8 +726,8 @@ namespace FarmITApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.AnimalsRowChanging != null)) {
-                    this.AnimalsRowChanging(this, new AnimalsRowChangeEvent(((AnimalsRow)(e.Row)), e.Action));
+                if ((this.AnimalRowChanging != null)) {
+                    this.AnimalRowChanging(this, new AnimalRowChangeEvent(((AnimalRow)(e.Row)), e.Action));
                 }
             }
             
@@ -735,8 +735,8 @@ namespace FarmITApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.AnimalsRowDeleted != null)) {
-                    this.AnimalsRowDeleted(this, new AnimalsRowChangeEvent(((AnimalsRow)(e.Row)), e.Action));
+                if ((this.AnimalRowDeleted != null)) {
+                    this.AnimalRowDeleted(this, new AnimalRowChangeEvent(((AnimalRow)(e.Row)), e.Action));
                 }
             }
             
@@ -744,14 +744,14 @@ namespace FarmITApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.AnimalsRowDeleting != null)) {
-                    this.AnimalsRowDeleting(this, new AnimalsRowChangeEvent(((AnimalsRow)(e.Row)), e.Action));
+                if ((this.AnimalRowDeleting != null)) {
+                    this.AnimalRowDeleting(this, new AnimalRowChangeEvent(((AnimalRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveAnimalsRow(AnimalsRow row) {
+            public void RemoveAnimalRow(AnimalRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -778,7 +778,7 @@ namespace FarmITApp {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "AnimalsDataTable";
+                attribute2.FixedValue = "AnimalDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -824,7 +824,7 @@ namespace FarmITApp {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class BoxesDataTable : global::System.Data.TypedTableBase<BoxesRow> {
+        public partial class BoxDataTable : global::System.Data.TypedTableBase<BoxRow> {
             
             private global::System.Data.DataColumn columnIdBox;
             
@@ -832,8 +832,8 @@ namespace FarmITApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BoxesDataTable() {
-                this.TableName = "Boxes";
+            public BoxDataTable() {
+                this.TableName = "Box";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -841,7 +841,7 @@ namespace FarmITApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal BoxesDataTable(global::System.Data.DataTable table) {
+            internal BoxDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -858,7 +858,7 @@ namespace FarmITApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected BoxesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected BoxDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -890,56 +890,56 @@ namespace FarmITApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BoxesRow this[int index] {
+            public BoxRow this[int index] {
                 get {
-                    return ((BoxesRow)(this.Rows[index]));
+                    return ((BoxRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event BoxesRowChangeEventHandler BoxesRowChanging;
+            public event BoxRowChangeEventHandler BoxRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event BoxesRowChangeEventHandler BoxesRowChanged;
+            public event BoxRowChangeEventHandler BoxRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event BoxesRowChangeEventHandler BoxesRowDeleting;
+            public event BoxRowChangeEventHandler BoxRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event BoxesRowChangeEventHandler BoxesRowDeleted;
+            public event BoxRowChangeEventHandler BoxRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddBoxesRow(BoxesRow row) {
+            public void AddBoxRow(BoxRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BoxesRow AddBoxesRow(string IdBox, BuildingsRow parentBuildingsRowByFK_dd931cgstt6jb67x2gt5qj3xa) {
-                BoxesRow rowBoxesRow = ((BoxesRow)(this.NewRow()));
+            public BoxRow AddBoxRow(string IdBox, BuildingRow parentBuildingRowByFK_dd931cgstt6jb67x2gt5qj3xa) {
+                BoxRow rowBoxRow = ((BoxRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         IdBox,
                         null};
-                if ((parentBuildingsRowByFK_dd931cgstt6jb67x2gt5qj3xa != null)) {
-                    columnValuesArray[1] = parentBuildingsRowByFK_dd931cgstt6jb67x2gt5qj3xa[0];
+                if ((parentBuildingRowByFK_dd931cgstt6jb67x2gt5qj3xa != null)) {
+                    columnValuesArray[1] = parentBuildingRowByFK_dd931cgstt6jb67x2gt5qj3xa[0];
                 }
-                rowBoxesRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowBoxesRow);
-                return rowBoxesRow;
+                rowBoxRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowBoxRow);
+                return rowBoxRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BoxesRow FindByIdBox(string IdBox) {
-                return ((BoxesRow)(this.Rows.Find(new object[] {
+            public BoxRow FindByIdBox(string IdBox) {
+                return ((BoxRow)(this.Rows.Find(new object[] {
                             IdBox})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                BoxesDataTable cln = ((BoxesDataTable)(base.Clone()));
+                BoxDataTable cln = ((BoxDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -947,7 +947,7 @@ namespace FarmITApp {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new BoxesDataTable();
+                return new BoxDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -974,28 +974,28 @@ namespace FarmITApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BoxesRow NewBoxesRow() {
-                return ((BoxesRow)(this.NewRow()));
+            public BoxRow NewBoxRow() {
+                return ((BoxRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new BoxesRow(builder);
+                return new BoxRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(BoxesRow);
+                return typeof(BoxRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.BoxesRowChanged != null)) {
-                    this.BoxesRowChanged(this, new BoxesRowChangeEvent(((BoxesRow)(e.Row)), e.Action));
+                if ((this.BoxRowChanged != null)) {
+                    this.BoxRowChanged(this, new BoxRowChangeEvent(((BoxRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1003,8 +1003,8 @@ namespace FarmITApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.BoxesRowChanging != null)) {
-                    this.BoxesRowChanging(this, new BoxesRowChangeEvent(((BoxesRow)(e.Row)), e.Action));
+                if ((this.BoxRowChanging != null)) {
+                    this.BoxRowChanging(this, new BoxRowChangeEvent(((BoxRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1012,8 +1012,8 @@ namespace FarmITApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.BoxesRowDeleted != null)) {
-                    this.BoxesRowDeleted(this, new BoxesRowChangeEvent(((BoxesRow)(e.Row)), e.Action));
+                if ((this.BoxRowDeleted != null)) {
+                    this.BoxRowDeleted(this, new BoxRowChangeEvent(((BoxRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1021,14 +1021,14 @@ namespace FarmITApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.BoxesRowDeleting != null)) {
-                    this.BoxesRowDeleting(this, new BoxesRowChangeEvent(((BoxesRow)(e.Row)), e.Action));
+                if ((this.BoxRowDeleting != null)) {
+                    this.BoxRowDeleting(this, new BoxRowChangeEvent(((BoxRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveBoxesRow(BoxesRow row) {
+            public void RemoveBoxRow(BoxRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1055,7 +1055,7 @@ namespace FarmITApp {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "BoxesDataTable";
+                attribute2.FixedValue = "BoxDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1101,14 +1101,14 @@ namespace FarmITApp {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class BuildingsDataTable : global::System.Data.TypedTableBase<BuildingsRow> {
+        public partial class BuildingDataTable : global::System.Data.TypedTableBase<BuildingRow> {
             
             private global::System.Data.DataColumn columnIdBuilding;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BuildingsDataTable() {
-                this.TableName = "Buildings";
+            public BuildingDataTable() {
+                this.TableName = "Building";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1116,7 +1116,7 @@ namespace FarmITApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal BuildingsDataTable(global::System.Data.DataTable table) {
+            internal BuildingDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1133,7 +1133,7 @@ namespace FarmITApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected BuildingsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected BuildingDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -1157,52 +1157,52 @@ namespace FarmITApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BuildingsRow this[int index] {
+            public BuildingRow this[int index] {
                 get {
-                    return ((BuildingsRow)(this.Rows[index]));
+                    return ((BuildingRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event BuildingsRowChangeEventHandler BuildingsRowChanging;
+            public event BuildingRowChangeEventHandler BuildingRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event BuildingsRowChangeEventHandler BuildingsRowChanged;
+            public event BuildingRowChangeEventHandler BuildingRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event BuildingsRowChangeEventHandler BuildingsRowDeleting;
+            public event BuildingRowChangeEventHandler BuildingRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event BuildingsRowChangeEventHandler BuildingsRowDeleted;
+            public event BuildingRowChangeEventHandler BuildingRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddBuildingsRow(BuildingsRow row) {
+            public void AddBuildingRow(BuildingRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BuildingsRow AddBuildingsRow(string IdBuilding) {
-                BuildingsRow rowBuildingsRow = ((BuildingsRow)(this.NewRow()));
+            public BuildingRow AddBuildingRow(string IdBuilding) {
+                BuildingRow rowBuildingRow = ((BuildingRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         IdBuilding};
-                rowBuildingsRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowBuildingsRow);
-                return rowBuildingsRow;
+                rowBuildingRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowBuildingRow);
+                return rowBuildingRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BuildingsRow FindByIdBuilding(string IdBuilding) {
-                return ((BuildingsRow)(this.Rows.Find(new object[] {
+            public BuildingRow FindByIdBuilding(string IdBuilding) {
+                return ((BuildingRow)(this.Rows.Find(new object[] {
                             IdBuilding})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                BuildingsDataTable cln = ((BuildingsDataTable)(base.Clone()));
+                BuildingDataTable cln = ((BuildingDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1210,7 +1210,7 @@ namespace FarmITApp {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new BuildingsDataTable();
+                return new BuildingDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1233,28 +1233,28 @@ namespace FarmITApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BuildingsRow NewBuildingsRow() {
-                return ((BuildingsRow)(this.NewRow()));
+            public BuildingRow NewBuildingRow() {
+                return ((BuildingRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new BuildingsRow(builder);
+                return new BuildingRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(BuildingsRow);
+                return typeof(BuildingRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.BuildingsRowChanged != null)) {
-                    this.BuildingsRowChanged(this, new BuildingsRowChangeEvent(((BuildingsRow)(e.Row)), e.Action));
+                if ((this.BuildingRowChanged != null)) {
+                    this.BuildingRowChanged(this, new BuildingRowChangeEvent(((BuildingRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1262,8 +1262,8 @@ namespace FarmITApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.BuildingsRowChanging != null)) {
-                    this.BuildingsRowChanging(this, new BuildingsRowChangeEvent(((BuildingsRow)(e.Row)), e.Action));
+                if ((this.BuildingRowChanging != null)) {
+                    this.BuildingRowChanging(this, new BuildingRowChangeEvent(((BuildingRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1271,8 +1271,8 @@ namespace FarmITApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.BuildingsRowDeleted != null)) {
-                    this.BuildingsRowDeleted(this, new BuildingsRowChangeEvent(((BuildingsRow)(e.Row)), e.Action));
+                if ((this.BuildingRowDeleted != null)) {
+                    this.BuildingRowDeleted(this, new BuildingRowChangeEvent(((BuildingRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1280,14 +1280,14 @@ namespace FarmITApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.BuildingsRowDeleting != null)) {
-                    this.BuildingsRowDeleting(this, new BuildingsRowChangeEvent(((BuildingsRow)(e.Row)), e.Action));
+                if ((this.BuildingRowDeleting != null)) {
+                    this.BuildingRowDeleting(this, new BuildingRowChangeEvent(((BuildingRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveBuildingsRow(BuildingsRow row) {
+            public void RemoveBuildingRow(BuildingRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1314,7 +1314,7 @@ namespace FarmITApp {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "BuildingsDataTable";
+                attribute2.FixedValue = "BuildingDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1360,7 +1360,7 @@ namespace FarmITApp {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class EatsDataTable : global::System.Data.TypedTableBase<EatsRow> {
+        public partial class EatDataTable : global::System.Data.TypedTableBase<EatRow> {
             
             private global::System.Data.DataColumn columnIdFood;
             
@@ -1368,8 +1368,8 @@ namespace FarmITApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public EatsDataTable() {
-                this.TableName = "Eats";
+            public EatDataTable() {
+                this.TableName = "Eat";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1377,7 +1377,7 @@ namespace FarmITApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal EatsDataTable(global::System.Data.DataTable table) {
+            internal EatDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1394,7 +1394,7 @@ namespace FarmITApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected EatsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected EatDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -1426,52 +1426,52 @@ namespace FarmITApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public EatsRow this[int index] {
+            public EatRow this[int index] {
                 get {
-                    return ((EatsRow)(this.Rows[index]));
+                    return ((EatRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event EatsRowChangeEventHandler EatsRowChanging;
+            public event EatRowChangeEventHandler EatRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event EatsRowChangeEventHandler EatsRowChanged;
+            public event EatRowChangeEventHandler EatRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event EatsRowChangeEventHandler EatsRowDeleting;
+            public event EatRowChangeEventHandler EatRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event EatsRowChangeEventHandler EatsRowDeleted;
+            public event EatRowChangeEventHandler EatRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddEatsRow(EatsRow row) {
+            public void AddEatRow(EatRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public EatsRow AddEatsRow(FoodsRow parentFoodsRowByFK_2tpds16mm2l88n3s1f869rodi, AnimalsRow parentAnimalsRowByFK_qt8cyyohj81abywvvtui1kxgv) {
-                EatsRow rowEatsRow = ((EatsRow)(this.NewRow()));
+            public EatRow AddEatRow(FoodRow parentFoodRowByFK_2tpds16mm2l88n3s1f869rodi, AnimalRow parentAnimalRowByFK_qt8cyyohj81abywvvtui1kxgv) {
+                EatRow rowEatRow = ((EatRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null};
-                if ((parentFoodsRowByFK_2tpds16mm2l88n3s1f869rodi != null)) {
-                    columnValuesArray[0] = parentFoodsRowByFK_2tpds16mm2l88n3s1f869rodi[0];
+                if ((parentFoodRowByFK_2tpds16mm2l88n3s1f869rodi != null)) {
+                    columnValuesArray[0] = parentFoodRowByFK_2tpds16mm2l88n3s1f869rodi[0];
                 }
-                if ((parentAnimalsRowByFK_qt8cyyohj81abywvvtui1kxgv != null)) {
-                    columnValuesArray[1] = parentAnimalsRowByFK_qt8cyyohj81abywvvtui1kxgv[1];
+                if ((parentAnimalRowByFK_qt8cyyohj81abywvvtui1kxgv != null)) {
+                    columnValuesArray[1] = parentAnimalRowByFK_qt8cyyohj81abywvvtui1kxgv[1];
                 }
-                rowEatsRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowEatsRow);
-                return rowEatsRow;
+                rowEatRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowEatRow);
+                return rowEatRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public EatsRow FindByIdFoodIdAnimal(long IdFood, long IdAnimal) {
-                return ((EatsRow)(this.Rows.Find(new object[] {
+            public EatRow FindByIdFoodIdAnimal(long IdFood, long IdAnimal) {
+                return ((EatRow)(this.Rows.Find(new object[] {
                             IdFood,
                             IdAnimal})));
             }
@@ -1479,7 +1479,7 @@ namespace FarmITApp {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                EatsDataTable cln = ((EatsDataTable)(base.Clone()));
+                EatDataTable cln = ((EatDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1487,7 +1487,7 @@ namespace FarmITApp {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new EatsDataTable();
+                return new EatDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1513,28 +1513,28 @@ namespace FarmITApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public EatsRow NewEatsRow() {
-                return ((EatsRow)(this.NewRow()));
+            public EatRow NewEatRow() {
+                return ((EatRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new EatsRow(builder);
+                return new EatRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(EatsRow);
+                return typeof(EatRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.EatsRowChanged != null)) {
-                    this.EatsRowChanged(this, new EatsRowChangeEvent(((EatsRow)(e.Row)), e.Action));
+                if ((this.EatRowChanged != null)) {
+                    this.EatRowChanged(this, new EatRowChangeEvent(((EatRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1542,8 +1542,8 @@ namespace FarmITApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.EatsRowChanging != null)) {
-                    this.EatsRowChanging(this, new EatsRowChangeEvent(((EatsRow)(e.Row)), e.Action));
+                if ((this.EatRowChanging != null)) {
+                    this.EatRowChanging(this, new EatRowChangeEvent(((EatRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1551,8 +1551,8 @@ namespace FarmITApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.EatsRowDeleted != null)) {
-                    this.EatsRowDeleted(this, new EatsRowChangeEvent(((EatsRow)(e.Row)), e.Action));
+                if ((this.EatRowDeleted != null)) {
+                    this.EatRowDeleted(this, new EatRowChangeEvent(((EatRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1560,14 +1560,14 @@ namespace FarmITApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.EatsRowDeleting != null)) {
-                    this.EatsRowDeleting(this, new EatsRowChangeEvent(((EatsRow)(e.Row)), e.Action));
+                if ((this.EatRowDeleting != null)) {
+                    this.EatRowDeleting(this, new EatRowChangeEvent(((EatRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveEatsRow(EatsRow row) {
+            public void RemoveEatRow(EatRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1594,7 +1594,7 @@ namespace FarmITApp {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "EatsDataTable";
+                attribute2.FixedValue = "EatDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1640,7 +1640,7 @@ namespace FarmITApp {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class FoodsDataTable : global::System.Data.TypedTableBase<FoodsRow> {
+        public partial class FoodDataTable : global::System.Data.TypedTableBase<FoodRow> {
             
             private global::System.Data.DataColumn columnIdFood;
             
@@ -1650,8 +1650,8 @@ namespace FarmITApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public FoodsDataTable() {
-                this.TableName = "Foods";
+            public FoodDataTable() {
+                this.TableName = "Food";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1659,7 +1659,7 @@ namespace FarmITApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal FoodsDataTable(global::System.Data.DataTable table) {
+            internal FoodDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1676,7 +1676,7 @@ namespace FarmITApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected FoodsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected FoodDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -1716,54 +1716,54 @@ namespace FarmITApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public FoodsRow this[int index] {
+            public FoodRow this[int index] {
                 get {
-                    return ((FoodsRow)(this.Rows[index]));
+                    return ((FoodRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event FoodsRowChangeEventHandler FoodsRowChanging;
+            public event FoodRowChangeEventHandler FoodRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event FoodsRowChangeEventHandler FoodsRowChanged;
+            public event FoodRowChangeEventHandler FoodRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event FoodsRowChangeEventHandler FoodsRowDeleting;
+            public event FoodRowChangeEventHandler FoodRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event FoodsRowChangeEventHandler FoodsRowDeleted;
+            public event FoodRowChangeEventHandler FoodRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddFoodsRow(FoodsRow row) {
+            public void AddFoodRow(FoodRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public FoodsRow AddFoodsRow(long IdFood, int Amount, string TypeFood) {
-                FoodsRow rowFoodsRow = ((FoodsRow)(this.NewRow()));
+            public FoodRow AddFoodRow(long IdFood, int Amount, string TypeFood) {
+                FoodRow rowFoodRow = ((FoodRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         IdFood,
                         Amount,
                         TypeFood};
-                rowFoodsRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowFoodsRow);
-                return rowFoodsRow;
+                rowFoodRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowFoodRow);
+                return rowFoodRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public FoodsRow FindByIdFood(long IdFood) {
-                return ((FoodsRow)(this.Rows.Find(new object[] {
+            public FoodRow FindByIdFood(long IdFood) {
+                return ((FoodRow)(this.Rows.Find(new object[] {
                             IdFood})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                FoodsDataTable cln = ((FoodsDataTable)(base.Clone()));
+                FoodDataTable cln = ((FoodDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1771,7 +1771,7 @@ namespace FarmITApp {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new FoodsDataTable();
+                return new FoodDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1800,28 +1800,28 @@ namespace FarmITApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public FoodsRow NewFoodsRow() {
-                return ((FoodsRow)(this.NewRow()));
+            public FoodRow NewFoodRow() {
+                return ((FoodRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new FoodsRow(builder);
+                return new FoodRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(FoodsRow);
+                return typeof(FoodRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.FoodsRowChanged != null)) {
-                    this.FoodsRowChanged(this, new FoodsRowChangeEvent(((FoodsRow)(e.Row)), e.Action));
+                if ((this.FoodRowChanged != null)) {
+                    this.FoodRowChanged(this, new FoodRowChangeEvent(((FoodRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1829,8 +1829,8 @@ namespace FarmITApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.FoodsRowChanging != null)) {
-                    this.FoodsRowChanging(this, new FoodsRowChangeEvent(((FoodsRow)(e.Row)), e.Action));
+                if ((this.FoodRowChanging != null)) {
+                    this.FoodRowChanging(this, new FoodRowChangeEvent(((FoodRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1838,8 +1838,8 @@ namespace FarmITApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.FoodsRowDeleted != null)) {
-                    this.FoodsRowDeleted(this, new FoodsRowChangeEvent(((FoodsRow)(e.Row)), e.Action));
+                if ((this.FoodRowDeleted != null)) {
+                    this.FoodRowDeleted(this, new FoodRowChangeEvent(((FoodRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1847,14 +1847,14 @@ namespace FarmITApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.FoodsRowDeleting != null)) {
-                    this.FoodsRowDeleting(this, new FoodsRowChangeEvent(((FoodsRow)(e.Row)), e.Action));
+                if ((this.FoodRowDeleting != null)) {
+                    this.FoodRowDeleting(this, new FoodRowChangeEvent(((FoodRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveFoodsRow(FoodsRow row) {
+            public void RemoveFoodRow(FoodRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1881,7 +1881,7 @@ namespace FarmITApp {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "FoodsDataTable";
+                attribute2.FixedValue = "FoodDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1925,25 +1925,25 @@ namespace FarmITApp {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class AnimalsRow : global::System.Data.DataRow {
+        public partial class AnimalRow : global::System.Data.DataRow {
             
-            private AnimalsDataTable tableAnimals;
+            private AnimalDataTable tableAnimal;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal AnimalsRow(global::System.Data.DataRowBuilder rb) : 
+            internal AnimalRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableAnimals = ((AnimalsDataTable)(this.Table));
+                this.tableAnimal = ((AnimalDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string TypeAnimal {
                 get {
-                    return ((string)(this[this.tableAnimals.TypeAnimalColumn]));
+                    return ((string)(this[this.tableAnimal.TypeAnimalColumn]));
                 }
                 set {
-                    this[this.tableAnimals.TypeAnimalColumn] = value;
+                    this[this.tableAnimal.TypeAnimalColumn] = value;
                 }
             }
             
@@ -1951,10 +1951,10 @@ namespace FarmITApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public long IdAnimal {
                 get {
-                    return ((long)(this[this.tableAnimals.IdAnimalColumn]));
+                    return ((long)(this[this.tableAnimal.IdAnimalColumn]));
                 }
                 set {
-                    this[this.tableAnimals.IdAnimalColumn] = value;
+                    this[this.tableAnimal.IdAnimalColumn] = value;
                 }
             }
             
@@ -1963,14 +1963,14 @@ namespace FarmITApp {
             public string Age {
                 get {
                     try {
-                        return ((string)(this[this.tableAnimals.AgeColumn]));
+                        return ((string)(this[this.tableAnimal.AgeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Age\' in table \'Animals\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Age\' in table \'Animal\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAnimals.AgeColumn] = value;
+                    this[this.tableAnimal.AgeColumn] = value;
                 }
             }
             
@@ -1979,14 +1979,14 @@ namespace FarmITApp {
             public string Name {
                 get {
                     try {
-                        return ((string)(this[this.tableAnimals.NameColumn]));
+                        return ((string)(this[this.tableAnimal.NameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Name\' in table \'Animals\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Name\' in table \'Animal\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAnimals.NameColumn] = value;
+                    this[this.tableAnimal.NameColumn] = value;
                 }
             }
             
@@ -1995,30 +1995,30 @@ namespace FarmITApp {
             public string StatusAnimal {
                 get {
                     try {
-                        return ((string)(this[this.tableAnimals.StatusAnimalColumn]));
+                        return ((string)(this[this.tableAnimal.StatusAnimalColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'StatusAnimal\' in table \'Animals\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'StatusAnimal\' in table \'Animal\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAnimals.StatusAnimalColumn] = value;
+                    this[this.tableAnimal.StatusAnimalColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int AmountOfPowerFeed {
+            public int AmountOfPowerfeed {
                 get {
                     try {
-                        return ((int)(this[this.tableAnimals.AmountOfPowerFeedColumn]));
+                        return ((int)(this[this.tableAnimal.AmountOfPowerfeedColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'AmountOfPowerFeed\' in table \'Animals\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'AmountOfPowerfeed\' in table \'Animal\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAnimals.AmountOfPowerFeedColumn] = value;
+                    this[this.tableAnimal.AmountOfPowerfeedColumn] = value;
                 }
             }
             
@@ -2027,14 +2027,14 @@ namespace FarmITApp {
             public int AmountOfHay {
                 get {
                     try {
-                        return ((int)(this[this.tableAnimals.AmountOfHayColumn]));
+                        return ((int)(this[this.tableAnimal.AmountOfHayColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'AmountOfHay\' in table \'Animals\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'AmountOfHay\' in table \'Animal\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAnimals.AmountOfHayColumn] = value;
+                    this[this.tableAnimal.AmountOfHayColumn] = value;
                 }
             }
             
@@ -2043,14 +2043,14 @@ namespace FarmITApp {
             public int AmountOfOats {
                 get {
                     try {
-                        return ((int)(this[this.tableAnimals.AmountOfOatsColumn]));
+                        return ((int)(this[this.tableAnimal.AmountOfOatsColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'AmountOfOats\' in table \'Animals\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'AmountOfOats\' in table \'Animal\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAnimals.AmountOfOatsColumn] = value;
+                    this[this.tableAnimal.AmountOfOatsColumn] = value;
                 }
             }
             
@@ -2059,22 +2059,22 @@ namespace FarmITApp {
             public string IdBox {
                 get {
                     try {
-                        return ((string)(this[this.tableAnimals.IdBoxColumn]));
+                        return ((string)(this[this.tableAnimal.IdBoxColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'IdBox\' in table \'Animals\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'IdBox\' in table \'Animal\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAnimals.IdBoxColumn] = value;
+                    this[this.tableAnimal.IdBoxColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BoxesRow BoxesRow {
+            public BoxRow BoxRow {
                 get {
-                    return ((BoxesRow)(this.GetParentRow(this.Table.ParentRelations["FK_o70uifc6d9hbo0cnkdgdbwfts"])));
+                    return ((BoxRow)(this.GetParentRow(this.Table.ParentRelations["FK_o70uifc6d9hbo0cnkdgdbwfts"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_o70uifc6d9hbo0cnkdgdbwfts"]);
@@ -2084,95 +2084,95 @@ namespace FarmITApp {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsAgeNull() {
-                return this.IsNull(this.tableAnimals.AgeColumn);
+                return this.IsNull(this.tableAnimal.AgeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetAgeNull() {
-                this[this.tableAnimals.AgeColumn] = global::System.Convert.DBNull;
+                this[this.tableAnimal.AgeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsNameNull() {
-                return this.IsNull(this.tableAnimals.NameColumn);
+                return this.IsNull(this.tableAnimal.NameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetNameNull() {
-                this[this.tableAnimals.NameColumn] = global::System.Convert.DBNull;
+                this[this.tableAnimal.NameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsStatusAnimalNull() {
-                return this.IsNull(this.tableAnimals.StatusAnimalColumn);
+                return this.IsNull(this.tableAnimal.StatusAnimalColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetStatusAnimalNull() {
-                this[this.tableAnimals.StatusAnimalColumn] = global::System.Convert.DBNull;
+                this[this.tableAnimal.StatusAnimalColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsAmountOfPowerFeedNull() {
-                return this.IsNull(this.tableAnimals.AmountOfPowerFeedColumn);
+            public bool IsAmountOfPowerfeedNull() {
+                return this.IsNull(this.tableAnimal.AmountOfPowerfeedColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetAmountOfPowerFeedNull() {
-                this[this.tableAnimals.AmountOfPowerFeedColumn] = global::System.Convert.DBNull;
+            public void SetAmountOfPowerfeedNull() {
+                this[this.tableAnimal.AmountOfPowerfeedColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsAmountOfHayNull() {
-                return this.IsNull(this.tableAnimals.AmountOfHayColumn);
+                return this.IsNull(this.tableAnimal.AmountOfHayColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetAmountOfHayNull() {
-                this[this.tableAnimals.AmountOfHayColumn] = global::System.Convert.DBNull;
+                this[this.tableAnimal.AmountOfHayColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsAmountOfOatsNull() {
-                return this.IsNull(this.tableAnimals.AmountOfOatsColumn);
+                return this.IsNull(this.tableAnimal.AmountOfOatsColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetAmountOfOatsNull() {
-                this[this.tableAnimals.AmountOfOatsColumn] = global::System.Convert.DBNull;
+                this[this.tableAnimal.AmountOfOatsColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsIdBoxNull() {
-                return this.IsNull(this.tableAnimals.IdBoxColumn);
+                return this.IsNull(this.tableAnimal.IdBoxColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetIdBoxNull() {
-                this[this.tableAnimals.IdBoxColumn] = global::System.Convert.DBNull;
+                this[this.tableAnimal.IdBoxColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public EatsRow[] GetEatsRows() {
+            public EatRow[] GetEatRows() {
                 if ((this.Table.ChildRelations["FK_qt8cyyohj81abywvvtui1kxgv"] == null)) {
-                    return new EatsRow[0];
+                    return new EatRow[0];
                 }
                 else {
-                    return ((EatsRow[])(base.GetChildRows(this.Table.ChildRelations["FK_qt8cyyohj81abywvvtui1kxgv"])));
+                    return ((EatRow[])(base.GetChildRows(this.Table.ChildRelations["FK_qt8cyyohj81abywvvtui1kxgv"])));
                 }
             }
         }
@@ -2180,25 +2180,25 @@ namespace FarmITApp {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class BoxesRow : global::System.Data.DataRow {
+        public partial class BoxRow : global::System.Data.DataRow {
             
-            private BoxesDataTable tableBoxes;
+            private BoxDataTable tableBox;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal BoxesRow(global::System.Data.DataRowBuilder rb) : 
+            internal BoxRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableBoxes = ((BoxesDataTable)(this.Table));
+                this.tableBox = ((BoxDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string IdBox {
                 get {
-                    return ((string)(this[this.tableBoxes.IdBoxColumn]));
+                    return ((string)(this[this.tableBox.IdBoxColumn]));
                 }
                 set {
-                    this[this.tableBoxes.IdBoxColumn] = value;
+                    this[this.tableBox.IdBoxColumn] = value;
                 }
             }
             
@@ -2207,22 +2207,22 @@ namespace FarmITApp {
             public string IdBuilding {
                 get {
                     try {
-                        return ((string)(this[this.tableBoxes.IdBuildingColumn]));
+                        return ((string)(this[this.tableBox.IdBuildingColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'IdBuilding\' in table \'Boxes\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'IdBuilding\' in table \'Box\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBoxes.IdBuildingColumn] = value;
+                    this[this.tableBox.IdBuildingColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BuildingsRow BuildingsRow {
+            public BuildingRow BuildingRow {
                 get {
-                    return ((BuildingsRow)(this.GetParentRow(this.Table.ParentRelations["FK_dd931cgstt6jb67x2gt5qj3xa"])));
+                    return ((BuildingRow)(this.GetParentRow(this.Table.ParentRelations["FK_dd931cgstt6jb67x2gt5qj3xa"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_dd931cgstt6jb67x2gt5qj3xa"]);
@@ -2232,23 +2232,23 @@ namespace FarmITApp {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsIdBuildingNull() {
-                return this.IsNull(this.tableBoxes.IdBuildingColumn);
+                return this.IsNull(this.tableBox.IdBuildingColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetIdBuildingNull() {
-                this[this.tableBoxes.IdBuildingColumn] = global::System.Convert.DBNull;
+                this[this.tableBox.IdBuildingColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public AnimalsRow[] GetAnimalsRows() {
+            public AnimalRow[] GetAnimalRows() {
                 if ((this.Table.ChildRelations["FK_o70uifc6d9hbo0cnkdgdbwfts"] == null)) {
-                    return new AnimalsRow[0];
+                    return new AnimalRow[0];
                 }
                 else {
-                    return ((AnimalsRow[])(base.GetChildRows(this.Table.ChildRelations["FK_o70uifc6d9hbo0cnkdgdbwfts"])));
+                    return ((AnimalRow[])(base.GetChildRows(this.Table.ChildRelations["FK_o70uifc6d9hbo0cnkdgdbwfts"])));
                 }
             }
         }
@@ -2256,36 +2256,36 @@ namespace FarmITApp {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class BuildingsRow : global::System.Data.DataRow {
+        public partial class BuildingRow : global::System.Data.DataRow {
             
-            private BuildingsDataTable tableBuildings;
+            private BuildingDataTable tableBuilding;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal BuildingsRow(global::System.Data.DataRowBuilder rb) : 
+            internal BuildingRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableBuildings = ((BuildingsDataTable)(this.Table));
+                this.tableBuilding = ((BuildingDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string IdBuilding {
                 get {
-                    return ((string)(this[this.tableBuildings.IdBuildingColumn]));
+                    return ((string)(this[this.tableBuilding.IdBuildingColumn]));
                 }
                 set {
-                    this[this.tableBuildings.IdBuildingColumn] = value;
+                    this[this.tableBuilding.IdBuildingColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BoxesRow[] GetBoxesRows() {
+            public BoxRow[] GetBoxRows() {
                 if ((this.Table.ChildRelations["FK_dd931cgstt6jb67x2gt5qj3xa"] == null)) {
-                    return new BoxesRow[0];
+                    return new BoxRow[0];
                 }
                 else {
-                    return ((BoxesRow[])(base.GetChildRows(this.Table.ChildRelations["FK_dd931cgstt6jb67x2gt5qj3xa"])));
+                    return ((BoxRow[])(base.GetChildRows(this.Table.ChildRelations["FK_dd931cgstt6jb67x2gt5qj3xa"])));
                 }
             }
         }
@@ -2293,25 +2293,25 @@ namespace FarmITApp {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class EatsRow : global::System.Data.DataRow {
+        public partial class EatRow : global::System.Data.DataRow {
             
-            private EatsDataTable tableEats;
+            private EatDataTable tableEat;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal EatsRow(global::System.Data.DataRowBuilder rb) : 
+            internal EatRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableEats = ((EatsDataTable)(this.Table));
+                this.tableEat = ((EatDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public long IdFood {
                 get {
-                    return ((long)(this[this.tableEats.IdFoodColumn]));
+                    return ((long)(this[this.tableEat.IdFoodColumn]));
                 }
                 set {
-                    this[this.tableEats.IdFoodColumn] = value;
+                    this[this.tableEat.IdFoodColumn] = value;
                 }
             }
             
@@ -2319,18 +2319,18 @@ namespace FarmITApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public long IdAnimal {
                 get {
-                    return ((long)(this[this.tableEats.IdAnimalColumn]));
+                    return ((long)(this[this.tableEat.IdAnimalColumn]));
                 }
                 set {
-                    this[this.tableEats.IdAnimalColumn] = value;
+                    this[this.tableEat.IdAnimalColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public FoodsRow FoodsRow {
+            public FoodRow FoodRow {
                 get {
-                    return ((FoodsRow)(this.GetParentRow(this.Table.ParentRelations["FK_2tpds16mm2l88n3s1f869rodi"])));
+                    return ((FoodRow)(this.GetParentRow(this.Table.ParentRelations["FK_2tpds16mm2l88n3s1f869rodi"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_2tpds16mm2l88n3s1f869rodi"]);
@@ -2339,9 +2339,9 @@ namespace FarmITApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public AnimalsRow AnimalsRow {
+            public AnimalRow AnimalRow {
                 get {
-                    return ((AnimalsRow)(this.GetParentRow(this.Table.ParentRelations["FK_qt8cyyohj81abywvvtui1kxgv"])));
+                    return ((AnimalRow)(this.GetParentRow(this.Table.ParentRelations["FK_qt8cyyohj81abywvvtui1kxgv"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_qt8cyyohj81abywvvtui1kxgv"]);
@@ -2352,25 +2352,25 @@ namespace FarmITApp {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class FoodsRow : global::System.Data.DataRow {
+        public partial class FoodRow : global::System.Data.DataRow {
             
-            private FoodsDataTable tableFoods;
+            private FoodDataTable tableFood;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal FoodsRow(global::System.Data.DataRowBuilder rb) : 
+            internal FoodRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableFoods = ((FoodsDataTable)(this.Table));
+                this.tableFood = ((FoodDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public long IdFood {
                 get {
-                    return ((long)(this[this.tableFoods.IdFoodColumn]));
+                    return ((long)(this[this.tableFood.IdFoodColumn]));
                 }
                 set {
-                    this[this.tableFoods.IdFoodColumn] = value;
+                    this[this.tableFood.IdFoodColumn] = value;
                 }
             }
             
@@ -2379,14 +2379,14 @@ namespace FarmITApp {
             public int Amount {
                 get {
                     try {
-                        return ((int)(this[this.tableFoods.AmountColumn]));
+                        return ((int)(this[this.tableFood.AmountColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Amount\' in table \'Foods\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Amount\' in table \'Food\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableFoods.AmountColumn] = value;
+                    this[this.tableFood.AmountColumn] = value;
                 }
             }
             
@@ -2395,49 +2395,49 @@ namespace FarmITApp {
             public string TypeFood {
                 get {
                     try {
-                        return ((string)(this[this.tableFoods.TypeFoodColumn]));
+                        return ((string)(this[this.tableFood.TypeFoodColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TypeFood\' in table \'Foods\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'TypeFood\' in table \'Food\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableFoods.TypeFoodColumn] = value;
+                    this[this.tableFood.TypeFoodColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsAmountNull() {
-                return this.IsNull(this.tableFoods.AmountColumn);
+                return this.IsNull(this.tableFood.AmountColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetAmountNull() {
-                this[this.tableFoods.AmountColumn] = global::System.Convert.DBNull;
+                this[this.tableFood.AmountColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsTypeFoodNull() {
-                return this.IsNull(this.tableFoods.TypeFoodColumn);
+                return this.IsNull(this.tableFood.TypeFoodColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetTypeFoodNull() {
-                this[this.tableFoods.TypeFoodColumn] = global::System.Convert.DBNull;
+                this[this.tableFood.TypeFoodColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public EatsRow[] GetEatsRows() {
+            public EatRow[] GetEatRows() {
                 if ((this.Table.ChildRelations["FK_2tpds16mm2l88n3s1f869rodi"] == null)) {
-                    return new EatsRow[0];
+                    return new EatRow[0];
                 }
                 else {
-                    return ((EatsRow[])(base.GetChildRows(this.Table.ChildRelations["FK_2tpds16mm2l88n3s1f869rodi"])));
+                    return ((EatRow[])(base.GetChildRows(this.Table.ChildRelations["FK_2tpds16mm2l88n3s1f869rodi"])));
                 }
             }
         }
@@ -2446,22 +2446,22 @@ namespace FarmITApp {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class AnimalsRowChangeEvent : global::System.EventArgs {
+        public class AnimalRowChangeEvent : global::System.EventArgs {
             
-            private AnimalsRow eventRow;
+            private AnimalRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public AnimalsRowChangeEvent(AnimalsRow row, global::System.Data.DataRowAction action) {
+            public AnimalRowChangeEvent(AnimalRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public AnimalsRow Row {
+            public AnimalRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -2480,22 +2480,22 @@ namespace FarmITApp {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class BoxesRowChangeEvent : global::System.EventArgs {
+        public class BoxRowChangeEvent : global::System.EventArgs {
             
-            private BoxesRow eventRow;
+            private BoxRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BoxesRowChangeEvent(BoxesRow row, global::System.Data.DataRowAction action) {
+            public BoxRowChangeEvent(BoxRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BoxesRow Row {
+            public BoxRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -2514,22 +2514,22 @@ namespace FarmITApp {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class BuildingsRowChangeEvent : global::System.EventArgs {
+        public class BuildingRowChangeEvent : global::System.EventArgs {
             
-            private BuildingsRow eventRow;
+            private BuildingRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BuildingsRowChangeEvent(BuildingsRow row, global::System.Data.DataRowAction action) {
+            public BuildingRowChangeEvent(BuildingRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BuildingsRow Row {
+            public BuildingRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -2548,22 +2548,22 @@ namespace FarmITApp {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class EatsRowChangeEvent : global::System.EventArgs {
+        public class EatRowChangeEvent : global::System.EventArgs {
             
-            private EatsRow eventRow;
+            private EatRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public EatsRowChangeEvent(EatsRow row, global::System.Data.DataRowAction action) {
+            public EatRowChangeEvent(EatRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public EatsRow Row {
+            public EatRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -2582,22 +2582,22 @@ namespace FarmITApp {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class FoodsRowChangeEvent : global::System.EventArgs {
+        public class FoodRowChangeEvent : global::System.EventArgs {
             
-            private FoodsRow eventRow;
+            private FoodRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public FoodsRowChangeEvent(FoodsRow row, global::System.Data.DataRowAction action) {
+            public FoodRowChangeEvent(FoodRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public FoodsRow Row {
+            public FoodRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -2625,7 +2625,7 @@ namespace FarmITApp.FarmITDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class AnimalsTableAdapter : global::System.ComponentModel.Component {
+    public partial class AnimalTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -2639,7 +2639,7 @@ namespace FarmITApp.FarmITDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public AnimalsTableAdapter() {
+        public AnimalTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -2736,20 +2736,20 @@ namespace FarmITApp.FarmITDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Animals";
+            tableMapping.DataSetTable = "Animal";
             tableMapping.ColumnMappings.Add("TypeAnimal", "TypeAnimal");
             tableMapping.ColumnMappings.Add("IdAnimal", "IdAnimal");
             tableMapping.ColumnMappings.Add("Age", "Age");
             tableMapping.ColumnMappings.Add("Name", "Name");
             tableMapping.ColumnMappings.Add("StatusAnimal", "StatusAnimal");
-            tableMapping.ColumnMappings.Add("AmountOfPowerFeed", "AmountOfPowerFeed");
+            tableMapping.ColumnMappings.Add("AmountOfPowerfeed", "AmountOfPowerfeed");
             tableMapping.ColumnMappings.Add("AmountOfHay", "AmountOfHay");
             tableMapping.ColumnMappings.Add("AmountOfOats", "AmountOfOats");
             tableMapping.ColumnMappings.Add("IdBox", "IdBox");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Animals] WHERE (([TypeAnimal] = @Original_TypeAnimal) AND ([IdAnimal] = @Original_IdAnimal) AND ((@IsNull_Age = 1 AND [Age] IS NULL) OR ([Age] = @Original_Age)) AND ((@IsNull_Name = 1 AND [Name] IS NULL) OR ([Name] = @Original_Name)) AND ((@IsNull_StatusAnimal = 1 AND [StatusAnimal] IS NULL) OR ([StatusAnimal] = @Original_StatusAnimal)) AND ((@IsNull_AmountOfPowerFeed = 1 AND [AmountOfPowerFeed] IS NULL) OR ([AmountOfPowerFeed] = @Original_AmountOfPowerFeed)) AND ((@IsNull_AmountOfHay = 1 AND [AmountOfHay] IS NULL) OR ([AmountOfHay] = @Original_AmountOfHay)) AND ((@IsNull_AmountOfOats = 1 AND [AmountOfOats] IS NULL) OR ([AmountOfOats] = @Original_AmountOfOats)) AND ((@IsNull_IdBox = 1 AND [IdBox] IS NULL) OR ([IdBox] = @Original_IdBox)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Animal] WHERE (([TypeAnimal] = @Original_TypeAnimal) AND ([IdAnimal] = @Original_IdAnimal) AND ((@IsNull_Age = 1 AND [Age] IS NULL) OR ([Age] = @Original_Age)) AND ((@IsNull_Name = 1 AND [Name] IS NULL) OR ([Name] = @Original_Name)) AND ((@IsNull_StatusAnimal = 1 AND [StatusAnimal] IS NULL) OR ([StatusAnimal] = @Original_StatusAnimal)) AND ((@IsNull_AmountOfPowerfeed = 1 AND [AmountOfPowerfeed] IS NULL) OR ([AmountOfPowerfeed] = @Original_AmountOfPowerfeed)) AND ((@IsNull_AmountOfHay = 1 AND [AmountOfHay] IS NULL) OR ([AmountOfHay] = @Original_AmountOfHay)) AND ((@IsNull_AmountOfOats = 1 AND [AmountOfOats] IS NULL) OR ([AmountOfOats] = @Original_AmountOfOats)) AND ((@IsNull_IdBox = 1 AND [IdBox] IS NULL) OR ([IdBox] = @Original_IdBox)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TypeAnimal", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TypeAnimal", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdAnimal", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdAnimal", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -2759,8 +2759,8 @@ namespace FarmITApp.FarmITDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_StatusAnimal", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StatusAnimal", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_StatusAnimal", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StatusAnimal", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AmountOfPowerFeed", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AmountOfPowerFeed", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AmountOfPowerFeed", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AmountOfPowerFeed", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AmountOfPowerfeed", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AmountOfPowerfeed", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AmountOfPowerfeed", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AmountOfPowerfeed", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AmountOfHay", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AmountOfHay", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AmountOfHay", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AmountOfHay", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AmountOfOats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AmountOfOats", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -2769,29 +2769,29 @@ namespace FarmITApp.FarmITDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdBox", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdBox", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Animals] ([TypeAnimal], [IdAnimal], [Age], [Name], [StatusAnimal], [AmountOfPowerFeed], [AmountOfHay], [AmountOfOats], [IdBox]) VALUES (@TypeAnimal, @IdAnimal, @Age, @Name, @StatusAnimal, @AmountOfPowerFeed, @AmountOfHay, @AmountOfOats, @IdBox);
-SELECT TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerFeed, AmountOfHay, AmountOfOats, IdBox FROM Animals WHERE (IdAnimal = @IdAnimal)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Animal] ([TypeAnimal], [IdAnimal], [Age], [Name], [StatusAnimal], [AmountOfPowerfeed], [AmountOfHay], [AmountOfOats], [IdBox]) VALUES (@TypeAnimal, @IdAnimal, @Age, @Name, @StatusAnimal, @AmountOfPowerfeed, @AmountOfHay, @AmountOfOats, @IdBox);
+SELECT TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerfeed, AmountOfHay, AmountOfOats, IdBox FROM Animal WHERE (IdAnimal = @IdAnimal)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TypeAnimal", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TypeAnimal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdAnimal", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdAnimal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Age", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Age", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StatusAnimal", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StatusAnimal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AmountOfPowerFeed", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AmountOfPowerFeed", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AmountOfPowerfeed", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AmountOfPowerfeed", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AmountOfHay", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AmountOfHay", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AmountOfOats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AmountOfOats", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdBox", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdBox", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Animals] SET [TypeAnimal] = @TypeAnimal, [IdAnimal] = @IdAnimal, [Age] = @Age, [Name] = @Name, [StatusAnimal] = @StatusAnimal, [AmountOfPowerFeed] = @AmountOfPowerFeed, [AmountOfHay] = @AmountOfHay, [AmountOfOats] = @AmountOfOats, [IdBox] = @IdBox WHERE (([TypeAnimal] = @Original_TypeAnimal) AND ([IdAnimal] = @Original_IdAnimal) AND ((@IsNull_Age = 1 AND [Age] IS NULL) OR ([Age] = @Original_Age)) AND ((@IsNull_Name = 1 AND [Name] IS NULL) OR ([Name] = @Original_Name)) AND ((@IsNull_StatusAnimal = 1 AND [StatusAnimal] IS NULL) OR ([StatusAnimal] = @Original_StatusAnimal)) AND ((@IsNull_AmountOfPowerFeed = 1 AND [AmountOfPowerFeed] IS NULL) OR ([AmountOfPowerFeed] = @Original_AmountOfPowerFeed)) AND ((@IsNull_AmountOfHay = 1 AND [AmountOfHay] IS NULL) OR ([AmountOfHay] = @Original_AmountOfHay)) AND ((@IsNull_AmountOfOats = 1 AND [AmountOfOats] IS NULL) OR ([AmountOfOats] = @Original_AmountOfOats)) AND ((@IsNull_IdBox = 1 AND [IdBox] IS NULL) OR ([IdBox] = @Original_IdBox)));
-SELECT TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerFeed, AmountOfHay, AmountOfOats, IdBox FROM Animals WHERE (IdAnimal = @IdAnimal)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Animal] SET [TypeAnimal] = @TypeAnimal, [IdAnimal] = @IdAnimal, [Age] = @Age, [Name] = @Name, [StatusAnimal] = @StatusAnimal, [AmountOfPowerfeed] = @AmountOfPowerfeed, [AmountOfHay] = @AmountOfHay, [AmountOfOats] = @AmountOfOats, [IdBox] = @IdBox WHERE (([TypeAnimal] = @Original_TypeAnimal) AND ([IdAnimal] = @Original_IdAnimal) AND ((@IsNull_Age = 1 AND [Age] IS NULL) OR ([Age] = @Original_Age)) AND ((@IsNull_Name = 1 AND [Name] IS NULL) OR ([Name] = @Original_Name)) AND ((@IsNull_StatusAnimal = 1 AND [StatusAnimal] IS NULL) OR ([StatusAnimal] = @Original_StatusAnimal)) AND ((@IsNull_AmountOfPowerfeed = 1 AND [AmountOfPowerfeed] IS NULL) OR ([AmountOfPowerfeed] = @Original_AmountOfPowerfeed)) AND ((@IsNull_AmountOfHay = 1 AND [AmountOfHay] IS NULL) OR ([AmountOfHay] = @Original_AmountOfHay)) AND ((@IsNull_AmountOfOats = 1 AND [AmountOfOats] IS NULL) OR ([AmountOfOats] = @Original_AmountOfOats)) AND ((@IsNull_IdBox = 1 AND [IdBox] IS NULL) OR ([IdBox] = @Original_IdBox)));
+SELECT TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerfeed, AmountOfHay, AmountOfOats, IdBox FROM Animal WHERE (IdAnimal = @IdAnimal)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TypeAnimal", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TypeAnimal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdAnimal", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdAnimal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Age", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Age", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StatusAnimal", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StatusAnimal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AmountOfPowerFeed", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AmountOfPowerFeed", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AmountOfPowerfeed", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AmountOfPowerfeed", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AmountOfHay", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AmountOfHay", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AmountOfOats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AmountOfOats", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdBox", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdBox", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -2803,8 +2803,8 @@ SELECT TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerFeed, AmountO
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_StatusAnimal", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StatusAnimal", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_StatusAnimal", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StatusAnimal", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AmountOfPowerFeed", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AmountOfPowerFeed", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AmountOfPowerFeed", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AmountOfPowerFeed", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AmountOfPowerfeed", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AmountOfPowerfeed", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AmountOfPowerfeed", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AmountOfPowerfeed", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AmountOfHay", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AmountOfHay", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AmountOfHay", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AmountOfHay", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AmountOfOats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AmountOfOats", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -2826,27 +2826,27 @@ SELECT TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerFeed, AmountO
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerFeed, AmountOf" +
-                "Hay, AmountOfOats, IdBox FROM dbo.Animals";
+            this._commandCollection[0].CommandText = "SELECT TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerfeed, AmountOf" +
+                "Hay, AmountOfOats, IdBox FROM dbo.Animal";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerFeed, A" +
-                "mountOfHay, AmountOfOats, IdBox\r\nFROM            Animals\r\nWHERE        (TypeAnim" +
-                "al LIKE @TypeAnimal + \'%\')";
+            this._commandCollection[1].CommandText = "SELECT        TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerfeed, A" +
+                "mountOfHay, AmountOfOats, IdBox\r\nFROM            Animal\r\nWHERE        (TypeAnima" +
+                "l LIKE @TypeAnimal + \'%\')";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TypeAnimal", global::System.Data.SqlDbType.VarChar, 6, global::System.Data.ParameterDirection.Input, 0, 0, "TypeAnimal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT        TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerFeed, A" +
-                "mountOfHay, AmountOfOats, IdBox\r\nFROM            Animals\r\nWHERE        (IdAnimal" +
-                " = @IdAnimal + \'\')";
+            this._commandCollection[2].CommandText = "SELECT        TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerfeed, A" +
+                "mountOfHay, AmountOfOats, IdBox\r\nFROM            Animal\r\nWHERE        (IdAnimal " +
+                "= @IdAnimal + \'\')";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdAnimal", global::System.Data.SqlDbType.BigInt, 8, global::System.Data.ParameterDirection.Input, 0, 0, "IdAnimal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "SELECT        TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerFeed, A" +
-                "mountOfHay, AmountOfOats, IdBox\r\nFROM            Animals";
+            this._commandCollection[3].CommandText = "SELECT        TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerfeed, A" +
+                "mountOfHay, AmountOfOats, IdBox\r\nFROM            Animal";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -2854,7 +2854,7 @@ SELECT TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerFeed, AmountO
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(FarmITDataSet.AnimalsDataTable dataTable) {
+        public virtual int Fill(FarmITDataSet.AnimalDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -2867,9 +2867,9 @@ SELECT TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerFeed, AmountO
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual FarmITDataSet.AnimalsDataTable GetData() {
+        public virtual FarmITDataSet.AnimalDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            FarmITDataSet.AnimalsDataTable dataTable = new FarmITDataSet.AnimalsDataTable();
+            FarmITDataSet.AnimalDataTable dataTable = new FarmITDataSet.AnimalDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -2878,7 +2878,7 @@ SELECT TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerFeed, AmountO
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int Find_Type(FarmITDataSet.AnimalsDataTable dataTable, string TypeAnimal) {
+        public virtual int Find_Type(FarmITDataSet.AnimalDataTable dataTable, string TypeAnimal) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((TypeAnimal == null)) {
                 throw new global::System.ArgumentNullException("TypeAnimal");
@@ -2897,7 +2897,7 @@ SELECT TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerFeed, AmountO
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FindById(FarmITDataSet.AnimalsDataTable dataTable, long IdAnimal) {
+        public virtual int FindById(FarmITDataSet.AnimalDataTable dataTable, long IdAnimal) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
             this.Adapter.SelectCommand.Parameters[0].Value = ((long)(IdAnimal));
             if ((this.ClearBeforeFill == true)) {
@@ -2911,7 +2911,7 @@ SELECT TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerFeed, AmountO
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int Reset(FarmITDataSet.AnimalsDataTable dataTable) {
+        public virtual int Reset(FarmITDataSet.AnimalDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[3];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -2923,7 +2923,7 @@ SELECT TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerFeed, AmountO
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(FarmITDataSet.AnimalsDataTable dataTable) {
+        public virtual int Update(FarmITDataSet.AnimalDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -2931,7 +2931,7 @@ SELECT TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerFeed, AmountO
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(FarmITDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Animals");
+            return this.Adapter.Update(dataSet, "Animal");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2953,7 +2953,7 @@ SELECT TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerFeed, AmountO
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_TypeAnimal, long Original_IdAnimal, string Original_Age, string Original_Name, string Original_StatusAnimal, global::System.Nullable<int> Original_AmountOfPowerFeed, global::System.Nullable<int> Original_AmountOfHay, global::System.Nullable<int> Original_AmountOfOats, string Original_IdBox) {
+        public virtual int Delete(string Original_TypeAnimal, long Original_IdAnimal, string Original_Age, string Original_Name, string Original_StatusAnimal, global::System.Nullable<int> Original_AmountOfPowerfeed, global::System.Nullable<int> Original_AmountOfHay, global::System.Nullable<int> Original_AmountOfOats, string Original_IdBox) {
             if ((Original_TypeAnimal == null)) {
                 throw new global::System.ArgumentNullException("Original_TypeAnimal");
             }
@@ -2985,9 +2985,9 @@ SELECT TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerFeed, AmountO
                 this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_StatusAnimal));
             }
-            if ((Original_AmountOfPowerFeed.HasValue == true)) {
+            if ((Original_AmountOfPowerfeed.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((int)(Original_AmountOfPowerFeed.Value));
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((int)(Original_AmountOfPowerfeed.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
@@ -3037,7 +3037,7 @@ SELECT TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerFeed, AmountO
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string TypeAnimal, long IdAnimal, string Age, string Name, string StatusAnimal, global::System.Nullable<int> AmountOfPowerFeed, global::System.Nullable<int> AmountOfHay, global::System.Nullable<int> AmountOfOats, string IdBox) {
+        public virtual int Insert(string TypeAnimal, long IdAnimal, string Age, string Name, string StatusAnimal, global::System.Nullable<int> AmountOfPowerfeed, global::System.Nullable<int> AmountOfHay, global::System.Nullable<int> AmountOfOats, string IdBox) {
             if ((TypeAnimal == null)) {
                 throw new global::System.ArgumentNullException("TypeAnimal");
             }
@@ -3063,8 +3063,8 @@ SELECT TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerFeed, AmountO
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = ((string)(StatusAnimal));
             }
-            if ((AmountOfPowerFeed.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(AmountOfPowerFeed.Value));
+            if ((AmountOfPowerfeed.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(AmountOfPowerfeed.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
@@ -3113,7 +3113,7 @@ SELECT TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerFeed, AmountO
                     string Age, 
                     string Name, 
                     string StatusAnimal, 
-                    global::System.Nullable<int> AmountOfPowerFeed, 
+                    global::System.Nullable<int> AmountOfPowerfeed, 
                     global::System.Nullable<int> AmountOfHay, 
                     global::System.Nullable<int> AmountOfOats, 
                     string IdBox, 
@@ -3122,7 +3122,7 @@ SELECT TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerFeed, AmountO
                     string Original_Age, 
                     string Original_Name, 
                     string Original_StatusAnimal, 
-                    global::System.Nullable<int> Original_AmountOfPowerFeed, 
+                    global::System.Nullable<int> Original_AmountOfPowerfeed, 
                     global::System.Nullable<int> Original_AmountOfHay, 
                     global::System.Nullable<int> Original_AmountOfOats, 
                     string Original_IdBox) {
@@ -3151,8 +3151,8 @@ SELECT TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerFeed, AmountO
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(StatusAnimal));
             }
-            if ((AmountOfPowerFeed.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(AmountOfPowerFeed.Value));
+            if ((AmountOfPowerfeed.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(AmountOfPowerfeed.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
@@ -3206,9 +3206,9 @@ SELECT TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerFeed, AmountO
                 this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_StatusAnimal));
             }
-            if ((Original_AmountOfPowerFeed.HasValue == true)) {
+            if ((Original_AmountOfPowerfeed.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Original_AmountOfPowerFeed.Value));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Original_AmountOfPowerfeed.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
@@ -3263,7 +3263,7 @@ SELECT TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerFeed, AmountO
                     string Age, 
                     string Name, 
                     string StatusAnimal, 
-                    global::System.Nullable<int> AmountOfPowerFeed, 
+                    global::System.Nullable<int> AmountOfPowerfeed, 
                     global::System.Nullable<int> AmountOfHay, 
                     global::System.Nullable<int> AmountOfOats, 
                     string IdBox, 
@@ -3272,11 +3272,11 @@ SELECT TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerFeed, AmountO
                     string Original_Age, 
                     string Original_Name, 
                     string Original_StatusAnimal, 
-                    global::System.Nullable<int> Original_AmountOfPowerFeed, 
+                    global::System.Nullable<int> Original_AmountOfPowerfeed, 
                     global::System.Nullable<int> Original_AmountOfHay, 
                     global::System.Nullable<int> Original_AmountOfOats, 
                     string Original_IdBox) {
-            return this.Update(TypeAnimal, Original_IdAnimal, Age, Name, StatusAnimal, AmountOfPowerFeed, AmountOfHay, AmountOfOats, IdBox, Original_TypeAnimal, Original_IdAnimal, Original_Age, Original_Name, Original_StatusAnimal, Original_AmountOfPowerFeed, Original_AmountOfHay, Original_AmountOfOats, Original_IdBox);
+            return this.Update(TypeAnimal, Original_IdAnimal, Age, Name, StatusAnimal, AmountOfPowerfeed, AmountOfHay, AmountOfOats, IdBox, Original_TypeAnimal, Original_IdAnimal, Original_Age, Original_Name, Original_StatusAnimal, Original_AmountOfPowerfeed, Original_AmountOfHay, Original_AmountOfOats, Original_IdBox);
         }
     }
     
@@ -3289,7 +3289,7 @@ SELECT TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerFeed, AmountO
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class BoxesTableAdapter : global::System.ComponentModel.Component {
+    public partial class BoxTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -3303,7 +3303,7 @@ SELECT TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerFeed, AmountO
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public BoxesTableAdapter() {
+        public BoxTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -3400,29 +3400,29 @@ SELECT TypeAnimal, IdAnimal, Age, Name, StatusAnimal, AmountOfPowerFeed, AmountO
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Boxes";
+            tableMapping.DataSetTable = "Box";
             tableMapping.ColumnMappings.Add("IdBox", "IdBox");
             tableMapping.ColumnMappings.Add("IdBuilding", "IdBuilding");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Boxes] WHERE (([IdBox] = @Original_IdBox) AND ((@IsNull_IdBuil" +
-                "ding = 1 AND [IdBuilding] IS NULL) OR ([IdBuilding] = @Original_IdBuilding)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Box] WHERE (([IdBox] = @Original_IdBox) AND ((@IsNull_IdBuildi" +
+                "ng = 1 AND [IdBuilding] IS NULL) OR ([IdBuilding] = @Original_IdBuilding)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdBox", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdBox", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IdBuilding", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdBuilding", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdBuilding", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdBuilding", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Boxes] ([IdBox], [IdBuilding]) VALUES (@IdBox, @IdBuilding);\r\n" +
-                "SELECT IdBox, IdBuilding FROM Boxes WHERE (IdBox = @IdBox)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Box] ([IdBox], [IdBuilding]) VALUES (@IdBox, @IdBuilding);\r\nSE" +
+                "LECT IdBox, IdBuilding FROM Box WHERE (IdBox = @IdBox)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdBox", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdBox", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdBuilding", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdBuilding", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Boxes] SET [IdBox] = @IdBox, [IdBuilding] = @IdBuilding WHERE (([IdBox] = @Original_IdBox) AND ((@IsNull_IdBuilding = 1 AND [IdBuilding] IS NULL) OR ([IdBuilding] = @Original_IdBuilding)));
-SELECT IdBox, IdBuilding FROM Boxes WHERE (IdBox = @IdBox)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Box] SET [IdBox] = @IdBox, [IdBuilding] = @IdBuilding WHERE (([IdBox] = @Original_IdBox) AND ((@IsNull_IdBuilding = 1 AND [IdBuilding] IS NULL) OR ([IdBuilding] = @Original_IdBuilding)));
+SELECT IdBox, IdBuilding FROM Box WHERE (IdBox = @IdBox)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdBox", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdBox", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdBuilding", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdBuilding", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3444,7 +3444,7 @@ SELECT IdBox, IdBuilding FROM Boxes WHERE (IdBox = @IdBox)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT IdBox, IdBuilding FROM dbo.Boxes";
+            this._commandCollection[0].CommandText = "SELECT IdBox, IdBuilding FROM dbo.Box";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -3452,7 +3452,7 @@ SELECT IdBox, IdBuilding FROM Boxes WHERE (IdBox = @IdBox)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(FarmITDataSet.BoxesDataTable dataTable) {
+        public virtual int Fill(FarmITDataSet.BoxDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3465,9 +3465,9 @@ SELECT IdBox, IdBuilding FROM Boxes WHERE (IdBox = @IdBox)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual FarmITDataSet.BoxesDataTable GetData() {
+        public virtual FarmITDataSet.BoxDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            FarmITDataSet.BoxesDataTable dataTable = new FarmITDataSet.BoxesDataTable();
+            FarmITDataSet.BoxDataTable dataTable = new FarmITDataSet.BoxDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3475,7 +3475,7 @@ SELECT IdBox, IdBuilding FROM Boxes WHERE (IdBox = @IdBox)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(FarmITDataSet.BoxesDataTable dataTable) {
+        public virtual int Update(FarmITDataSet.BoxDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -3483,7 +3483,7 @@ SELECT IdBox, IdBuilding FROM Boxes WHERE (IdBox = @IdBox)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(FarmITDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Boxes");
+            return this.Adapter.Update(dataSet, "Box");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3634,7 +3634,7 @@ SELECT IdBox, IdBuilding FROM Boxes WHERE (IdBox = @IdBox)";
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class BuildingsTableAdapter : global::System.ComponentModel.Component {
+    public partial class BuildingTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -3648,7 +3648,7 @@ SELECT IdBox, IdBuilding FROM Boxes WHERE (IdBox = @IdBox)";
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public BuildingsTableAdapter() {
+        public BuildingTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -3745,25 +3745,25 @@ SELECT IdBox, IdBuilding FROM Boxes WHERE (IdBox = @IdBox)";
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Buildings";
+            tableMapping.DataSetTable = "Building";
             tableMapping.ColumnMappings.Add("IdBuilding", "IdBuilding");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Buildings] WHERE (([IdBuilding] = @Original_IdBuilding))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Building] WHERE (([IdBuilding] = @Original_IdBuilding))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdBuilding", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdBuilding", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Buildings] ([IdBuilding]) VALUES (@IdBuilding);\r\nSELECT IdBuil" +
-                "ding FROM Buildings WHERE (IdBuilding = @IdBuilding)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Building] ([IdBuilding]) VALUES (@IdBuilding);\r\nSELECT IdBuild" +
+                "ing FROM Building WHERE (IdBuilding = @IdBuilding)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdBuilding", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdBuilding", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Buildings] SET [IdBuilding] = @IdBuilding WHERE (([IdBuilding] = @O" +
-                "riginal_IdBuilding));\r\nSELECT IdBuilding FROM Buildings WHERE (IdBuilding = @IdB" +
-                "uilding)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Building] SET [IdBuilding] = @IdBuilding WHERE (([IdBuilding] = @Or" +
+                "iginal_IdBuilding));\r\nSELECT IdBuilding FROM Building WHERE (IdBuilding = @IdBui" +
+                "lding)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdBuilding", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdBuilding", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdBuilding", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdBuilding", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -3782,7 +3782,7 @@ SELECT IdBox, IdBuilding FROM Boxes WHERE (IdBox = @IdBox)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT IdBuilding FROM dbo.Buildings";
+            this._commandCollection[0].CommandText = "SELECT IdBuilding FROM dbo.Building";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -3790,7 +3790,7 @@ SELECT IdBox, IdBuilding FROM Boxes WHERE (IdBox = @IdBox)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(FarmITDataSet.BuildingsDataTable dataTable) {
+        public virtual int Fill(FarmITDataSet.BuildingDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3803,9 +3803,9 @@ SELECT IdBox, IdBuilding FROM Boxes WHERE (IdBox = @IdBox)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual FarmITDataSet.BuildingsDataTable GetData() {
+        public virtual FarmITDataSet.BuildingDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            FarmITDataSet.BuildingsDataTable dataTable = new FarmITDataSet.BuildingsDataTable();
+            FarmITDataSet.BuildingDataTable dataTable = new FarmITDataSet.BuildingDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3813,7 +3813,7 @@ SELECT IdBox, IdBuilding FROM Boxes WHERE (IdBox = @IdBox)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(FarmITDataSet.BuildingsDataTable dataTable) {
+        public virtual int Update(FarmITDataSet.BuildingDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -3821,7 +3821,7 @@ SELECT IdBox, IdBuilding FROM Boxes WHERE (IdBox = @IdBox)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(FarmITDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Buildings");
+            return this.Adapter.Update(dataSet, "Building");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3944,7 +3944,7 @@ SELECT IdBox, IdBuilding FROM Boxes WHERE (IdBox = @IdBox)";
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class EatsTableAdapter : global::System.ComponentModel.Component {
+    public partial class EatTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -3958,7 +3958,7 @@ SELECT IdBox, IdBuilding FROM Boxes WHERE (IdBox = @IdBox)";
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public EatsTableAdapter() {
+        public EatTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -4055,30 +4055,30 @@ SELECT IdBox, IdBuilding FROM Boxes WHERE (IdBox = @IdBox)";
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Eats";
+            tableMapping.DataSetTable = "Eat";
             tableMapping.ColumnMappings.Add("IdFood", "IdFood");
             tableMapping.ColumnMappings.Add("IdAnimal", "IdAnimal");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Eats] WHERE (([IdFood] = @Original_IdFood) AND ([IdAnimal] = @" +
-                "Original_IdAnimal))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Eat] WHERE (([IdFood] = @Original_IdFood) AND ([IdAnimal] = @O" +
+                "riginal_IdAnimal))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdFood", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdFood", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdAnimal", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdAnimal", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Eats] ([IdFood], [IdAnimal]) VALUES (@IdFood, @IdAnimal);\r\nSEL" +
-                "ECT IdFood, IdAnimal FROM Eats WHERE (IdAnimal = @IdAnimal) AND (IdFood = @IdFoo" +
-                "d)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Eat] ([IdFood], [IdAnimal]) VALUES (@IdFood, @IdAnimal);\r\nSELE" +
+                "CT IdFood, IdAnimal FROM Eat WHERE (IdAnimal = @IdAnimal) AND (IdFood = @IdFood)" +
+                "";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdFood", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdFood", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdAnimal", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdAnimal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Eats] SET [IdFood] = @IdFood, [IdAnimal] = @IdAnimal WHERE (([IdFoo" +
-                "d] = @Original_IdFood) AND ([IdAnimal] = @Original_IdAnimal));\r\nSELECT IdFood, I" +
-                "dAnimal FROM Eats WHERE (IdAnimal = @IdAnimal) AND (IdFood = @IdFood)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Eat] SET [IdFood] = @IdFood, [IdAnimal] = @IdAnimal WHERE (([IdFood" +
+                "] = @Original_IdFood) AND ([IdAnimal] = @Original_IdAnimal));\r\nSELECT IdFood, Id" +
+                "Animal FROM Eat WHERE (IdAnimal = @IdAnimal) AND (IdFood = @IdFood)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdFood", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdFood", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdAnimal", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdAnimal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4099,7 +4099,7 @@ SELECT IdBox, IdBuilding FROM Boxes WHERE (IdBox = @IdBox)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT IdFood, IdAnimal FROM dbo.Eats";
+            this._commandCollection[0].CommandText = "SELECT IdFood, IdAnimal FROM dbo.Eat";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4107,7 +4107,7 @@ SELECT IdBox, IdBuilding FROM Boxes WHERE (IdBox = @IdBox)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(FarmITDataSet.EatsDataTable dataTable) {
+        public virtual int Fill(FarmITDataSet.EatDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4120,9 +4120,9 @@ SELECT IdBox, IdBuilding FROM Boxes WHERE (IdBox = @IdBox)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual FarmITDataSet.EatsDataTable GetData() {
+        public virtual FarmITDataSet.EatDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            FarmITDataSet.EatsDataTable dataTable = new FarmITDataSet.EatsDataTable();
+            FarmITDataSet.EatDataTable dataTable = new FarmITDataSet.EatDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4130,7 +4130,7 @@ SELECT IdBox, IdBuilding FROM Boxes WHERE (IdBox = @IdBox)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(FarmITDataSet.EatsDataTable dataTable) {
+        public virtual int Update(FarmITDataSet.EatDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -4138,7 +4138,7 @@ SELECT IdBox, IdBuilding FROM Boxes WHERE (IdBox = @IdBox)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(FarmITDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Eats");
+            return this.Adapter.Update(dataSet, "Eat");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4245,7 +4245,7 @@ SELECT IdBox, IdBuilding FROM Boxes WHERE (IdBox = @IdBox)";
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class FoodsTableAdapter : global::System.ComponentModel.Component {
+    public partial class FoodTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -4259,7 +4259,7 @@ SELECT IdBox, IdBuilding FROM Boxes WHERE (IdBox = @IdBox)";
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public FoodsTableAdapter() {
+        public FoodTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -4356,16 +4356,16 @@ SELECT IdBox, IdBuilding FROM Boxes WHERE (IdBox = @IdBox)";
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Foods";
+            tableMapping.DataSetTable = "Food";
             tableMapping.ColumnMappings.Add("IdFood", "IdFood");
             tableMapping.ColumnMappings.Add("Amount", "Amount");
             tableMapping.ColumnMappings.Add("TypeFood", "TypeFood");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Foods] WHERE (([IdFood] = @Original_IdFood) AND ((@IsNull_Amou" +
-                "nt = 1 AND [Amount] IS NULL) OR ([Amount] = @Original_Amount)) AND ((@IsNull_Typ" +
-                "eFood = 1 AND [TypeFood] IS NULL) OR ([TypeFood] = @Original_TypeFood)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Food] WHERE (([IdFood] = @Original_IdFood) AND ((@IsNull_Amoun" +
+                "t = 1 AND [Amount] IS NULL) OR ([Amount] = @Original_Amount)) AND ((@IsNull_Type" +
+                "Food = 1 AND [TypeFood] IS NULL) OR ([TypeFood] = @Original_TypeFood)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdFood", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdFood", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Amount", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Amount", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -4374,17 +4374,17 @@ SELECT IdBox, IdBuilding FROM Boxes WHERE (IdBox = @IdBox)";
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TypeFood", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TypeFood", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Foods] ([IdFood], [Amount], [TypeFood]) VALUES (@IdFood, @Amou" +
-                "nt, @TypeFood);\r\nSELECT IdFood, Amount, TypeFood FROM Foods WHERE (IdFood = @IdF" +
-                "ood)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Food] ([IdFood], [Amount], [TypeFood]) VALUES (@IdFood, @Amoun" +
+                "t, @TypeFood);\r\nSELECT IdFood, Amount, TypeFood FROM Food WHERE (IdFood = @IdFoo" +
+                "d)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdFood", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdFood", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Amount", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Amount", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TypeFood", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TypeFood", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Foods] SET [IdFood] = @IdFood, [Amount] = @Amount, [TypeFood] = @TypeFood WHERE (([IdFood] = @Original_IdFood) AND ((@IsNull_Amount = 1 AND [Amount] IS NULL) OR ([Amount] = @Original_Amount)) AND ((@IsNull_TypeFood = 1 AND [TypeFood] IS NULL) OR ([TypeFood] = @Original_TypeFood)));
-SELECT IdFood, Amount, TypeFood FROM Foods WHERE (IdFood = @IdFood)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Food] SET [IdFood] = @IdFood, [Amount] = @Amount, [TypeFood] = @TypeFood WHERE (([IdFood] = @Original_IdFood) AND ((@IsNull_Amount = 1 AND [Amount] IS NULL) OR ([Amount] = @Original_Amount)) AND ((@IsNull_TypeFood = 1 AND [TypeFood] IS NULL) OR ([TypeFood] = @Original_TypeFood)));
+SELECT IdFood, Amount, TypeFood FROM Food WHERE (IdFood = @IdFood)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdFood", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdFood", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Amount", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Amount", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4409,7 +4409,7 @@ SELECT IdFood, Amount, TypeFood FROM Foods WHERE (IdFood = @IdFood)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT IdFood, Amount, TypeFood FROM dbo.Foods";
+            this._commandCollection[0].CommandText = "SELECT IdFood, Amount, TypeFood FROM dbo.Food";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4417,7 +4417,7 @@ SELECT IdFood, Amount, TypeFood FROM Foods WHERE (IdFood = @IdFood)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(FarmITDataSet.FoodsDataTable dataTable) {
+        public virtual int Fill(FarmITDataSet.FoodDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4430,9 +4430,9 @@ SELECT IdFood, Amount, TypeFood FROM Foods WHERE (IdFood = @IdFood)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual FarmITDataSet.FoodsDataTable GetData() {
+        public virtual FarmITDataSet.FoodDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            FarmITDataSet.FoodsDataTable dataTable = new FarmITDataSet.FoodsDataTable();
+            FarmITDataSet.FoodDataTable dataTable = new FarmITDataSet.FoodDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4440,7 +4440,7 @@ SELECT IdFood, Amount, TypeFood FROM Foods WHERE (IdFood = @IdFood)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(FarmITDataSet.FoodsDataTable dataTable) {
+        public virtual int Update(FarmITDataSet.FoodDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -4448,7 +4448,7 @@ SELECT IdFood, Amount, TypeFood FROM Foods WHERE (IdFood = @IdFood)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(FarmITDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Foods");
+            return this.Adapter.Update(dataSet, "Food");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4610,15 +4610,15 @@ SELECT IdFood, Amount, TypeFood FROM Foods WHERE (IdFood = @IdFood)";
         
         private UpdateOrderOption _updateOrder;
         
-        private AnimalsTableAdapter _animalsTableAdapter;
+        private AnimalTableAdapter _animalTableAdapter;
         
-        private BoxesTableAdapter _boxesTableAdapter;
+        private BoxTableAdapter _boxTableAdapter;
         
-        private BuildingsTableAdapter _buildingsTableAdapter;
+        private BuildingTableAdapter _buildingTableAdapter;
         
-        private EatsTableAdapter _eatsTableAdapter;
+        private EatTableAdapter _eatTableAdapter;
         
-        private FoodsTableAdapter _foodsTableAdapter;
+        private FoodTableAdapter _foodTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -4640,12 +4640,12 @@ SELECT IdFood, Amount, TypeFood FROM Foods WHERE (IdFood = @IdFood)";
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public AnimalsTableAdapter AnimalsTableAdapter {
+        public AnimalTableAdapter AnimalTableAdapter {
             get {
-                return this._animalsTableAdapter;
+                return this._animalTableAdapter;
             }
             set {
-                this._animalsTableAdapter = value;
+                this._animalTableAdapter = value;
             }
         }
         
@@ -4654,12 +4654,12 @@ SELECT IdFood, Amount, TypeFood FROM Foods WHERE (IdFood = @IdFood)";
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public BoxesTableAdapter BoxesTableAdapter {
+        public BoxTableAdapter BoxTableAdapter {
             get {
-                return this._boxesTableAdapter;
+                return this._boxTableAdapter;
             }
             set {
-                this._boxesTableAdapter = value;
+                this._boxTableAdapter = value;
             }
         }
         
@@ -4668,12 +4668,12 @@ SELECT IdFood, Amount, TypeFood FROM Foods WHERE (IdFood = @IdFood)";
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public BuildingsTableAdapter BuildingsTableAdapter {
+        public BuildingTableAdapter BuildingTableAdapter {
             get {
-                return this._buildingsTableAdapter;
+                return this._buildingTableAdapter;
             }
             set {
-                this._buildingsTableAdapter = value;
+                this._buildingTableAdapter = value;
             }
         }
         
@@ -4682,12 +4682,12 @@ SELECT IdFood, Amount, TypeFood FROM Foods WHERE (IdFood = @IdFood)";
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public EatsTableAdapter EatsTableAdapter {
+        public EatTableAdapter EatTableAdapter {
             get {
-                return this._eatsTableAdapter;
+                return this._eatTableAdapter;
             }
             set {
-                this._eatsTableAdapter = value;
+                this._eatTableAdapter = value;
             }
         }
         
@@ -4696,12 +4696,12 @@ SELECT IdFood, Amount, TypeFood FROM Foods WHERE (IdFood = @IdFood)";
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public FoodsTableAdapter FoodsTableAdapter {
+        public FoodTableAdapter FoodTableAdapter {
             get {
-                return this._foodsTableAdapter;
+                return this._foodTableAdapter;
             }
             set {
-                this._foodsTableAdapter = value;
+                this._foodTableAdapter = value;
             }
         }
         
@@ -4724,25 +4724,25 @@ SELECT IdFood, Amount, TypeFood FROM Foods WHERE (IdFood = @IdFood)";
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._animalsTableAdapter != null) 
-                            && (this._animalsTableAdapter.Connection != null))) {
-                    return this._animalsTableAdapter.Connection;
+                if (((this._animalTableAdapter != null) 
+                            && (this._animalTableAdapter.Connection != null))) {
+                    return this._animalTableAdapter.Connection;
                 }
-                if (((this._boxesTableAdapter != null) 
-                            && (this._boxesTableAdapter.Connection != null))) {
-                    return this._boxesTableAdapter.Connection;
+                if (((this._boxTableAdapter != null) 
+                            && (this._boxTableAdapter.Connection != null))) {
+                    return this._boxTableAdapter.Connection;
                 }
-                if (((this._buildingsTableAdapter != null) 
-                            && (this._buildingsTableAdapter.Connection != null))) {
-                    return this._buildingsTableAdapter.Connection;
+                if (((this._buildingTableAdapter != null) 
+                            && (this._buildingTableAdapter.Connection != null))) {
+                    return this._buildingTableAdapter.Connection;
                 }
-                if (((this._eatsTableAdapter != null) 
-                            && (this._eatsTableAdapter.Connection != null))) {
-                    return this._eatsTableAdapter.Connection;
+                if (((this._eatTableAdapter != null) 
+                            && (this._eatTableAdapter.Connection != null))) {
+                    return this._eatTableAdapter.Connection;
                 }
-                if (((this._foodsTableAdapter != null) 
-                            && (this._foodsTableAdapter.Connection != null))) {
-                    return this._foodsTableAdapter.Connection;
+                if (((this._foodTableAdapter != null) 
+                            && (this._foodTableAdapter.Connection != null))) {
+                    return this._foodTableAdapter.Connection;
                 }
                 return null;
             }
@@ -4757,19 +4757,19 @@ SELECT IdFood, Amount, TypeFood FROM Foods WHERE (IdFood = @IdFood)";
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._animalsTableAdapter != null)) {
+                if ((this._animalTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._boxesTableAdapter != null)) {
+                if ((this._boxTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._buildingsTableAdapter != null)) {
+                if ((this._buildingTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._eatsTableAdapter != null)) {
+                if ((this._eatTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._foodsTableAdapter != null)) {
+                if ((this._foodTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -4783,48 +4783,48 @@ SELECT IdFood, Amount, TypeFood FROM Foods WHERE (IdFood = @IdFood)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateUpdatedRows(FarmITDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._buildingsTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Buildings.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._buildingTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Building.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._buildingsTableAdapter.Update(updatedRows));
+                    result = (result + this._buildingTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._boxesTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Boxes.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._boxTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Box.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._boxesTableAdapter.Update(updatedRows));
+                    result = (result + this._boxTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._animalsTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Animals.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._animalTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Animal.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._animalsTableAdapter.Update(updatedRows));
+                    result = (result + this._animalTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._foodsTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Foods.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._foodTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Food.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._foodsTableAdapter.Update(updatedRows));
+                    result = (result + this._foodTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._eatsTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Eats.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._eatTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Eat.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._eatsTableAdapter.Update(updatedRows));
+                    result = (result + this._eatTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -4838,43 +4838,43 @@ SELECT IdFood, Amount, TypeFood FROM Foods WHERE (IdFood = @IdFood)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateInsertedRows(FarmITDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._buildingsTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Buildings.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._buildingTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Building.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._buildingsTableAdapter.Update(addedRows));
+                    result = (result + this._buildingTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._boxesTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Boxes.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._boxTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Box.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._boxesTableAdapter.Update(addedRows));
+                    result = (result + this._boxTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._animalsTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Animals.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._animalTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Animal.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._animalsTableAdapter.Update(addedRows));
+                    result = (result + this._animalTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._foodsTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Foods.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._foodTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Food.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._foodsTableAdapter.Update(addedRows));
+                    result = (result + this._foodTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._eatsTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Eats.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._eatTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Eat.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._eatsTableAdapter.Update(addedRows));
+                    result = (result + this._eatTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -4888,43 +4888,43 @@ SELECT IdFood, Amount, TypeFood FROM Foods WHERE (IdFood = @IdFood)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(FarmITDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._eatsTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Eats.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._eatTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Eat.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._eatsTableAdapter.Update(deletedRows));
+                    result = (result + this._eatTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._foodsTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Foods.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._foodTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Food.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._foodsTableAdapter.Update(deletedRows));
+                    result = (result + this._foodTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._animalsTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Animals.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._animalTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Animal.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._animalsTableAdapter.Update(deletedRows));
+                    result = (result + this._animalTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._boxesTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Boxes.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._boxTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Box.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._boxesTableAdapter.Update(deletedRows));
+                    result = (result + this._boxTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._buildingsTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Buildings.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._buildingTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Building.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._buildingsTableAdapter.Update(deletedRows));
+                    result = (result + this._buildingTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -4967,28 +4967,28 @@ SELECT IdFood, Amount, TypeFood FROM Foods WHERE (IdFood = @IdFood)";
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._animalsTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._animalsTableAdapter.Connection) == false))) {
+            if (((this._animalTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._animalTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._boxesTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._boxesTableAdapter.Connection) == false))) {
+            if (((this._boxTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._boxTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._buildingsTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._buildingsTableAdapter.Connection) == false))) {
+            if (((this._buildingTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._buildingTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._eatsTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._eatsTableAdapter.Connection) == false))) {
+            if (((this._eatTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._eatTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._foodsTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._foodsTableAdapter.Connection) == false))) {
+            if (((this._foodTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._foodTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -5024,49 +5024,49 @@ SELECT IdFood, Amount, TypeFood FROM Foods WHERE (IdFood = @IdFood)";
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._animalsTableAdapter != null)) {
-                    revertConnections.Add(this._animalsTableAdapter, this._animalsTableAdapter.Connection);
-                    this._animalsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._animalsTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._animalsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._animalsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._animalsTableAdapter.Adapter);
+                if ((this._animalTableAdapter != null)) {
+                    revertConnections.Add(this._animalTableAdapter, this._animalTableAdapter.Connection);
+                    this._animalTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._animalTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._animalTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._animalTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._animalTableAdapter.Adapter);
                     }
                 }
-                if ((this._boxesTableAdapter != null)) {
-                    revertConnections.Add(this._boxesTableAdapter, this._boxesTableAdapter.Connection);
-                    this._boxesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._boxesTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._boxesTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._boxesTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._boxesTableAdapter.Adapter);
+                if ((this._boxTableAdapter != null)) {
+                    revertConnections.Add(this._boxTableAdapter, this._boxTableAdapter.Connection);
+                    this._boxTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._boxTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._boxTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._boxTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._boxTableAdapter.Adapter);
                     }
                 }
-                if ((this._buildingsTableAdapter != null)) {
-                    revertConnections.Add(this._buildingsTableAdapter, this._buildingsTableAdapter.Connection);
-                    this._buildingsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._buildingsTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._buildingsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._buildingsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._buildingsTableAdapter.Adapter);
+                if ((this._buildingTableAdapter != null)) {
+                    revertConnections.Add(this._buildingTableAdapter, this._buildingTableAdapter.Connection);
+                    this._buildingTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._buildingTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._buildingTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._buildingTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._buildingTableAdapter.Adapter);
                     }
                 }
-                if ((this._eatsTableAdapter != null)) {
-                    revertConnections.Add(this._eatsTableAdapter, this._eatsTableAdapter.Connection);
-                    this._eatsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._eatsTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._eatsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._eatsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._eatsTableAdapter.Adapter);
+                if ((this._eatTableAdapter != null)) {
+                    revertConnections.Add(this._eatTableAdapter, this._eatTableAdapter.Connection);
+                    this._eatTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._eatTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._eatTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._eatTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._eatTableAdapter.Adapter);
                     }
                 }
-                if ((this._foodsTableAdapter != null)) {
-                    revertConnections.Add(this._foodsTableAdapter, this._foodsTableAdapter.Connection);
-                    this._foodsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._foodsTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._foodsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._foodsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._foodsTableAdapter.Adapter);
+                if ((this._foodTableAdapter != null)) {
+                    revertConnections.Add(this._foodTableAdapter, this._foodTableAdapter.Connection);
+                    this._foodTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._foodTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._foodTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._foodTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._foodTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -5127,25 +5127,25 @@ SELECT IdFood, Amount, TypeFood FROM Foods WHERE (IdFood = @IdFood)";
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._animalsTableAdapter != null)) {
-                    this._animalsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._animalsTableAdapter]));
-                    this._animalsTableAdapter.Transaction = null;
+                if ((this._animalTableAdapter != null)) {
+                    this._animalTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._animalTableAdapter]));
+                    this._animalTableAdapter.Transaction = null;
                 }
-                if ((this._boxesTableAdapter != null)) {
-                    this._boxesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._boxesTableAdapter]));
-                    this._boxesTableAdapter.Transaction = null;
+                if ((this._boxTableAdapter != null)) {
+                    this._boxTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._boxTableAdapter]));
+                    this._boxTableAdapter.Transaction = null;
                 }
-                if ((this._buildingsTableAdapter != null)) {
-                    this._buildingsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._buildingsTableAdapter]));
-                    this._buildingsTableAdapter.Transaction = null;
+                if ((this._buildingTableAdapter != null)) {
+                    this._buildingTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._buildingTableAdapter]));
+                    this._buildingTableAdapter.Transaction = null;
                 }
-                if ((this._eatsTableAdapter != null)) {
-                    this._eatsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._eatsTableAdapter]));
-                    this._eatsTableAdapter.Transaction = null;
+                if ((this._eatTableAdapter != null)) {
+                    this._eatTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._eatTableAdapter]));
+                    this._eatTableAdapter.Transaction = null;
                 }
-                if ((this._foodsTableAdapter != null)) {
-                    this._foodsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._foodsTableAdapter]));
-                    this._foodsTableAdapter.Transaction = null;
+                if ((this._foodTableAdapter != null)) {
+                    this._foodTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._foodTableAdapter]));
+                    this._foodTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
