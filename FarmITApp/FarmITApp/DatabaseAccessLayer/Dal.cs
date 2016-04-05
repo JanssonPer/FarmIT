@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using FarmITApp.EntityFrameworkV2;
+using FarmITApp.EntityFramework;
 
 namespace FarmITApp.DatabaseAccessLayer
 {
@@ -188,6 +188,28 @@ namespace FarmITApp.DatabaseAccessLayer
             {
                 //Exception
                 context.Animal.Remove(a);
+
+            }
+
+        }
+
+        public void UpdateFood(Food f)
+        {
+            try
+            {
+                Food oldFood = GetFood(f.IdFood);
+
+                if (oldFood != null)
+                {
+                    context.Entry(oldFood).CurrentValues.SetValues(f);
+                    context.SaveChanges();
+
+                }
+            }
+            catch
+            {
+                //Exception
+                context.Food.Remove(f);
 
             }
 
