@@ -68,7 +68,7 @@ namespace FarmITApp.ControllerFarm
         }
 
         //Feed methods
-        public void FeedAllAnimals(Food f)
+        public void FeedAllAnimals()
         {
             
                 List<Animal> list = dal.GetAllAnimals();
@@ -96,11 +96,14 @@ namespace FarmITApp.ControllerFarm
                     {
                         totalPowerfeed += (int)a.AmountOfPowerfeed;
                     }
-                    powerfeed.Amount = (int)powerfeed.Amount - totalPowerfeed;
-                    oats.Amount = (int)oats.Amount - totalOats;
-                    hay.Amount = (int)hay.Amount - totalHay;
+                   
                 }
-            }
+            powerfeed.Amount -= totalPowerfeed;
+            oats.Amount -= totalOats;
+            hay.Amount -= totalHay;
+
+            dal.UpdateFood(hay);
+        }
 
     }
 }
