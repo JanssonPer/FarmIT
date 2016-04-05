@@ -334,7 +334,16 @@ SELECT IdFood, Amount, TypeFood FROM Food WHERE (IdFood = @IdFood)</CommandText>
               <Mapping SourceColumn="Amount" DataSetColumn="Amount" />
               <Mapping SourceColumn="TypeFood" DataSetColumn="TypeFood" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="LabConnectionString (Settings)" DbObjectName="Lab.dbo.Food" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Refresh" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="Refresh" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="Refresh">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT IdFood, Amount, TypeFood FROM dbo.Food</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources />

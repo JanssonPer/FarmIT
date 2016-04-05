@@ -21,22 +21,17 @@ namespace FarmITApp.View
         public FarmITDesktopApp()
         {
             InitializeComponent();
-            try
-            {
-                combo_FindType.Text = "Cow";            
-            }
-            catch
-            {
-                Console.WriteLine("ej funnit");
-            }
+            combo_FindType.Text = "Cow";
+            Food pf = c.GetFood("1");
+            Food oat = c.GetFood("2");
+            Food hay = c.GetFood("3");
+            chart_Food.Series["Food Storage"].Points.AddXY("Powerfeed", pf.Amount);
+            chart_Food.Series["Food Storage"].Points.AddXY("Hay", oat.Amount);
+            chart_Food.Series["Food Storage"].Points.AddXY("Oats", hay.Amount);
+            label_Hay.Text = ""+ hay.Amount;
+            label_Oats.Text = ""+oat.Amount;
+            label_Powerfeed.Text ="" + pf.Amount;
 
-            Food pf = controller.GetFood(1);
-            Food oat = controller.GetFood(2);
-            Food hay = controller.GetFood(3);
-
-            chart_Food.Series["Food"].Points.AddXY("Powerfeed", pf.Amount);
-            chart_Food.Series["Food"].Points.AddXY("Hay", oat.Amount);
-            chart_Food.Series["Food"].Points.AddXY("Oats", hay.Amount);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -252,7 +247,28 @@ namespace FarmITApp.View
 
         private void button_FeedAnimals_Click(object sender, EventArgs e)
         {
+            Food pf = c.GetFood("1");
+            Food oat = c.GetFood("2");
+            Food hay = c.GetFood("3");
             c.FeedAllAnimals();
+            label_Hay.Text = "" + hay.Amount;
+            label_Oats.Text = "" + oat.Amount;
+            label_Powerfeed.Text = ""+ pf.Amount;
+
+
+            chart_Food.Series["Food Storage"].Points.ElementAt(0).SetValueXY("Powerfeed", pf.Amount);
+            chart_Food.Series["Food Storage"].Points.ElementAt(1).SetValueXY("Hay", oat.Amount);
+            chart_Food.Series["Food Storage"].Points.ElementAt(2).SetValueXY("Oats", hay.Amount);
+            chart_Food.Series[0].Points.ResumeUpdates();
+
+            try
+            {
+                this.foodTableAdapter.Refresh(this.farmITDataSet.Food);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
 
         }
     }

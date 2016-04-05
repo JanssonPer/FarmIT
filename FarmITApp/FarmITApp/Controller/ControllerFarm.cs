@@ -66,6 +66,98 @@ namespace FarmITApp.ControllerFarm
                 return null;
             }
         }
+        public List<Food> GetAllFood()
+        {
+            try
+            {
+                return dal.GetAllFood();
+            }
+            catch
+            {
+                //Exception
+                return null;
+            }
+        }
+
+        public List<Animal> GetAllAnimalsWhere(String status)
+        {
+            try
+            {
+                return dal.GetAllAnimalsWhere(status);
+            }
+            catch
+            {
+                //Exception
+                return null;
+            }
+        }
+
+        //Add Methods
+
+        public void AddAnimal(Animal a)
+        {
+            try
+            {
+                dal.AddAnimal(a);
+            }
+            catch
+            {
+                //Exception
+            }
+        }
+
+        //Remove Methods
+
+        public void RemoveAnimal(Animal a)
+        {
+            try
+            {
+                dal.RemoveAnimal(a);
+            }
+            catch
+            {
+                //Exception
+            }
+        }
+
+        //Update Methods
+
+        public void UpdateAnimal(Animal a)
+        {
+            try
+            {
+                dal.UpdateAnimal(a);
+            }
+            catch
+            {
+                //Exception
+            }
+        }
+
+        public void UpdateFood(Food f)
+        {
+            try
+            {
+                dal.UpdateFood(f);
+            }
+            catch
+            {
+                //Exception
+            }
+        }
+
+        public void UpdateBox(Box b)
+        {
+            try
+            {
+                dal.UpdateBox(b);
+            }
+            catch
+            {
+                //Exception
+            }
+        }
+     
 
         //Feed methods
         public void FeedAllAnimals()
@@ -103,6 +195,8 @@ namespace FarmITApp.ControllerFarm
             hay.Amount -= totalHay;
 
             dal.UpdateFood(hay);
+            dal.UpdateFood(oats);
+            dal.UpdateFood(powerfeed);
         }
 
     }

@@ -52,6 +52,10 @@
             this.textBox_Message = new System.Windows.Forms.Label();
             this.tabMenu = new System.Windows.Forms.TabControl();
             this.tabPage_Info = new System.Windows.Forms.TabPage();
+            this.label_Oats = new System.Windows.Forms.Label();
+            this.label_Powerfeed = new System.Windows.Forms.Label();
+            this.label_Hay = new System.Windows.Forms.Label();
+            this.button_FeedAnimals = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.chart_Food = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage_Find = new System.Windows.Forms.TabPage();
@@ -104,7 +108,6 @@
             this.tabPage_Create = new System.Windows.Forms.TabPage();
             this.animalTableAdapter = new FarmITApp.FarmITDataSetTableAdapters.AnimalTableAdapter();
             this.foodTableAdapter = new FarmITApp.FarmITDataSetTableAdapters.FoodTableAdapter();
-            this.button_FeedAnimals = new System.Windows.Forms.Button();
             this.tabMenu.SuspendLayout();
             this.tabPage_Info.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_Food)).BeginInit();
@@ -307,6 +310,9 @@
             // tabPage_Info
             // 
             this.tabPage_Info.BackColor = System.Drawing.Color.White;
+            this.tabPage_Info.Controls.Add(this.label_Oats);
+            this.tabPage_Info.Controls.Add(this.label_Powerfeed);
+            this.tabPage_Info.Controls.Add(this.label_Hay);
             this.tabPage_Info.Controls.Add(this.button_FeedAnimals);
             this.tabPage_Info.Controls.Add(this.label8);
             this.tabPage_Info.Controls.Add(this.chart_Food);
@@ -315,6 +321,43 @@
             this.tabPage_Info.Size = new System.Drawing.Size(1016, 476);
             this.tabPage_Info.TabIndex = 2;
             this.tabPage_Info.Text = "Information";
+            // 
+            // label_Oats
+            // 
+            this.label_Oats.AutoSize = true;
+            this.label_Oats.Location = new System.Drawing.Point(418, 377);
+            this.label_Oats.Name = "label_Oats";
+            this.label_Oats.Size = new System.Drawing.Size(29, 13);
+            this.label_Oats.TabIndex = 5;
+            this.label_Oats.Text = "Oats";
+            // 
+            // label_Powerfeed
+            // 
+            this.label_Powerfeed.AutoSize = true;
+            this.label_Powerfeed.Location = new System.Drawing.Point(345, 377);
+            this.label_Powerfeed.Name = "label_Powerfeed";
+            this.label_Powerfeed.Size = new System.Drawing.Size(58, 13);
+            this.label_Powerfeed.TabIndex = 4;
+            this.label_Powerfeed.Text = "Powerfeed";
+            // 
+            // label_Hay
+            // 
+            this.label_Hay.AutoSize = true;
+            this.label_Hay.Location = new System.Drawing.Point(489, 377);
+            this.label_Hay.Name = "label_Hay";
+            this.label_Hay.Size = new System.Drawing.Size(26, 13);
+            this.label_Hay.TabIndex = 3;
+            this.label_Hay.Text = "Hay";
+            // 
+            // button_FeedAnimals
+            // 
+            this.button_FeedAnimals.Location = new System.Drawing.Point(405, 424);
+            this.button_FeedAnimals.Name = "button_FeedAnimals";
+            this.button_FeedAnimals.Size = new System.Drawing.Size(134, 23);
+            this.button_FeedAnimals.TabIndex = 2;
+            this.button_FeedAnimals.Text = "Feed Animals";
+            this.button_FeedAnimals.UseVisualStyleBackColor = true;
+            this.button_FeedAnimals.Click += new System.EventHandler(this.button_FeedAnimals_Click);
             // 
             // label8
             // 
@@ -361,7 +404,7 @@
         System.Drawing.Color.DarkSeaGreen};
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
-            series1.Name = "Food";
+            series1.Name = "Food Storage";
             this.chart_Food.Series.Add(series1);
             this.chart_Food.Size = new System.Drawing.Size(501, 310);
             this.chart_Food.TabIndex = 0;
@@ -775,6 +818,7 @@
             // 
             // idFoodDataGridViewTextBoxColumn
             // 
+            this.idFoodDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.idFoodDataGridViewTextBoxColumn.DataPropertyName = "IdFood";
             this.idFoodDataGridViewTextBoxColumn.HeaderText = "IdFood";
             this.idFoodDataGridViewTextBoxColumn.Name = "idFoodDataGridViewTextBoxColumn";
@@ -782,6 +826,7 @@
             // 
             // amountDataGridViewTextBoxColumn
             // 
+            this.amountDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.amountDataGridViewTextBoxColumn.DataPropertyName = "Amount";
             this.amountDataGridViewTextBoxColumn.HeaderText = "Amount";
             this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
@@ -789,6 +834,7 @@
             // 
             // typeFoodDataGridViewTextBoxColumn
             // 
+            this.typeFoodDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.typeFoodDataGridViewTextBoxColumn.DataPropertyName = "TypeFood";
             this.typeFoodDataGridViewTextBoxColumn.HeaderText = "TypeFood";
             this.typeFoodDataGridViewTextBoxColumn.Name = "typeFoodDataGridViewTextBoxColumn";
@@ -861,16 +907,6 @@
             // foodTableAdapter
             // 
             this.foodTableAdapter.ClearBeforeFill = true;
-            // 
-            // button_FeedAnimals
-            // 
-            this.button_FeedAnimals.Location = new System.Drawing.Point(405, 424);
-            this.button_FeedAnimals.Name = "button_FeedAnimals";
-            this.button_FeedAnimals.Size = new System.Drawing.Size(134, 23);
-            this.button_FeedAnimals.TabIndex = 2;
-            this.button_FeedAnimals.Text = "Feed Animals";
-            this.button_FeedAnimals.UseVisualStyleBackColor = true;
-            this.button_FeedAnimals.Click += new System.EventHandler(this.button_FeedAnimals_Click);
             // 
             // FarmITDesktopApp
             // 
@@ -967,9 +1003,6 @@
         private FarmITDataSetTableAdapters.AnimalTableAdapter animalTableAdapter;
         private System.Windows.Forms.BindingSource foodBindingSource;
         private FarmITDataSetTableAdapters.FoodTableAdapter foodTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idFoodDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn typeFoodDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idAnimalDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn typeAnimalDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ageDataGridViewTextBoxColumn;
@@ -981,5 +1014,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idBoxDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button_ResetFilter;
         private System.Windows.Forms.Button button_FeedAnimals;
+        private System.Windows.Forms.Label label_Oats;
+        private System.Windows.Forms.Label label_Powerfeed;
+        private System.Windows.Forms.Label label_Hay;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idFoodDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn typeFoodDataGridViewTextBoxColumn;
     }
 }
