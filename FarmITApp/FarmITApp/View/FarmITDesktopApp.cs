@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FarmITApp.EntityFrameworkV2;
+using FarmITApp.Model;
 using FarmITApp.ControllerFarm;
 
 namespace FarmITApp.View
@@ -33,13 +33,7 @@ namespace FarmITApp.View
             label_Powerfeed.Text ="" + pf.Amount;
 
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
+        
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -270,6 +264,48 @@ namespace FarmITApp.View
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
 
+        }
+
+        private void button_Create_Click(object sender, EventArgs e)
+        {
+            {
+                Animal a = new Animal();
+                try
+                {
+
+
+                    a.Age = textBox_Age.Text;
+                    a.IdBox = textBox_BoxId.Text;
+                    Console.WriteLine(a.Name);
+                    a.IdAnimal = long.Parse(textBox_Id.Text);
+                    a.Name = textBox_Name.Text;
+                    a.StatusAnimal = textBox_Status.Text;
+                    a.TypeAnimal = textBox_Type.Text;
+                    if (a.TypeAnimal.Equals("Horse"))
+                    {
+                        a.AmountOfPowerfeed = int.Parse(textBox_Food.Text);
+                        a.AmountOfHay = int.Parse(textBox_FoodTwo.Text);
+                    }
+                    else if (a.TypeAnimal.Equals("Hen"))
+                    {
+
+                        a.AmountOfOats = int.Parse(textBox_Food.Text);
+                    }
+                    else
+                    {
+                        a.AmountOfPowerfeed = int.Parse(textBox_Food.Text);
+                    }
+                    c.AddAnimal(a);
+                    textBox_Message.Text = a.TypeAnimal+ " created";
+
+                }
+                catch
+                {
+                    Console.WriteLine(a.Name);
+                    Console.WriteLine("något fel");
+                    textBox_Message.Text = "något fel";
+                }
+            }
         }
     }
 }

@@ -33,7 +33,6 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.button_Reset = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.foodTwo = new System.Windows.Forms.Label();
             this.textBox_FoodTwo = new System.Windows.Forms.TextBox();
             this.food = new System.Windows.Forms.Label();
@@ -95,7 +94,7 @@
             this.amountOfOatsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idBoxDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.animalBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.farmITDataSet = new FarmITApp.FarmITDataSet();
+            this.farmITDataSet = new FarmITApp.DatabaseAccessLayer.FarmITDataSet();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.idFoodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -106,8 +105,11 @@
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage_Create = new System.Windows.Forms.TabPage();
-            this.animalTableAdapter = new FarmITApp.FarmITDataSetTableAdapters.AnimalTableAdapter();
-            this.foodTableAdapter = new FarmITApp.FarmITDataSetTableAdapters.FoodTableAdapter();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox_BoxId = new System.Windows.Forms.TextBox();
+            this.animalTableAdapter = new FarmITApp.DatabaseAccessLayer.FarmITDataSetTableAdapters.AnimalTableAdapter();
+            this.foodTableAdapter = new FarmITApp.DatabaseAccessLayer.FarmITDataSetTableAdapters.FoodTableAdapter();
+            this.button_Create = new System.Windows.Forms.Button();
             this.tabMenu.SuspendLayout();
             this.tabPage_Info.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_Food)).BeginInit();
@@ -127,7 +129,7 @@
             // 
             // button_Reset
             // 
-            this.button_Reset.Location = new System.Drawing.Point(381, 351);
+            this.button_Reset.Location = new System.Drawing.Point(381, 377);
             this.button_Reset.Name = "button_Reset";
             this.button_Reset.Size = new System.Drawing.Size(75, 23);
             this.button_Reset.TabIndex = 16;
@@ -135,20 +137,10 @@
             this.button_Reset.UseVisualStyleBackColor = true;
             this.button_Reset.Click += new System.EventHandler(this.button_Reset_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(485, 351);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Create";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // foodTwo
             // 
             this.foodTwo.AutoSize = true;
-            this.foodTwo.Location = new System.Drawing.Point(378, 322);
+            this.foodTwo.Location = new System.Drawing.Point(378, 348);
             this.foodTwo.Name = "foodTwo";
             this.foodTwo.Size = new System.Drawing.Size(52, 13);
             this.foodTwo.TabIndex = 14;
@@ -157,7 +149,7 @@
             // 
             // textBox_FoodTwo
             // 
-            this.textBox_FoodTwo.Location = new System.Drawing.Point(439, 319);
+            this.textBox_FoodTwo.Location = new System.Drawing.Point(439, 345);
             this.textBox_FoodTwo.Name = "textBox_FoodTwo";
             this.textBox_FoodTwo.Size = new System.Drawing.Size(121, 20);
             this.textBox_FoodTwo.TabIndex = 13;
@@ -166,7 +158,7 @@
             // food
             // 
             this.food.AutoSize = true;
-            this.food.Location = new System.Drawing.Point(378, 286);
+            this.food.Location = new System.Drawing.Point(378, 312);
             this.food.Name = "food";
             this.food.Size = new System.Drawing.Size(31, 13);
             this.food.TabIndex = 12;
@@ -175,7 +167,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(378, 244);
+            this.label6.Location = new System.Drawing.Point(378, 242);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(26, 13);
             this.label6.TabIndex = 11;
@@ -217,14 +209,14 @@
             // 
             // textBox_Age
             // 
-            this.textBox_Age.Location = new System.Drawing.Point(439, 241);
+            this.textBox_Age.Location = new System.Drawing.Point(439, 239);
             this.textBox_Age.Name = "textBox_Age";
             this.textBox_Age.Size = new System.Drawing.Size(121, 20);
             this.textBox_Age.TabIndex = 6;
             // 
             // textBox_Food
             // 
-            this.textBox_Food.Location = new System.Drawing.Point(439, 283);
+            this.textBox_Food.Location = new System.Drawing.Point(439, 309);
             this.textBox_Food.Name = "textBox_Food";
             this.textBox_Food.Size = new System.Drawing.Size(121, 20);
             this.textBox_Food.TabIndex = 5;
@@ -876,9 +868,11 @@
             // 
             this.tabPage_Create.AllowDrop = true;
             this.tabPage_Create.BackColor = System.Drawing.Color.White;
+            this.tabPage_Create.Controls.Add(this.button_Create);
+            this.tabPage_Create.Controls.Add(this.label10);
+            this.tabPage_Create.Controls.Add(this.textBox_BoxId);
             this.tabPage_Create.Controls.Add(this.button_Reset);
             this.tabPage_Create.Controls.Add(this.textBox_Id);
-            this.tabPage_Create.Controls.Add(this.button1);
             this.tabPage_Create.Controls.Add(this.type);
             this.tabPage_Create.Controls.Add(this.foodTwo);
             this.tabPage_Create.Controls.Add(this.label2);
@@ -900,6 +894,22 @@
             this.tabPage_Create.TabIndex = 1;
             this.tabPage_Create.Text = "Create";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(378, 277);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(34, 13);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "IdBox";
+            // 
+            // textBox_BoxId
+            // 
+            this.textBox_BoxId.Location = new System.Drawing.Point(439, 274);
+            this.textBox_BoxId.Name = "textBox_BoxId";
+            this.textBox_BoxId.Size = new System.Drawing.Size(121, 20);
+            this.textBox_BoxId.TabIndex = 17;
+            // 
             // animalTableAdapter
             // 
             this.animalTableAdapter.ClearBeforeFill = true;
@@ -907,6 +917,16 @@
             // foodTableAdapter
             // 
             this.foodTableAdapter.ClearBeforeFill = true;
+            // 
+            // button_Create
+            // 
+            this.button_Create.Location = new System.Drawing.Point(485, 377);
+            this.button_Create.Name = "button_Create";
+            this.button_Create.Size = new System.Drawing.Size(75, 23);
+            this.button_Create.TabIndex = 19;
+            this.button_Create.Text = "Create";
+            this.button_Create.UseVisualStyleBackColor = true;
+            this.button_Create.Click += new System.EventHandler(this.button_Create_Click);
             // 
             // FarmITDesktopApp
             // 
@@ -961,7 +981,6 @@
         private System.Windows.Forms.TextBox textBox_FoodTwo;
         private System.Windows.Forms.Label textBox_Message;
         private System.Windows.Forms.Button button_Reset;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TabControl tabMenu;
         private System.Windows.Forms.TabPage tabPage_Find;
         private System.Windows.Forms.TabPage tabPage_Create;
@@ -998,11 +1017,11 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox_UBox;
         private System.Windows.Forms.ComboBox textBox_UStatus;
-        private FarmITDataSet farmITDataSet;
+        private DatabaseAccessLayer.FarmITDataSet farmITDataSet;
         private System.Windows.Forms.BindingSource animalBindingSource;
-        private FarmITDataSetTableAdapters.AnimalTableAdapter animalTableAdapter;
+        private DatabaseAccessLayer.FarmITDataSetTableAdapters.AnimalTableAdapter animalTableAdapter;
         private System.Windows.Forms.BindingSource foodBindingSource;
-        private FarmITDataSetTableAdapters.FoodTableAdapter foodTableAdapter;
+        private DatabaseAccessLayer.FarmITDataSetTableAdapters.FoodTableAdapter foodTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idAnimalDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn typeAnimalDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ageDataGridViewTextBoxColumn;
@@ -1020,5 +1039,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idFoodDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn typeFoodDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBox_BoxId;
+        private System.Windows.Forms.Button button_Create;
     }
 }
