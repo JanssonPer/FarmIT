@@ -9,35 +9,34 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FarmITApp.EntityFrameworkV2;
+using FarmITApp.ControllerFarm;
 
 namespace FarmITApp.View
 {
     public partial class FarmITDesktopApp : Form
     {
         Dal controller = new Dal();
+       Controller c = new Controller();
 
         public FarmITDesktopApp()
         {
             InitializeComponent();
             try
             {
-                combo_FindType.Text = "Cow";
-                List<Food> listFood = controller.GetAllFood();
-                foreach(Food f in listFood){
-                    Console.WriteLine(f.TypeFood); 
-
-                }
-                Food pf = controller.GetFood(1);
-                Console.WriteLine(pf.Amount);
+                combo_FindType.Text = "Cow";            
             }
             catch
             {
                 Console.WriteLine("ej funnit");
             }
-           
-            chart_Food.Series["Food"].Points.AddXY("Powerfeed", 1000);
-            chart_Food.Series["Food"].Points.AddXY("Hay", 900);
-            chart_Food.Series["Food"].Points.AddXY("Oats", 1000);
+
+            Food pf = controller.GetFood(1);
+            Food oat = controller.GetFood(2);
+            Food hay = controller.GetFood(3);
+
+            chart_Food.Series["Food"].Points.AddXY("Powerfeed", pf.Amount);
+            chart_Food.Series["Food"].Points.AddXY("Hay", oat.Amount);
+            chart_Food.Series["Food"].Points.AddXY("Oats", hay.Amount);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -110,25 +109,11 @@ namespace FarmITApp.View
             }
 
         }
-
-        private void resetToolStripButton_Click_1(object sender, EventArgs e)
-        {
-            try
-            {
-                this.animalTableAdapter.Reset(this.farmITDataSet.Animal);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
         private void button_Update_Click(object sender, EventArgs e)
         {
             try
             {
-                Animal a = controller.GetAnimal(((long)(System.Convert.ChangeType(textBox_FindById.Text, typeof(long)))));
+                Animal a = controller.GetAnimal(((long)(System.Convert.ChangeType(textBox_UId.Text, typeof(long)))));
                 a.Age = textBox_UAge.Text;
                 a.Name = textBox_UName.Text;
                 a.TypeAnimal = textBox_UType.Text;
@@ -252,6 +237,22 @@ namespace FarmITApp.View
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
         }
-        
+
+        private void button_ResetFilter_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.animalTableAdapter.Reset(this.farmITDataSet.Animal);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button_FeedAnimals_Click(object sender, EventArgs e)
+        {
+            c.FeedAllAnimals();
+        }
     }
 }

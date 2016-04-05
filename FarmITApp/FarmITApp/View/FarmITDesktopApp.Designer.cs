@@ -58,6 +58,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button_ResetFilter = new System.Windows.Forms.Button();
+            this.textBox_UStatus = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox_UBox = new System.Windows.Forms.TextBox();
             this.textBox_UFoodTwo = new System.Windows.Forms.TextBox();
@@ -75,19 +77,10 @@
             this.label14 = new System.Windows.Forms.Label();
             this.button_Remove = new System.Windows.Forms.Button();
             this.button_Update = new System.Windows.Forms.Button();
-            this.resetToolStrip = new System.Windows.Forms.ToolStrip();
-            this.resetToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.button4 = new System.Windows.Forms.Button();
             this.textBox_FindById = new System.Windows.Forms.TextBox();
             this.combo_FindType = new System.Windows.Forms.ComboBox();
             this.dataGridView_Animals = new System.Windows.Forms.DataGridView();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabPage_Create = new System.Windows.Forms.TabPage();
-            this.textBox_UStatus = new System.Windows.Forms.ComboBox();
             this.idAnimalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeAnimalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -99,28 +92,34 @@
             this.idBoxDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.animalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.farmITDataSet = new FarmITApp.FarmITDataSet();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.idFoodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeFoodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.foodBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.tabPage_Create = new System.Windows.Forms.TabPage();
             this.animalTableAdapter = new FarmITApp.FarmITDataSetTableAdapters.AnimalTableAdapter();
             this.foodTableAdapter = new FarmITApp.FarmITDataSetTableAdapters.FoodTableAdapter();
+            this.button_FeedAnimals = new System.Windows.Forms.Button();
             this.tabMenu.SuspendLayout();
             this.tabPage_Info.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_Food)).BeginInit();
             this.tabPage_Find.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.resetToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Animals)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.animalBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.farmITDataSet)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.foodBindingSource)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.tabPage_Create.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.animalBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.farmITDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.foodBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button_Reset
@@ -308,6 +307,7 @@
             // tabPage_Info
             // 
             this.tabPage_Info.BackColor = System.Drawing.Color.White;
+            this.tabPage_Info.Controls.Add(this.button_FeedAnimals);
             this.tabPage_Info.Controls.Add(this.label8);
             this.tabPage_Info.Controls.Add(this.chart_Food);
             this.tabPage_Info.Location = new System.Drawing.Point(4, 22);
@@ -383,7 +383,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label7.Location = new System.Drawing.Point(457, 3);
+            this.label7.Location = new System.Drawing.Point(470, 3);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(50, 25);
             this.label7.TabIndex = 3;
@@ -405,6 +405,7 @@
             // 
             this.tabPage1.AutoScroll = true;
             this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.tabPage1.Controls.Add(this.button_ResetFilter);
             this.tabPage1.Controls.Add(this.textBox_UStatus);
             this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.textBox_UBox);
@@ -423,7 +424,6 @@
             this.tabPage1.Controls.Add(this.label14);
             this.tabPage1.Controls.Add(this.button_Remove);
             this.tabPage1.Controls.Add(this.button_Update);
-            this.tabPage1.Controls.Add(this.resetToolStrip);
             this.tabPage1.Controls.Add(this.button4);
             this.tabPage1.Controls.Add(this.textBox_FindById);
             this.tabPage1.Controls.Add(this.combo_FindType);
@@ -434,6 +434,30 @@
             this.tabPage1.Size = new System.Drawing.Size(991, 417);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Animals";
+            // 
+            // button_ResetFilter
+            // 
+            this.button_ResetFilter.Location = new System.Drawing.Point(9, 371);
+            this.button_ResetFilter.Name = "button_ResetFilter";
+            this.button_ResetFilter.Size = new System.Drawing.Size(74, 25);
+            this.button_ResetFilter.TabIndex = 32;
+            this.button_ResetFilter.Text = "Reset filter";
+            this.button_ResetFilter.UseVisualStyleBackColor = true;
+            this.button_ResetFilter.Click += new System.EventHandler(this.button_ResetFilter_Click);
+            // 
+            // textBox_UStatus
+            // 
+            this.textBox_UStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.textBox_UStatus.FormattingEnabled = true;
+            this.textBox_UStatus.Items.AddRange(new object[] {
+            "Gluefactory",
+            "Healthy",
+            "Sick"});
+            this.textBox_UStatus.Location = new System.Drawing.Point(786, 109);
+            this.textBox_UStatus.Name = "textBox_UStatus";
+            this.textBox_UStatus.Size = new System.Drawing.Size(100, 21);
+            this.textBox_UStatus.Sorted = true;
+            this.textBox_UStatus.TabIndex = 31;
             // 
             // label9
             // 
@@ -562,9 +586,9 @@
             // 
             // button_Remove
             // 
-            this.button_Remove.Location = new System.Drawing.Point(127, 373);
+            this.button_Remove.Location = new System.Drawing.Point(581, 371);
             this.button_Remove.Name = "button_Remove";
-            this.button_Remove.Size = new System.Drawing.Size(75, 23);
+            this.button_Remove.Size = new System.Drawing.Size(74, 25);
             this.button_Remove.TabIndex = 9;
             this.button_Remove.Text = "Remove";
             this.button_Remove.UseVisualStyleBackColor = true;
@@ -574,31 +598,12 @@
             // 
             this.button_Update.Location = new System.Drawing.Point(892, 371);
             this.button_Update.Name = "button_Update";
-            this.button_Update.Size = new System.Drawing.Size(75, 23);
+            this.button_Update.Size = new System.Drawing.Size(75, 25);
             this.button_Update.TabIndex = 8;
             this.button_Update.Text = "Update";
             this.button_Update.UseVisualStyleBackColor = true;
             this.button_Update.Visible = false;
             this.button_Update.Click += new System.EventHandler(this.button_Update_Click);
-            // 
-            // resetToolStrip
-            // 
-            this.resetToolStrip.Dock = System.Windows.Forms.DockStyle.None;
-            this.resetToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.resetToolStripButton});
-            this.resetToolStrip.Location = new System.Drawing.Point(6, 371);
-            this.resetToolStrip.Name = "resetToolStrip";
-            this.resetToolStrip.Size = new System.Drawing.Size(78, 25);
-            this.resetToolStrip.TabIndex = 3;
-            this.resetToolStrip.Text = "resetToolStrip";
-            // 
-            // resetToolStripButton
-            // 
-            this.resetToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.resetToolStripButton.Name = "resetToolStripButton";
-            this.resetToolStripButton.Size = new System.Drawing.Size(66, 22);
-            this.resetToolStripButton.Text = "Reset filter";
-            this.resetToolStripButton.Click += new System.EventHandler(this.resetToolStripButton_Click_1);
             // 
             // button4
             // 
@@ -612,15 +617,6 @@
             // 
             // textBox_FindById
             // 
-            this.textBox_FindById.AutoCompleteCustomSource.AddRange(new string[] {
-            "1001",
-            "1002",
-            "1003",
-            "2001",
-            "2002",
-            "2003",
-            "3001",
-            "3002"});
             this.textBox_FindById.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.textBox_FindById.Location = new System.Drawing.Point(9, 8);
             this.textBox_FindById.Name = "textBox_FindById";
@@ -667,6 +663,88 @@
             this.dataGridView_Animals.TabIndex = 0;
             this.dataGridView_Animals.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Animals_CellClick);
             // 
+            // idAnimalDataGridViewTextBoxColumn
+            // 
+            this.idAnimalDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idAnimalDataGridViewTextBoxColumn.DataPropertyName = "IdAnimal";
+            this.idAnimalDataGridViewTextBoxColumn.HeaderText = "IdAnimal";
+            this.idAnimalDataGridViewTextBoxColumn.Name = "idAnimalDataGridViewTextBoxColumn";
+            this.idAnimalDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // typeAnimalDataGridViewTextBoxColumn
+            // 
+            this.typeAnimalDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.typeAnimalDataGridViewTextBoxColumn.DataPropertyName = "TypeAnimal";
+            this.typeAnimalDataGridViewTextBoxColumn.HeaderText = "TypeAnimal";
+            this.typeAnimalDataGridViewTextBoxColumn.Name = "typeAnimalDataGridViewTextBoxColumn";
+            this.typeAnimalDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ageDataGridViewTextBoxColumn
+            // 
+            this.ageDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ageDataGridViewTextBoxColumn.DataPropertyName = "Age";
+            this.ageDataGridViewTextBoxColumn.HeaderText = "Age";
+            this.ageDataGridViewTextBoxColumn.Name = "ageDataGridViewTextBoxColumn";
+            this.ageDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // statusAnimalDataGridViewTextBoxColumn
+            // 
+            this.statusAnimalDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.statusAnimalDataGridViewTextBoxColumn.DataPropertyName = "StatusAnimal";
+            this.statusAnimalDataGridViewTextBoxColumn.HeaderText = "StatusAnimal";
+            this.statusAnimalDataGridViewTextBoxColumn.Name = "statusAnimalDataGridViewTextBoxColumn";
+            this.statusAnimalDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // amountOfPowerfeedDataGridViewTextBoxColumn
+            // 
+            this.amountOfPowerfeedDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.amountOfPowerfeedDataGridViewTextBoxColumn.DataPropertyName = "AmountOfPowerfeed";
+            this.amountOfPowerfeedDataGridViewTextBoxColumn.HeaderText = "Powerfeed";
+            this.amountOfPowerfeedDataGridViewTextBoxColumn.Name = "amountOfPowerfeedDataGridViewTextBoxColumn";
+            this.amountOfPowerfeedDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // amountOfHayDataGridViewTextBoxColumn
+            // 
+            this.amountOfHayDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.amountOfHayDataGridViewTextBoxColumn.DataPropertyName = "AmountOfHay";
+            this.amountOfHayDataGridViewTextBoxColumn.HeaderText = "Hay";
+            this.amountOfHayDataGridViewTextBoxColumn.Name = "amountOfHayDataGridViewTextBoxColumn";
+            this.amountOfHayDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // amountOfOatsDataGridViewTextBoxColumn
+            // 
+            this.amountOfOatsDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.amountOfOatsDataGridViewTextBoxColumn.DataPropertyName = "AmountOfOats";
+            this.amountOfOatsDataGridViewTextBoxColumn.HeaderText = "Oats";
+            this.amountOfOatsDataGridViewTextBoxColumn.Name = "amountOfOatsDataGridViewTextBoxColumn";
+            this.amountOfOatsDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idBoxDataGridViewTextBoxColumn
+            // 
+            this.idBoxDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idBoxDataGridViewTextBoxColumn.DataPropertyName = "IdBox";
+            this.idBoxDataGridViewTextBoxColumn.HeaderText = "IdBox";
+            this.idBoxDataGridViewTextBoxColumn.Name = "idBoxDataGridViewTextBoxColumn";
+            this.idBoxDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // animalBindingSource
+            // 
+            this.animalBindingSource.DataMember = "Animal";
+            this.animalBindingSource.DataSource = this.farmITDataSet;
+            // 
+            // farmITDataSet
+            // 
+            this.farmITDataSet.DataSetName = "FarmITDataSet";
+            this.farmITDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.dataGridView2);
@@ -694,6 +772,32 @@
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.Size = new System.Drawing.Size(576, 290);
             this.dataGridView2.TabIndex = 0;
+            // 
+            // idFoodDataGridViewTextBoxColumn
+            // 
+            this.idFoodDataGridViewTextBoxColumn.DataPropertyName = "IdFood";
+            this.idFoodDataGridViewTextBoxColumn.HeaderText = "IdFood";
+            this.idFoodDataGridViewTextBoxColumn.Name = "idFoodDataGridViewTextBoxColumn";
+            this.idFoodDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // amountDataGridViewTextBoxColumn
+            // 
+            this.amountDataGridViewTextBoxColumn.DataPropertyName = "Amount";
+            this.amountDataGridViewTextBoxColumn.HeaderText = "Amount";
+            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
+            this.amountDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // typeFoodDataGridViewTextBoxColumn
+            // 
+            this.typeFoodDataGridViewTextBoxColumn.DataPropertyName = "TypeFood";
+            this.typeFoodDataGridViewTextBoxColumn.HeaderText = "TypeFood";
+            this.typeFoodDataGridViewTextBoxColumn.Name = "typeFoodDataGridViewTextBoxColumn";
+            this.typeFoodDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // foodBindingSource
+            // 
+            this.foodBindingSource.DataMember = "Food";
+            this.foodBindingSource.DataSource = this.farmITDataSet;
             // 
             // tabPage4
             // 
@@ -750,119 +854,6 @@
             this.tabPage_Create.TabIndex = 1;
             this.tabPage_Create.Text = "Create";
             // 
-            // textBox_UStatus
-            // 
-            this.textBox_UStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.textBox_UStatus.FormattingEnabled = true;
-            this.textBox_UStatus.Items.AddRange(new object[] {
-            "Gluefactory",
-            "Healthy",
-            "Sick"});
-            this.textBox_UStatus.Location = new System.Drawing.Point(786, 109);
-            this.textBox_UStatus.Name = "textBox_UStatus";
-            this.textBox_UStatus.Size = new System.Drawing.Size(100, 21);
-            this.textBox_UStatus.Sorted = true;
-            this.textBox_UStatus.TabIndex = 31;
-            // 
-            // idAnimalDataGridViewTextBoxColumn
-            // 
-            this.idAnimalDataGridViewTextBoxColumn.DataPropertyName = "IdAnimal";
-            this.idAnimalDataGridViewTextBoxColumn.HeaderText = "IdAnimal";
-            this.idAnimalDataGridViewTextBoxColumn.Name = "idAnimalDataGridViewTextBoxColumn";
-            this.idAnimalDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // typeAnimalDataGridViewTextBoxColumn
-            // 
-            this.typeAnimalDataGridViewTextBoxColumn.DataPropertyName = "TypeAnimal";
-            this.typeAnimalDataGridViewTextBoxColumn.HeaderText = "TypeAnimal";
-            this.typeAnimalDataGridViewTextBoxColumn.Name = "typeAnimalDataGridViewTextBoxColumn";
-            this.typeAnimalDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // ageDataGridViewTextBoxColumn
-            // 
-            this.ageDataGridViewTextBoxColumn.DataPropertyName = "Age";
-            this.ageDataGridViewTextBoxColumn.HeaderText = "Age";
-            this.ageDataGridViewTextBoxColumn.Name = "ageDataGridViewTextBoxColumn";
-            this.ageDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // statusAnimalDataGridViewTextBoxColumn
-            // 
-            this.statusAnimalDataGridViewTextBoxColumn.DataPropertyName = "StatusAnimal";
-            this.statusAnimalDataGridViewTextBoxColumn.HeaderText = "StatusAnimal";
-            this.statusAnimalDataGridViewTextBoxColumn.Name = "statusAnimalDataGridViewTextBoxColumn";
-            this.statusAnimalDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // amountOfPowerfeedDataGridViewTextBoxColumn
-            // 
-            this.amountOfPowerfeedDataGridViewTextBoxColumn.DataPropertyName = "AmountOfPowerfeed";
-            this.amountOfPowerfeedDataGridViewTextBoxColumn.HeaderText = "AmountOfPowerfeed";
-            this.amountOfPowerfeedDataGridViewTextBoxColumn.Name = "amountOfPowerfeedDataGridViewTextBoxColumn";
-            this.amountOfPowerfeedDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // amountOfHayDataGridViewTextBoxColumn
-            // 
-            this.amountOfHayDataGridViewTextBoxColumn.DataPropertyName = "AmountOfHay";
-            this.amountOfHayDataGridViewTextBoxColumn.HeaderText = "AmountOfHay";
-            this.amountOfHayDataGridViewTextBoxColumn.Name = "amountOfHayDataGridViewTextBoxColumn";
-            this.amountOfHayDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // amountOfOatsDataGridViewTextBoxColumn
-            // 
-            this.amountOfOatsDataGridViewTextBoxColumn.DataPropertyName = "AmountOfOats";
-            this.amountOfOatsDataGridViewTextBoxColumn.HeaderText = "AmountOfOats";
-            this.amountOfOatsDataGridViewTextBoxColumn.Name = "amountOfOatsDataGridViewTextBoxColumn";
-            this.amountOfOatsDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idBoxDataGridViewTextBoxColumn
-            // 
-            this.idBoxDataGridViewTextBoxColumn.DataPropertyName = "IdBox";
-            this.idBoxDataGridViewTextBoxColumn.HeaderText = "IdBox";
-            this.idBoxDataGridViewTextBoxColumn.Name = "idBoxDataGridViewTextBoxColumn";
-            this.idBoxDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // animalBindingSource
-            // 
-            this.animalBindingSource.DataMember = "Animal";
-            this.animalBindingSource.DataSource = this.farmITDataSet;
-            // 
-            // farmITDataSet
-            // 
-            this.farmITDataSet.DataSetName = "FarmITDataSet";
-            this.farmITDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // idFoodDataGridViewTextBoxColumn
-            // 
-            this.idFoodDataGridViewTextBoxColumn.DataPropertyName = "IdFood";
-            this.idFoodDataGridViewTextBoxColumn.HeaderText = "IdFood";
-            this.idFoodDataGridViewTextBoxColumn.Name = "idFoodDataGridViewTextBoxColumn";
-            this.idFoodDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // amountDataGridViewTextBoxColumn
-            // 
-            this.amountDataGridViewTextBoxColumn.DataPropertyName = "Amount";
-            this.amountDataGridViewTextBoxColumn.HeaderText = "Amount";
-            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
-            this.amountDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // typeFoodDataGridViewTextBoxColumn
-            // 
-            this.typeFoodDataGridViewTextBoxColumn.DataPropertyName = "TypeFood";
-            this.typeFoodDataGridViewTextBoxColumn.HeaderText = "TypeFood";
-            this.typeFoodDataGridViewTextBoxColumn.Name = "typeFoodDataGridViewTextBoxColumn";
-            this.typeFoodDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // foodBindingSource
-            // 
-            this.foodBindingSource.DataMember = "Food";
-            this.foodBindingSource.DataSource = this.farmITDataSet;
-            // 
             // animalTableAdapter
             // 
             this.animalTableAdapter.ClearBeforeFill = true;
@@ -870,6 +861,16 @@
             // foodTableAdapter
             // 
             this.foodTableAdapter.ClearBeforeFill = true;
+            // 
+            // button_FeedAnimals
+            // 
+            this.button_FeedAnimals.Location = new System.Drawing.Point(405, 424);
+            this.button_FeedAnimals.Name = "button_FeedAnimals";
+            this.button_FeedAnimals.Size = new System.Drawing.Size(134, 23);
+            this.button_FeedAnimals.TabIndex = 2;
+            this.button_FeedAnimals.Text = "Feed Animals";
+            this.button_FeedAnimals.UseVisualStyleBackColor = true;
+            this.button_FeedAnimals.Click += new System.EventHandler(this.button_FeedAnimals_Click);
             // 
             // FarmITDesktopApp
             // 
@@ -891,18 +892,16 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.resetToolStrip.ResumeLayout(false);
-            this.resetToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Animals)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.animalBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.farmITDataSet)).EndInit();
             this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.foodBindingSource)).EndInit();
             this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.tabPage_Create.ResumeLayout(false);
             this.tabPage_Create.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.animalBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.farmITDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.foodBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -944,8 +943,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TabPage tabPage_Info;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart_Food;
-        private System.Windows.Forms.ToolStrip resetToolStrip;
-        private System.Windows.Forms.ToolStripButton resetToolStripButton;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button_Update;
         private System.Windows.Forms.Button button_Remove;
@@ -968,6 +965,11 @@
         private FarmITDataSet farmITDataSet;
         private System.Windows.Forms.BindingSource animalBindingSource;
         private FarmITDataSetTableAdapters.AnimalTableAdapter animalTableAdapter;
+        private System.Windows.Forms.BindingSource foodBindingSource;
+        private FarmITDataSetTableAdapters.FoodTableAdapter foodTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idFoodDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn typeFoodDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idAnimalDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn typeAnimalDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ageDataGridViewTextBoxColumn;
@@ -977,10 +979,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn amountOfHayDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn amountOfOatsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idBoxDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource foodBindingSource;
-        private FarmITDataSetTableAdapters.FoodTableAdapter foodTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idFoodDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn typeFoodDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button_ResetFilter;
+        private System.Windows.Forms.Button button_FeedAnimals;
     }
 }

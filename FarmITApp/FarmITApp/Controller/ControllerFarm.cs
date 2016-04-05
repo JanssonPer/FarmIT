@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using FarmITApp.EntityFrameworkV2;
 using FarmITApp.DatabaseAccessLayer;
 
-namespace FarmITApp.Controller
+namespace FarmITApp.ControllerFarm
 {
     public class Controller
     {
