@@ -22,10 +22,8 @@ namespace FarmITApp.View
             try
             {
                 combo_FindType.Text = "Cow";
-                Animals a = controller.GetAnimal(1);
-                Console.WriteLine(a.Name);
+                List<Foods> listFoods = controller
                 Foods pf = controller.GetFood(1);
-                
                 Console.WriteLine(pf.Amount);
             }
             catch
