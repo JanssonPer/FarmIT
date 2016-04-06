@@ -87,11 +87,6 @@
     <Compile Include="Model\sysdiagrams.cs">
       <DependentUpon>FarmEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="DatabaseAccessLayer\FarmITDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FarmITDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="View\FarmITDesktopApp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,17 +107,6 @@
     <EmbeddedResource Include="View\FarmITDesktopApp.resx">
       <DependentUpon>FarmITDesktopApp.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DatabaseAccessLayer\FarmITDataSet.xsc">
-      <DependentUpon>FarmITDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="DatabaseAccessLayer\FarmITDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>FarmITDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DatabaseAccessLayer\FarmITDataSet.xss">
-      <DependentUpon>FarmITDataSet.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

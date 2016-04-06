@@ -21,18 +21,7 @@ namespace FarmITApp.View
         public FarmITDesktopApp()
         {
             InitializeComponent();
-            combo_FindType.Text = "Cow";
-            textBox_Type.Text = "Cow";
-            textBox_Status.Text= "Healthy";
-            Food pf = controller.GetFood("1");
-            Food oat = controller.GetFood("2");
-            Food hay = controller.GetFood("3");
-            chart_Food.Series["Food Storage"].Points.AddXY("Powerfeed", pf.Amount);
-            chart_Food.Series["Food Storage"].Points.AddXY("Hay", oat.Amount);
-            chart_Food.Series["Food Storage"].Points.AddXY("Oats", hay.Amount);
-            label_Hay.Text = "" + hay.Amount;
-            label_Oats.Text = "" + oat.Amount;
-            label_Powerfeed.Text = "" + pf.Amount;
+           
 
         }
 
@@ -43,21 +32,27 @@ namespace FarmITApp.View
 
         private void FarmITDesktopApp_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'farmITDataSet.Food' table. You can move, or remove it, as needed.
-            this.foodTableAdapter.Fill(this.farmITDataSet.Food);
-            // TODO: This line of code loads data into the 'farmITDataSet.Animal' table. You can move, or remove it, as needed.
             List<Animal> aL = controller.GetAllAnimals();
-
+            combo_FindType.Text = "Cow";
+            textBox_Type.Text = "Cow";
+            textBox_Status.Text = "Healthy";
+            Food pf = controller.GetFood("1");
+            Food oat = controller.GetFood("2");
+            Food hay = controller.GetFood("3");
+            chart_Food.Series["Food Storage"].Points.AddXY("Powerfeed", pf.Amount);
+            chart_Food.Series["Food Storage"].Points.AddXY("Hay", oat.Amount);
+            chart_Food.Series["Food Storage"].Points.AddXY("Oats", hay.Amount);
+            label_Hay.Text = "" + hay.Amount;
+            label_Oats.Text = "" + oat.Amount;
+            label_Powerfeed.Text = "" + pf.Amount;
 
             dataGrid_Animal.DataSource = ConvertAnimalToDatatable(aL);
-
-            this.animalTableAdapter.Fill(this.farmITDataSet.Animal);
-
+            
         }
-       public DataTable ConvertAnimalToDatatable(List<Animal> list)
+        public DataTable ConvertAnimalToDatatable(List<Animal> list)
         {
             DataTable dt = new DataTable();
-            dt.Columns.Add("Animal Id");
+            dt.Columns.Add("Id");
             dt.Columns.Add("Type");
             dt.Columns.Add("Age");
             dt.Columns.Add("Name");
@@ -70,7 +65,7 @@ namespace FarmITApp.View
             {
                 var row = dt.NewRow();
 
-                row["Animal Id"] = Animal.IdAnimal;
+                row["Id"] = Animal.IdAnimal;
                 row["Type"] = Animal.TypeAnimal;
                 row["Age"] = Animal.Age;
                 row["Name"] = Animal.Name;
@@ -83,19 +78,20 @@ namespace FarmITApp.View
             }
             return dt;
         }
-        
-        private void button4_Click(object sender, EventArgs e)
+
+        private void button_FindById_Click(object sender, EventArgs e)
         {
+
             try
             {
-              //  List<Animal> listType = controller.(combo_FindType.Text);
-                //dataGrid_Animal.DataSource = ConvertAnimalToDatatable(listType);
-
-                this.animalTableAdapter.FindById(this.farmITDataSet.Animal, ((long)(System.Convert.ChangeType(textBox_FindById.Text, typeof(long)))));
+                List<Animal> listType = controller.GetAnimalsById(textBox_FindById.Text);
+                dataGrid_Animal.DataSource = ConvertAnimalToDatatable(listType);
+                textBox_Message.Text = "Animal found";
             }
-            catch (System.Exception ex)
+            catch
             {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+                textBox_Message.Show();
+                textBox_Message.Text = "No animal found";
             }
         }
 
@@ -103,11 +99,12 @@ namespace FarmITApp.View
         {
             long id = 0;
             List<Animal> animalList = controller.GetAnimalsByType(textBox_Type.Text);
-            foreach(Animal a in animalList){
-              id = a.IdAnimal + 1;
-              
+            foreach (Animal a in animalList)
+            {
+                id = a.IdAnimal + 1;
+
             }
-            textBox_Id.Text ="" + id;
+            textBox_Id.Text = "" + id;
             if (textBox_Type.Text.Equals("Horse"))
             {
 
@@ -128,19 +125,6 @@ namespace FarmITApp.View
                 textBox_FoodTwo.Hide();
                 foodTwo.Hide();
             }
-        }
-
-        private void resetToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.animalTableAdapter.Reset(this.farmITDataSet.Animal);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
         }
         private void button_Update_Click(object sender, EventArgs e)
         {
@@ -167,66 +151,25 @@ namespace FarmITApp.View
                 }
 
                 controller.UpdateAnimal(a);
-
+                textBox_Message.Show();
+                textBox_Message.Text = "Animal updated";
                 try
                 {
-                    List<Animal> listType = controller.GetAllAnimals();
+                    List<Animal> listType = controller.GetAnimalsById(textBox_UId.Text);
                     dataGrid_Animal.DataSource = ConvertAnimalToDatatable(listType);
-                  
                 }
-                catch (System.Exception ex)
+                catch 
                 {
-                    System.Windows.Forms.MessageBox.Show(ex.Message);
+                    textBox_Message.Show();
+                    textBox_Message.Text = "No animal updated";
                 }
             }
             catch
             {
-
+                textBox_Message.Show();
+                textBox_Message.Text = "No animal updated";
             }
-
         }
-
-        private void dataGridView_Animals_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                button_Update.Show();
-                DataGridViewRow row = dataGridView_Animals.Rows[e.RowIndex];
-                textBox_UId.Text = row.Cells[0].Value.ToString();
-                textBox_UType.Text = row.Cells[1].Value.ToString();
-                textBox_UAge.Text = row.Cells[2].Value.ToString();
-                textBox_UName.Text = row.Cells[3].Value.ToString();
-                textBox_UStatus.Text = row.Cells[4].Value.ToString();
-                textBox_UBox.Text = row.Cells[8].Value.ToString();
-                if (textBox_UType.Text.Equals("Horse"))
-                {
-                    textBox_UFood.Text = row.Cells[5].Value.ToString();
-                    textBox_UFoodTwo.Text = row.Cells[6].Value.ToString();
-                    food.Text = "Powerfeed";
-                    UFoodTwo.Text = "Hay";
-                    UFoodTwo.Show();
-                    textBox_UFoodTwo.Show();
-                }
-                else if (textBox_UType.Text.Equals("Hen"))
-                {
-                    textBox_UFood.Text = row.Cells[7].Value.ToString();
-                    UFood.Text = "Oats";
-                    UFoodTwo.Hide();
-                    textBox_UFoodTwo.Hide();
-                }
-                else
-                {
-                    textBox_UFood.Text = row.Cells[5].Value.ToString();
-                    UFood.Text = "Powerfeed";
-                    textBox_UFoodTwo.Hide();
-                    UFoodTwo.Hide();
-                }
-
-            }
-
-
-        }
-
         private void button_Remove_Click(object sender, EventArgs e)
         {
             DialogResult remove = MessageBox.Show("Do you really want to delete an animal?", "Delete", MessageBoxButtons.YesNo);
@@ -246,16 +189,13 @@ namespace FarmITApp.View
                     textBox_UId.Text = "";
                     textBox_UName.Text = "";
                     button_Update.Hide();
-
-                    
-                        List<Animal> listType = controller.GetAllAnimals();
-                        dataGrid_Animal.DataSource = ConvertAnimalToDatatable(listType);
+                    List<Animal> listType = controller.GetAllAnimals();
+                    dataGrid_Animal.DataSource = ConvertAnimalToDatatable(listType);
                 }
                 catch
                 {
                     textBox_Message.Text = "something went wrong";
                     textBox_Message.Show();
-
                 }
             }
             else if (remove == DialogResult.No)
@@ -263,8 +203,6 @@ namespace FarmITApp.View
                 textBox_Message.Text = "No Animal deleted ";
                 textBox_Message.Show();
             }
-
-
         }
         private void button_Reset_Click(object sender, EventArgs e)
         {
@@ -281,12 +219,11 @@ namespace FarmITApp.View
             {
                 List<Animal> listType = controller.GetAnimalsByType(combo_FindType.Text);
                 dataGrid_Animal.DataSource = ConvertAnimalToDatatable(listType);
-
-                this.animalTableAdapter.Find_Type(this.farmITDataSet.Animal, combo_FindType.Text);
             }
-            catch (System.Exception ex)
+            catch
             {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+                textBox_Message.Show();
+                textBox_Message.Text = "something went wrong";
             }
         }
 
@@ -296,11 +233,11 @@ namespace FarmITApp.View
             {
                 List<Animal> listType = controller.GetAllAnimals();
                 dataGrid_Animal.DataSource = ConvertAnimalToDatatable(listType);
-                this.animalTableAdapter.Reset(this.farmITDataSet.Animal);
             }
-            catch (System.Exception ex)
+            catch
             {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+                textBox_Message.Show();
+                textBox_Message.Text = "something went wrong";
             }
         }
 
@@ -319,15 +256,13 @@ namespace FarmITApp.View
             chart_Food.Series[0].Points.ResumeUpdates();
             try
             {
-                this.foodTableAdapter.Refresh(this.farmITDataSet.Food);
+                // foood tabellen ska också updateras GLÖM EJ !!!!!
             }
-            catch (System.Exception ex)
+               catch
             {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+                textBox_Message.Show();
             }
-
         }
-
         private void button_Create_Click(object sender, EventArgs e)
         {
             Console.WriteLine("in i metoden");
@@ -355,14 +290,6 @@ namespace FarmITApp.View
                 {
                     a.AmountOfPowerfeed = int.Parse(textBox_Food.Text);
                 }
-                    try
-                    {
-                    this.animalTableAdapter.Reset(this.farmITDataSet.Animal);
-                    }
-                    catch (System.Exception ex)
-                    {
-                    System.Windows.Forms.MessageBox.Show(ex.Message);
-                    }
                 controller.AddAnimal(a);
                 textBox_Message.Text = a.TypeAnimal + " created";
                 textBox_Message.Show();
@@ -371,14 +298,13 @@ namespace FarmITApp.View
                 textBox_Food.Text = "";
                 textBox_FoodTwo.Text = "";
                 textBox_Type.Text = "";
-                textBox_Id.Text = "";
                 textBox_Name.Text = "";
+                List<Animal> listType = controller.GetAllAnimals();
+                dataGrid_Animal.DataSource = ConvertAnimalToDatatable(listType);
             }
             catch
             {
-                Console.WriteLine(a.Name);
-                Console.WriteLine("något fel");
-                textBox_Message.Text = "något fel";
+                textBox_Message.Text = "something went wrong";
                 textBox_Message.Show();
             }
         }
@@ -418,11 +344,7 @@ namespace FarmITApp.View
                     textBox_UFoodTwo.Hide();
                     UFoodTwo.Hide();
                 }
-
             }
-
-
         }
-
     }
 }

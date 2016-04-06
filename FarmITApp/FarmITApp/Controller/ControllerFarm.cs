@@ -103,11 +103,12 @@ namespace FarmITApp.ControllerFarm
                 return null;
             }
         }
-        public List<Animal> GetAnimalsBy(String type)
+        public List<Animal> GetAnimalsById(string id)
         {
             try
             {
-                return dal.GetAnimalsByType(type);
+                long id1 = ((long)(System.Convert.ChangeType(id, typeof(long))));
+                return dal.GetAnimalsById(id1);
             }
             catch
             {
