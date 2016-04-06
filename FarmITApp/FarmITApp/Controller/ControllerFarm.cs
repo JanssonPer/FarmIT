@@ -91,6 +91,18 @@ namespace FarmITApp.ControllerFarm
                 return null;
             }
         }
+        public List<Animal> GetAnimalsByType(String type)
+        {
+            try
+            {
+                return dal.GetAnimalsByType(type);
+            }
+            catch
+            {
+                //Exception
+                return null;
+            }
+        }
 
         //Add Methods
 

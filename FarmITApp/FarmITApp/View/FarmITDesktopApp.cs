@@ -15,25 +15,27 @@ namespace FarmITApp.View
 {
     public partial class FarmITDesktopApp : Form
     {
-        Dal controller = new Dal();
-       Controller c = new Controller();
+
+        Controller controller = new Controller();
 
         public FarmITDesktopApp()
         {
             InitializeComponent();
             combo_FindType.Text = "Cow";
-            Food pf = c.GetFood("1");
-            Food oat = c.GetFood("2");
-            Food hay = c.GetFood("3");
+            textBox_Type.Text = "Cow";
+            textBox_Status.Text= "Healthy";
+            Food pf = controller.GetFood("1");
+            Food oat = controller.GetFood("2");
+            Food hay = controller.GetFood("3");
             chart_Food.Series["Food Storage"].Points.AddXY("Powerfeed", pf.Amount);
             chart_Food.Series["Food Storage"].Points.AddXY("Hay", oat.Amount);
             chart_Food.Series["Food Storage"].Points.AddXY("Oats", hay.Amount);
-            label_Hay.Text = ""+ hay.Amount;
-            label_Oats.Text = ""+oat.Amount;
-            label_Powerfeed.Text ="" + pf.Amount;
+            label_Hay.Text = "" + hay.Amount;
+            label_Oats.Text = "" + oat.Amount;
+            label_Powerfeed.Text = "" + pf.Amount;
 
         }
-        
+
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -48,7 +50,7 @@ namespace FarmITApp.View
         }
 
 
-        
+
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -64,9 +66,16 @@ namespace FarmITApp.View
 
         private void box_Type_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            long id = 0;
+            List<Animal> animalList = controller.GetAnimalsByType(textBox_Type.Text);
+            foreach(Animal a in animalList){
+              id = a.IdAnimal + 1;
+              
+            }
+            textBox_Id.Text ="" + id;
             if (textBox_Type.Text.Equals("Horse"))
             {
+
                 food.Text = "Powerfeed";
                 foodTwo.Text = "Hay";
                 foodTwo.Show();
@@ -102,7 +111,7 @@ namespace FarmITApp.View
         {
             try
             {
-                Animal a = controller.GetAnimal(((long)(System.Convert.ChangeType(textBox_UId.Text, typeof(long)))));
+                Animal a = controller.GetAnimal(textBox_UId.Text);
                 a.Age = textBox_UAge.Text;
                 a.Name = textBox_UName.Text;
                 a.TypeAnimal = textBox_UType.Text;
@@ -123,7 +132,7 @@ namespace FarmITApp.View
                 }
 
                 controller.UpdateAnimal(a);
-                
+
                 try
                 {
                     this.animalTableAdapter.Reset(this.farmITDataSet.Animal);
@@ -186,26 +195,45 @@ namespace FarmITApp.View
             DialogResult remove = MessageBox.Show("Do you really want to delete an animal?", "Delete", MessageBoxButtons.YesNo);
             if (remove == DialogResult.Yes)
             {
-
-                textBox_Message.Text = "You just deleted an animal";
-                textBox_Message.Show();
-                Animal a = controller.GetAnimal(long.Parse(textBox_UId.Text));
-                controller.RemoveAnimal(a);
                 try
                 {
-                    this.animalTableAdapter.Reset(this.farmITDataSet.Animal);
-                }
-                catch (System.Exception ex)
-                {
-                    System.Windows.Forms.MessageBox.Show(ex.Message);
-                }
+                    textBox_Message.Text = "You just deleted an animal";
+                    textBox_Message.Show();
+                    Animal a = controller.GetAnimal(textBox_UId.Text);
+                    controller.RemoveAnimal(a);
+                    textBox_UAge.Text = "";
+                    textBox_UBox.Text = "";
+                    textBox_UFood.Text = "";
+                    textBox_UFoodTwo.Text = "";
+                    textBox_UType.Text = "";
+                    textBox_UId.Text = "";
+                    textBox_UName.Text = "";
+                    button_Update.Hide();
 
+                    try
+                    {
+                        this.animalTableAdapter.Reset(this.farmITDataSet.Animal);
+                    }
+                    catch (System.Exception ex)
+                    {
+                        System.Windows.Forms.MessageBox.Show(ex.Message);
+                    }
+
+                }
+                catch
+                {
+                    textBox_Message.Text = "something went wrong";
+                    textBox_Message.Show();
+
+                }
             }
             else if (remove == DialogResult.No)
             {
                 textBox_Message.Text = "No Animal deleted ";
                 textBox_Message.Show();
             }
+
+
         }
         private void button_Reset_Click(object sender, EventArgs e)
         {
@@ -213,6 +241,7 @@ namespace FarmITApp.View
             textBox_FoodTwo.Text = "";
             textBox_Name.Text = "";
             textBox_Age.Text = "";
+            textBox_BoxId.Text = "";
         }
 
         private void combo_FindType_SelectedIndexChanged(object sender, EventArgs e)
@@ -241,20 +270,17 @@ namespace FarmITApp.View
 
         private void button_FeedAnimals_Click(object sender, EventArgs e)
         {
-            Food pf = c.GetFood("1");
-            Food oat = c.GetFood("2");
-            Food hay = c.GetFood("3");
-            c.FeedAllAnimals();
+            Food pf = controller.GetFood("1");
+            Food oat = controller.GetFood("2");
+            Food hay = controller.GetFood("3");
+            controller.FeedAllAnimals();
             label_Hay.Text = "" + hay.Amount;
             label_Oats.Text = "" + oat.Amount;
-            label_Powerfeed.Text = ""+ pf.Amount;
-
-
+            label_Powerfeed.Text = "" + pf.Amount;
             chart_Food.Series["Food Storage"].Points.ElementAt(0).SetValueXY("Powerfeed", pf.Amount);
             chart_Food.Series["Food Storage"].Points.ElementAt(1).SetValueXY("Hay", oat.Amount);
             chart_Food.Series["Food Storage"].Points.ElementAt(2).SetValueXY("Oats", hay.Amount);
             chart_Food.Series[0].Points.ResumeUpdates();
-
             try
             {
                 this.foodTableAdapter.Refresh(this.farmITDataSet.Food);
@@ -268,43 +294,56 @@ namespace FarmITApp.View
 
         private void button_Create_Click(object sender, EventArgs e)
         {
+            Console.WriteLine("in i metoden");
+            Animal a = new Animal();
+            a.IdAnimal = long.Parse(textBox_Id.Text);
+            Console.WriteLine(a.IdAnimal);
+            try
             {
-                Animal a = new Animal();
-                try
+                a.Age = textBox_Age.Text;
+                a.IdBox = textBox_BoxId.Text;
+                a.Name = textBox_Name.Text;
+                a.StatusAnimal = textBox_Status.Text;
+                a.TypeAnimal = textBox_Type.Text;
+                if (a.TypeAnimal.Equals("Horse"))
+                {
+                    a.AmountOfPowerfeed = int.Parse(textBox_Food.Text);
+                    a.AmountOfHay = int.Parse(textBox_FoodTwo.Text);
+                }
+                else if (a.TypeAnimal.Equals("Hen"))
                 {
 
-
-                    a.Age = textBox_Age.Text;
-                    a.IdBox = textBox_BoxId.Text;
-                    Console.WriteLine(a.Name);
-                    a.IdAnimal = long.Parse(textBox_Id.Text);
-                    a.Name = textBox_Name.Text;
-                    a.StatusAnimal = textBox_Status.Text;
-                    a.TypeAnimal = textBox_Type.Text;
-                    if (a.TypeAnimal.Equals("Horse"))
-                    {
-                        a.AmountOfPowerfeed = int.Parse(textBox_Food.Text);
-                        a.AmountOfHay = int.Parse(textBox_FoodTwo.Text);
-                    }
-                    else if (a.TypeAnimal.Equals("Hen"))
-                    {
-
-                        a.AmountOfOats = int.Parse(textBox_Food.Text);
-                    }
-                    else
-                    {
-                        a.AmountOfPowerfeed = int.Parse(textBox_Food.Text);
-                    }
-                    c.AddAnimal(a);
-                    textBox_Message.Text = a.TypeAnimal+ " created";
-
+                    a.AmountOfOats = int.Parse(textBox_Food.Text);
                 }
-                catch
+                else
                 {
-                    Console.WriteLine(a.Name);
-                    Console.WriteLine("något fel");
-                    textBox_Message.Text = "något fel";
+                    a.AmountOfPowerfeed = int.Parse(textBox_Food.Text);
                 }
+                    try
+                    {
+                    this.animalTableAdapter.Reset(this.farmITDataSet.Animal);
+                    }
+                    catch (System.Exception ex)
+                    {
+                    System.Windows.Forms.MessageBox.Show(ex.Message);
+                    }
+                controller.AddAnimal(a);
+                textBox_Message.Text = a.TypeAnimal + " created";
+                textBox_Message.Show();
+                textBox_Age.Text = "";
+                textBox_BoxId.Text = "";
+                textBox_Food.Text = "";
+                textBox_FoodTwo.Text = "";
+                textBox_Type.Text = "";
+                textBox_Id.Text = "";
+                textBox_Name.Text = "";
+            }
+            catch
+            {
+                Console.WriteLine(a.Name);
+                Console.WriteLine("något fel");
+                textBox_Message.Text = "något fel";
+                textBox_Message.Show();
             }
         }
     }

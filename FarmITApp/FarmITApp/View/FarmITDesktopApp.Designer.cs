@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.button_Reset = new System.Windows.Forms.Button();
             this.foodTwo = new System.Windows.Forms.Label();
             this.textBox_FoodTwo = new System.Windows.Forms.TextBox();
@@ -105,11 +105,11 @@
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage_Create = new System.Windows.Forms.TabPage();
+            this.button_Create = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.textBox_BoxId = new System.Windows.Forms.TextBox();
             this.animalTableAdapter = new FarmITApp.DatabaseAccessLayer.FarmITDataSetTableAdapters.AnimalTableAdapter();
             this.foodTableAdapter = new FarmITApp.DatabaseAccessLayer.FarmITDataSetTableAdapters.FoodTableAdapter();
-            this.button_Create = new System.Windows.Forms.Button();
             this.tabMenu.SuspendLayout();
             this.tabPage_Info.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_Food)).BeginInit();
@@ -152,7 +152,7 @@
             this.textBox_FoodTwo.Location = new System.Drawing.Point(439, 345);
             this.textBox_FoodTwo.Name = "textBox_FoodTwo";
             this.textBox_FoodTwo.Size = new System.Drawing.Size(121, 20);
-            this.textBox_FoodTwo.TabIndex = 13;
+            this.textBox_FoodTwo.TabIndex = 8;
             this.textBox_FoodTwo.Visible = false;
             // 
             // food
@@ -205,25 +205,25 @@
             this.textBox_Name.Location = new System.Drawing.Point(439, 201);
             this.textBox_Name.Name = "textBox_Name";
             this.textBox_Name.Size = new System.Drawing.Size(121, 20);
-            this.textBox_Name.TabIndex = 7;
+            this.textBox_Name.TabIndex = 4;
             // 
             // textBox_Age
             // 
             this.textBox_Age.Location = new System.Drawing.Point(439, 239);
             this.textBox_Age.Name = "textBox_Age";
             this.textBox_Age.Size = new System.Drawing.Size(121, 20);
-            this.textBox_Age.TabIndex = 6;
+            this.textBox_Age.TabIndex = 5;
             // 
             // textBox_Food
             // 
             this.textBox_Food.Location = new System.Drawing.Point(439, 309);
             this.textBox_Food.Name = "textBox_Food";
             this.textBox_Food.Size = new System.Drawing.Size(121, 20);
-            this.textBox_Food.TabIndex = 5;
+            this.textBox_Food.TabIndex = 7;
             // 
             // textBox_Status
             // 
-            this.textBox_Status.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.textBox_Status.BackColor = System.Drawing.Color.White;
             this.textBox_Status.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.textBox_Status.FormattingEnabled = true;
             this.textBox_Status.Items.AddRange(new object[] {
@@ -233,7 +233,7 @@
             this.textBox_Status.Location = new System.Drawing.Point(439, 123);
             this.textBox_Status.Name = "textBox_Status";
             this.textBox_Status.Size = new System.Drawing.Size(121, 21);
-            this.textBox_Status.TabIndex = 4;
+            this.textBox_Status.TabIndex = 2;
             // 
             // textBox_Type
             // 
@@ -248,16 +248,17 @@
             this.textBox_Type.Location = new System.Drawing.Point(439, 83);
             this.textBox_Type.Name = "textBox_Type";
             this.textBox_Type.Size = new System.Drawing.Size(121, 21);
-            this.textBox_Type.TabIndex = 3;
+            this.textBox_Type.TabIndex = 1;
             this.textBox_Type.SelectedIndexChanged += new System.EventHandler(this.box_Type_SelectedIndexChanged);
             // 
             // textBox_Id
             // 
             this.textBox_Id.BackColor = System.Drawing.Color.White;
+            this.textBox_Id.Enabled = false;
             this.textBox_Id.Location = new System.Drawing.Point(439, 163);
             this.textBox_Id.Name = "textBox_Id";
             this.textBox_Id.Size = new System.Drawing.Size(121, 20);
-            this.textBox_Id.TabIndex = 2;
+            this.textBox_Id.TabIndex = 3;
             // 
             // label2
             // 
@@ -367,37 +368,37 @@
             this.chart_Food.BorderlineColor = System.Drawing.Color.Violet;
             this.chart_Food.BorderSkin.BorderColor = System.Drawing.Color.BlanchedAlmond;
             this.chart_Food.BorderSkin.PageColor = System.Drawing.Color.Violet;
-            chartArea1.AlignmentOrientation = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.None;
-            chartArea1.AlignmentStyle = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentStyles.None;
-            chartArea1.Area3DStyle.Inclination = 20;
-            chartArea1.Area3DStyle.IsRightAngleAxes = false;
-            chartArea1.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
-            chartArea1.Area3DStyle.Rotation = 20;
-            chartArea1.Area3DStyle.WallWidth = 1;
-            chartArea1.AxisX.MajorGrid.Enabled = false;
-            chartArea1.AxisY.MajorGrid.Enabled = false;
-            chartArea1.AxisY.Maximum = 1000D;
-            chartArea1.AxisY.ScaleBreakStyle.LineColor = System.Drawing.Color.Transparent;
-            chartArea1.AxisY.ScaleBreakStyle.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
-            chartArea1.BackColor = System.Drawing.Color.Transparent;
-            chartArea1.BackImageTransparentColor = System.Drawing.Color.BurlyWood;
-            chartArea1.BackImageWrapMode = System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.Scaled;
-            chartArea1.BackSecondaryColor = System.Drawing.Color.CornflowerBlue;
-            chartArea1.BorderColor = System.Drawing.Color.Transparent;
-            chartArea1.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
-            chartArea1.Name = "ChartArea1";
-            this.chart_Food.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart_Food.Legends.Add(legend1);
+            chartArea2.AlignmentOrientation = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.None;
+            chartArea2.AlignmentStyle = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentStyles.None;
+            chartArea2.Area3DStyle.Inclination = 20;
+            chartArea2.Area3DStyle.IsRightAngleAxes = false;
+            chartArea2.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
+            chartArea2.Area3DStyle.Rotation = 20;
+            chartArea2.Area3DStyle.WallWidth = 1;
+            chartArea2.AxisX.MajorGrid.Enabled = false;
+            chartArea2.AxisY.MajorGrid.Enabled = false;
+            chartArea2.AxisY.Maximum = 1000D;
+            chartArea2.AxisY.ScaleBreakStyle.LineColor = System.Drawing.Color.Transparent;
+            chartArea2.AxisY.ScaleBreakStyle.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+            chartArea2.BackColor = System.Drawing.Color.Transparent;
+            chartArea2.BackImageTransparentColor = System.Drawing.Color.BurlyWood;
+            chartArea2.BackImageWrapMode = System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.Scaled;
+            chartArea2.BackSecondaryColor = System.Drawing.Color.CornflowerBlue;
+            chartArea2.BorderColor = System.Drawing.Color.Transparent;
+            chartArea2.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea2.Name = "ChartArea1";
+            this.chart_Food.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart_Food.Legends.Add(legend2);
             this.chart_Food.Location = new System.Drawing.Point(224, 77);
             this.chart_Food.Name = "chart_Food";
             this.chart_Food.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chart_Food.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.DarkSeaGreen};
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Food Storage";
-            this.chart_Food.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Food Storage";
+            this.chart_Food.Series.Add(series2);
             this.chart_Food.Size = new System.Drawing.Size(501, 310);
             this.chart_Food.TabIndex = 0;
             this.chart_Food.Text = "chart_Food";
@@ -679,6 +680,7 @@
             this.dataGridView_Animals.AllowUserToAddRows = false;
             this.dataGridView_Animals.AllowUserToDeleteRows = false;
             this.dataGridView_Animals.AutoGenerateColumns = false;
+            this.dataGridView_Animals.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dataGridView_Animals.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Animals.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idAnimalDataGridViewTextBoxColumn,
@@ -710,7 +712,7 @@
             // 
             this.typeAnimalDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.typeAnimalDataGridViewTextBoxColumn.DataPropertyName = "TypeAnimal";
-            this.typeAnimalDataGridViewTextBoxColumn.HeaderText = "TypeAnimal";
+            this.typeAnimalDataGridViewTextBoxColumn.HeaderText = "Type";
             this.typeAnimalDataGridViewTextBoxColumn.Name = "typeAnimalDataGridViewTextBoxColumn";
             this.typeAnimalDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -734,7 +736,7 @@
             // 
             this.statusAnimalDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.statusAnimalDataGridViewTextBoxColumn.DataPropertyName = "StatusAnimal";
-            this.statusAnimalDataGridViewTextBoxColumn.HeaderText = "StatusAnimal";
+            this.statusAnimalDataGridViewTextBoxColumn.HeaderText = "Status";
             this.statusAnimalDataGridViewTextBoxColumn.Name = "statusAnimalDataGridViewTextBoxColumn";
             this.statusAnimalDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -894,6 +896,16 @@
             this.tabPage_Create.TabIndex = 1;
             this.tabPage_Create.Text = "Create";
             // 
+            // button_Create
+            // 
+            this.button_Create.Location = new System.Drawing.Point(485, 377);
+            this.button_Create.Name = "button_Create";
+            this.button_Create.Size = new System.Drawing.Size(75, 23);
+            this.button_Create.TabIndex = 9;
+            this.button_Create.Text = "Create";
+            this.button_Create.UseVisualStyleBackColor = true;
+            this.button_Create.Click += new System.EventHandler(this.button_Create_Click);
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -908,7 +920,7 @@
             this.textBox_BoxId.Location = new System.Drawing.Point(439, 274);
             this.textBox_BoxId.Name = "textBox_BoxId";
             this.textBox_BoxId.Size = new System.Drawing.Size(121, 20);
-            this.textBox_BoxId.TabIndex = 17;
+            this.textBox_BoxId.TabIndex = 6;
             // 
             // animalTableAdapter
             // 
@@ -917,16 +929,6 @@
             // foodTableAdapter
             // 
             this.foodTableAdapter.ClearBeforeFill = true;
-            // 
-            // button_Create
-            // 
-            this.button_Create.Location = new System.Drawing.Point(485, 377);
-            this.button_Create.Name = "button_Create";
-            this.button_Create.Size = new System.Drawing.Size(75, 23);
-            this.button_Create.TabIndex = 19;
-            this.button_Create.Text = "Create";
-            this.button_Create.UseVisualStyleBackColor = true;
-            this.button_Create.Click += new System.EventHandler(this.button_Create_Click);
             // 
             // FarmITDesktopApp
             // 
@@ -1022,15 +1024,6 @@
         private DatabaseAccessLayer.FarmITDataSetTableAdapters.AnimalTableAdapter animalTableAdapter;
         private System.Windows.Forms.BindingSource foodBindingSource;
         private DatabaseAccessLayer.FarmITDataSetTableAdapters.FoodTableAdapter foodTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idAnimalDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn typeAnimalDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ageDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statusAnimalDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn amountOfPowerfeedDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn amountOfHayDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn amountOfOatsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idBoxDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button_ResetFilter;
         private System.Windows.Forms.Button button_FeedAnimals;
         private System.Windows.Forms.Label label_Oats;
@@ -1042,5 +1035,14 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBox_BoxId;
         private System.Windows.Forms.Button button_Create;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idAnimalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn typeAnimalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ageDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusAnimalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amountOfPowerfeedDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amountOfHayDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amountOfOatsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idBoxDataGridViewTextBoxColumn;
     }
 }

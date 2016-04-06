@@ -124,6 +124,28 @@ namespace FarmITApp.DatabaseAccessLayer
             }
 
         }
+        public List<Animal> GetAnimalsByType(string type)
+        {
+            try
+            {
+                List<Animal> list = context.Animal.Where(r => r.TypeAnimal == type).ToList();
+
+                if (list.Count > 0)
+                {
+                    return list;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch
+            {
+                //Exception
+                return null;
+            }
+
+        }
 
         //Add Methods
 
@@ -133,7 +155,7 @@ namespace FarmITApp.DatabaseAccessLayer
             {
                 List<Animal> list = context.Animal.Where(r => r.IdAnimal == a.IdAnimal).ToList();
 
-                if (list.Count > 0)
+                if (list.Count == 0)
                 {
                     context.Animal.Add(a);
                     context.SaveChanges();
