@@ -88,8 +88,8 @@ namespace FarmITApp.View
         {
             try
             {
-                List<Animal> listType = controller.get(combo_FindType.Text);
-                dataGrid_Animal.DataSource = ConvertAnimalToDatatable(listType);
+              //  List<Animal> listType = controller.(combo_FindType.Text);
+                //dataGrid_Animal.DataSource = ConvertAnimalToDatatable(listType);
 
                 this.animalTableAdapter.FindById(this.farmITDataSet.Animal, ((long)(System.Convert.ChangeType(textBox_FindById.Text, typeof(long)))));
             }
@@ -170,7 +170,9 @@ namespace FarmITApp.View
 
                 try
                 {
-                    this.animalTableAdapter.Reset(this.farmITDataSet.Animal);
+                    List<Animal> listType = controller.GetAllAnimals();
+                    dataGrid_Animal.DataSource = ConvertAnimalToDatatable(listType);
+                  
                 }
                 catch (System.Exception ex)
                 {
@@ -245,15 +247,9 @@ namespace FarmITApp.View
                     textBox_UName.Text = "";
                     button_Update.Hide();
 
-                    try
-                    {
-                        this.animalTableAdapter.Reset(this.farmITDataSet.Animal);
-                    }
-                    catch (System.Exception ex)
-                    {
-                        System.Windows.Forms.MessageBox.Show(ex.Message);
-                    }
-
+                    
+                        List<Animal> listType = controller.GetAllAnimals();
+                        dataGrid_Animal.DataSource = ConvertAnimalToDatatable(listType);
                 }
                 catch
                 {
@@ -298,6 +294,8 @@ namespace FarmITApp.View
         {
             try
             {
+                List<Animal> listType = controller.GetAllAnimals();
+                dataGrid_Animal.DataSource = ConvertAnimalToDatatable(listType);
                 this.animalTableAdapter.Reset(this.farmITDataSet.Animal);
             }
             catch (System.Exception ex)
