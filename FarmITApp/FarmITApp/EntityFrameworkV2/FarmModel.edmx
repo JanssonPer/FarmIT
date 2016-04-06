@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="EntityFrameworkV2.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Animal">
+          <Key>
+            <PropertyRef Name="IdAnimal" />
+          </Key>
+          <Property Name="TypeAnimal" Type="varchar" MaxLength="6" Nullable="false" />
+          <Property Name="IdAnimal" Type="bigint" Nullable="false" />
+          <Property Name="Age" Type="varchar" MaxLength="255" />
+          <Property Name="Name" Type="varchar" MaxLength="255" />
+          <Property Name="StatusAnimal" Type="varchar" MaxLength="255" />
+          <Property Name="AmountOfPowerfeed" Type="int" />
+          <Property Name="amountOfHay" Type="int" />
+          <Property Name="AmountOfOats" Type="int" />
+          <Property Name="IdBox" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Box">
+          <Key>
+            <PropertyRef Name="IdBox" />
+          </Key>
+          <Property Name="IdBox" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="IdBuilding" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Building">
+          <Key>
+            <PropertyRef Name="IdBuilding" />
+          </Key>
+          <Property Name="IdBuilding" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Eat">
+          <Key>
+            <PropertyRef Name="IdFood" />
+            <PropertyRef Name="IdAnimal" />
+          </Key>
+          <Property Name="IdFood" Type="bigint" Nullable="false" />
+          <Property Name="IdAnimal" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Food">
+          <Key>
+            <PropertyRef Name="IdFood" />
+          </Key>
+          <Property Name="IdFood" Type="bigint" Nullable="false" />
+          <Property Name="Amount" Type="int" />
+          <Property Name="TypeFood" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <Association Name="FK_2tpds16mm2l88n3s1f869rodi">
+          <End Role="Food" Type="Self.Food" Multiplicity="1" />
+          <End Role="Eat" Type="Self.Eat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Food">
+              <PropertyRef Name="IdFood" />
+            </Principal>
+            <Dependent Role="Eat">
+              <PropertyRef Name="IdFood" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dd931cgstt6jb67x2gt5qj3xa">
+          <End Role="Building" Type="Self.Building" Multiplicity="0..1" />
+          <End Role="Box" Type="Self.Box" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Building">
+              <PropertyRef Name="IdBuilding" />
+            </Principal>
+            <Dependent Role="Box">
+              <PropertyRef Name="IdBuilding" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_o70uifc6d9hbo0cnkdgdbwfts">
+          <End Role="Box" Type="Self.Box" Multiplicity="0..1" />
+          <End Role="Animal" Type="Self.Animal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Box">
+              <PropertyRef Name="IdBox" />
+            </Principal>
+            <Dependent Role="Animal">
+              <PropertyRef Name="IdBox" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_qt8cyyohj81abywvvtui1kxgv">
+          <End Role="Animal" Type="Self.Animal" Multiplicity="1" />
+          <End Role="Eat" Type="Self.Eat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Animal">
+              <PropertyRef Name="IdAnimal" />
+            </Principal>
+            <Dependent Role="Eat">
+              <PropertyRef Name="IdAnimal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="EntityFrameworkV2StoreContainer">
+          <EntitySet Name="Animal" EntityType="Self.Animal" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Box" EntityType="Self.Box" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Building" EntityType="Self.Building" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Eat" EntityType="Self.Eat" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Food" EntityType="Self.Food" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_2tpds16mm2l88n3s1f869rodi" Association="Self.FK_2tpds16mm2l88n3s1f869rodi">
+            <End Role="Food" EntitySet="Food" />
+            <End Role="Eat" EntitySet="Eat" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dd931cgstt6jb67x2gt5qj3xa" Association="Self.FK_dd931cgstt6jb67x2gt5qj3xa">
+            <End Role="Building" EntitySet="Building" />
+            <End Role="Box" EntitySet="Box" />
+          </AssociationSet>
+          <AssociationSet Name="FK_o70uifc6d9hbo0cnkdgdbwfts" Association="Self.FK_o70uifc6d9hbo0cnkdgdbwfts">
+            <End Role="Box" EntitySet="Box" />
+            <End Role="Animal" EntitySet="Animal" />
+          </AssociationSet>
+          <AssociationSet Name="FK_qt8cyyohj81abywvvtui1kxgv" Association="Self.FK_qt8cyyohj81abywvvtui1kxgv">
+            <End Role="Animal" EntitySet="Animal" />
+            <End Role="Eat" EntitySet="Eat" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EntityFrameworkV2" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Animal">
+          <Key>
+            <PropertyRef Name="IdAnimal" />
+          </Key>
+          <Property Name="TypeAnimal" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IdAnimal" Type="Int64" Nullable="false" />
+          <Property Name="Age" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="StatusAnimal" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="AmountOfPowerfeed" Type="Int32" />
+          <Property Name="amountOfHay" Type="Int32" />
+          <Property Name="AmountOfOats" Type="Int32" />
+          <Property Name="IdBox" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Box" Relationship="Self.FK_o70uifc6d9hbo0cnkdgdbwfts" FromRole="Animal" ToRole="Box" />
+          <NavigationProperty Name="Food" Relationship="Self.Eat" FromRole="Animal" ToRole="Food" />
+        </EntityType>
+        <EntityType Name="Box">
+          <Key>
+            <PropertyRef Name="IdBox" />
+          </Key>
+          <Property Name="IdBox" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IdBuilding" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Animal" Relationship="Self.FK_o70uifc6d9hbo0cnkdgdbwfts" FromRole="Box" ToRole="Animal" />
+          <NavigationProperty Name="Building" Relationship="Self.FK_dd931cgstt6jb67x2gt5qj3xa" FromRole="Box" ToRole="Building" />
+        </EntityType>
+        <EntityType Name="Building">
+          <Key>
+            <PropertyRef Name="IdBuilding" />
+          </Key>
+          <Property Name="IdBuilding" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Box" Relationship="Self.FK_dd931cgstt6jb67x2gt5qj3xa" FromRole="Building" ToRole="Box" />
+        </EntityType>
+        <EntityType Name="Food">
+          <Key>
+            <PropertyRef Name="IdFood" />
+          </Key>
+          <Property Name="IdFood" Type="Int64" Nullable="false" />
+          <Property Name="Amount" Type="Int32" />
+          <Property Name="TypeFood" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Animal" Relationship="Self.Eat" FromRole="Food" ToRole="Animal" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_o70uifc6d9hbo0cnkdgdbwfts">
+          <End Role="Box" Type="Self.Box" Multiplicity="0..1" />
+          <End Role="Animal" Type="Self.Animal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Box">
+              <PropertyRef Name="IdBox" />
+            </Principal>
+            <Dependent Role="Animal">
+              <PropertyRef Name="IdBox" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dd931cgstt6jb67x2gt5qj3xa">
+          <End Role="Building" Type="Self.Building" Multiplicity="0..1" />
+          <End Role="Box" Type="Self.Box" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Building">
+              <PropertyRef Name="IdBuilding" />
+            </Principal>
+            <Dependent Role="Box">
+              <PropertyRef Name="IdBuilding" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Eat">
+          <End Role="Food" Type="Self.Food" Multiplicity="*" />
+          <End Role="Animal" Type="Self.Animal" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="FarmEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Animal" EntityType="Self.Animal" />
+          <EntitySet Name="Box" EntityType="Self.Box" />
+          <EntitySet Name="Building" EntityType="Self.Building" />
+          <EntitySet Name="Food" EntityType="Self.Food" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <AssociationSet Name="FK_o70uifc6d9hbo0cnkdgdbwfts" Association="Self.FK_o70uifc6d9hbo0cnkdgdbwfts">
+            <End Role="Box" EntitySet="Box" />
+            <End Role="Animal" EntitySet="Animal" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dd931cgstt6jb67x2gt5qj3xa" Association="Self.FK_dd931cgstt6jb67x2gt5qj3xa">
+            <End Role="Building" EntitySet="Building" />
+            <End Role="Box" EntitySet="Box" />
+          </AssociationSet>
+          <AssociationSet Name="Eat" Association="Self.Eat">
+            <End Role="Food" EntitySet="Food" />
+            <End Role="Animal" EntitySet="Animal" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EntityFrameworkV2StoreContainer" CdmEntityContainer="FarmEntities">
+          <EntitySetMapping Name="Animal">
+            <EntityTypeMapping TypeName="EntityFrameworkV2.Animal">
+              <MappingFragment StoreEntitySet="Animal">
+                <ScalarProperty Name="TypeAnimal" ColumnName="TypeAnimal" />
+                <ScalarProperty Name="IdAnimal" ColumnName="IdAnimal" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="StatusAnimal" ColumnName="StatusAnimal" />
+                <ScalarProperty Name="AmountOfPowerfeed" ColumnName="AmountOfPowerfeed" />
+                <ScalarProperty Name="amountOfHay" ColumnName="amountOfHay" />
+                <ScalarProperty Name="AmountOfOats" ColumnName="AmountOfOats" />
+                <ScalarProperty Name="IdBox" ColumnName="IdBox" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Box">
+            <EntityTypeMapping TypeName="EntityFrameworkV2.Box">
+              <MappingFragment StoreEntitySet="Box">
+                <ScalarProperty Name="IdBox" ColumnName="IdBox" />
+                <ScalarProperty Name="IdBuilding" ColumnName="IdBuilding" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Building">
+            <EntityTypeMapping TypeName="EntityFrameworkV2.Building">
+              <MappingFragment StoreEntitySet="Building">
+                <ScalarProperty Name="IdBuilding" ColumnName="IdBuilding" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Food">
+            <EntityTypeMapping TypeName="EntityFrameworkV2.Food">
+              <MappingFragment StoreEntitySet="Food">
+                <ScalarProperty Name="IdFood" ColumnName="IdFood" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="TypeFood" ColumnName="TypeFood" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="EntityFrameworkV2.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="Eat" TypeName="EntityFrameworkV2.Eat" StoreEntitySet="Eat">
+            <EndProperty Name="Food">
+              <ScalarProperty Name="IdFood" ColumnName="IdFood" />
+            </EndProperty>
+            <EndProperty Name="Animal">
+              <ScalarProperty Name="IdAnimal" ColumnName="IdAnimal" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

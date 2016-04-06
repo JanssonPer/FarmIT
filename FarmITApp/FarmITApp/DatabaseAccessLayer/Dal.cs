@@ -147,6 +147,29 @@ namespace FarmITApp.DatabaseAccessLayer
 
         }
 
+        public List<Animal> GetAnimalsById(long id)
+        {
+            try
+            {
+                List<Animal> list = context.Animal.Where(r => r.IdAnimal == id).ToList();
+
+                if (list.Count > 0)
+                {
+                    return list;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch
+            {
+                //Exception
+                return null;
+            }
+
+        }
+
         //Add Methods
 
         public void AddAnimal(Animal a)
