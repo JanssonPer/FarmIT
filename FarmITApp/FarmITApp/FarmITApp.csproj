@@ -55,42 +55,39 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\Controller.cs" />
+    <Compile Include="Controller\ControllerFarm.cs" />
     <Compile Include="DatabaseAccessLayer\Dal.cs" />
-    <Compile Include="EntityFramework\Animals.cs">
-      <DependentUpon>EntityDataModel.tt</DependentUpon>
+    <Compile Include="Model\Animal.cs">
+      <DependentUpon>FarmEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="EntityFramework\Boxes.cs">
-      <DependentUpon>EntityDataModel.tt</DependentUpon>
+    <Compile Include="Model\Box.cs">
+      <DependentUpon>FarmEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="EntityFramework\Buildings.cs">
-      <DependentUpon>EntityDataModel.tt</DependentUpon>
+    <Compile Include="Model\Building.cs">
+      <DependentUpon>FarmEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="EntityFramework\EntityDataModel.Context.cs">
+    <Compile Include="Model\FarmEntities.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>EntityDataModel.Context.tt</DependentUpon>
+      <DependentUpon>FarmEntities.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="EntityFramework\EntityDataModel.cs">
+    <Compile Include="Model\FarmEntities.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>EntityDataModel.tt</DependentUpon>
+      <DependentUpon>FarmEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="EntityFramework\EntityDataModel.Designer.cs">
+    <Compile Include="Model\FarmEntities.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>EntityDataModel.edmx</DependentUpon>
+      <DependentUpon>FarmEntities.edmx</DependentUpon>
     </Compile>
-    <Compile Include="EntityFramework\Foods.cs">
-      <DependentUpon>EntityDataModel.tt</DependentUpon>
+    <Compile Include="Model\Food.cs">
+      <DependentUpon>FarmEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="EntityFramework\sysdiagrams.cs">
-      <DependentUpon>EntityDataModel.tt</DependentUpon>
+    <Compile Include="Model\sysdiagrams.cs">
+      <DependentUpon>FarmEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="FarmITDataSet.cs">
-      <DependentUpon>FarmITDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="FarmITDataSet.Designer.cs">
+    <Compile Include="DatabaseAccessLayer\FarmITDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FarmITDataSet.xsd</DependentUpon>
@@ -115,22 +112,15 @@
     <EmbeddedResource Include="View\FarmITDesktopApp.resx">
       <DependentUpon>FarmITDesktopApp.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="EntityFramework\EntityDataModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>EntityDataModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="EntityFramework\EntityDataModel.edmx.diagram">
-      <DependentUpon>EntityDataModel.edmx</DependentUpon>
-    </None>
-    <None Include="FarmITDataSet.xsc">
+    <None Include="DatabaseAccessLayer\FarmITDataSet.xsc">
       <DependentUpon>FarmITDataSet.xsd</DependentUpon>
     </None>
-    <None Include="FarmITDataSet.xsd">
+    <None Include="DatabaseAccessLayer\FarmITDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>FarmITDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="FarmITDataSet.xss">
+    <None Include="DatabaseAccessLayer\FarmITDataSet.xss">
       <DependentUpon>FarmITDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
@@ -143,26 +133,32 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EntityDeploy Include="Model\FarmEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>FarmEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\FarmEntities.edmx.diagram">
+      <DependentUpon>FarmEntities.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="EntityFramework\EntityDataModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EntityDataModel.edmx</DependentUpon>
-      <LastGenOutput>EntityDataModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="EntityFramework\EntityDataModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EntityDataModel.edmx</DependentUpon>
-      <LastGenOutput>EntityDataModel.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Model\FarmEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FarmEntities.edmx</DependentUpon>
+      <LastGenOutput>FarmEntities.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\FarmEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FarmEntities.edmx</DependentUpon>
+      <LastGenOutput>FarmEntities.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

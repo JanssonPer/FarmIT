@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace FarmITApp {
+namespace FarmITApp.DatabaseAccessLayer {
     
     
     /// <summary>
@@ -2613,7 +2613,7 @@ namespace FarmITApp {
         }
     }
 }
-namespace FarmITApp.FarmITDataSetTableAdapters {
+namespace FarmITApp.DatabaseAccessLayer.FarmITDataSetTableAdapters {
     
     
     /// <summary>

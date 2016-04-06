@@ -12,17 +12,12 @@ namespace FarmITApp.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Box
+    public partial class sysdiagrams
     {
-        public Box()
-        {
-            this.Animal = new HashSet<Animal>();
-        }
-    
-        public string IdBox { get; set; }
-        public string IdBuilding { get; set; }
-    
-        public virtual ICollection<Animal> Animal { get; set; }
-        public virtual Building Building { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

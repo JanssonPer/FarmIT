@@ -12,17 +12,17 @@ namespace FarmITApp.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Box
+    public partial class Food
     {
-        public Box()
+        public Food()
         {
             this.Animal = new HashSet<Animal>();
         }
     
-        public string IdBox { get; set; }
-        public string IdBuilding { get; set; }
+        public long IdFood { get; set; }
+        public Nullable<int> Amount { get; set; }
+        public string TypeFood { get; set; }
     
         public virtual ICollection<Animal> Animal { get; set; }
-        public virtual Building Building { get; set; }
     }
 }
