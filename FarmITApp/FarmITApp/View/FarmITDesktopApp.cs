@@ -57,7 +57,6 @@ namespace FarmITApp.View
        public DataTable ConvertAnimalToDatatable(List<Animal> list)
         {
             DataTable dt = new DataTable();
-
             dt.Columns.Add("Animal Id");
             dt.Columns.Add("Type");
             dt.Columns.Add("Age");
@@ -80,10 +79,8 @@ namespace FarmITApp.View
                 row["Hay"] = Animal.AmountOfHay;
                 row["Oats"] = Animal.AmountOfOats;
                 row["IdBox"] = Animal.IdBox;
-          
                 dt.Rows.Add(row);
             }
-
             return dt;
         }
         
