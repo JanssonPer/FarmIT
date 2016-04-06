@@ -46,16 +46,54 @@ namespace FarmITApp.View
             // TODO: This line of code loads data into the 'farmITDataSet.Food' table. You can move, or remove it, as needed.
             this.foodTableAdapter.Fill(this.farmITDataSet.Food);
             // TODO: This line of code loads data into the 'farmITDataSet.Animal' table. You can move, or remove it, as needed.
+            List<Animal> aL = controller.GetAllAnimals();
+
+
+            dataGrid_Animal.DataSource = ConvertAnimalToDatatable(aL);
+
             this.animalTableAdapter.Fill(this.farmITDataSet.Animal);
+
         }
+       public DataTable ConvertAnimalToDatatable(List<Animal> list)
+        {
+            DataTable dt = new DataTable();
 
+            dt.Columns.Add("Animal Id");
+            dt.Columns.Add("Type");
+            dt.Columns.Add("Age");
+            dt.Columns.Add("Name");
+            dt.Columns.Add("Status");
+            dt.Columns.Add("Powerfeed");
+            dt.Columns.Add("Hay");
+            dt.Columns.Add("Oats");
+            dt.Columns.Add("IdBox");
+            foreach (var Animal in list)
+            {
+                var row = dt.NewRow();
 
+                row["Animal Id"] = Animal.IdAnimal;
+                row["Type"] = Animal.TypeAnimal;
+                row["Age"] = Animal.Age;
+                row["Name"] = Animal.Name;
+                row["Status"] = Animal.StatusAnimal;
+                row["Powerfeed"] = Animal.AmountOfPowerfeed;
+                row["Hay"] = Animal.AmountOfHay;
+                row["Oats"] = Animal.AmountOfOats;
+                row["IdBox"] = Animal.IdBox;
+          
+                dt.Rows.Add(row);
+            }
 
-
+            return dt;
+        }
+        
         private void button4_Click(object sender, EventArgs e)
         {
             try
             {
+                List<Animal> listType = controller.get(combo_FindType.Text);
+                dataGrid_Animal.DataSource = ConvertAnimalToDatatable(listType);
+
                 this.animalTableAdapter.FindById(this.farmITDataSet.Animal, ((long)(System.Convert.ChangeType(textBox_FindById.Text, typeof(long)))));
             }
             catch (System.Exception ex)
@@ -248,6 +286,9 @@ namespace FarmITApp.View
         {
             try
             {
+                List<Animal> listType = controller.GetAnimalsByType(combo_FindType.Text);
+                dataGrid_Animal.DataSource = ConvertAnimalToDatatable(listType);
+
                 this.animalTableAdapter.Find_Type(this.farmITDataSet.Animal, combo_FindType.Text);
             }
             catch (System.Exception ex)
@@ -346,5 +387,47 @@ namespace FarmITApp.View
                 textBox_Message.Show();
             }
         }
+
+        private void dataGrid_Animal_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                button_Update.Show();
+                DataGridViewRow row = dataGrid_Animal.Rows[e.RowIndex];
+                textBox_UId.Text = row.Cells[0].Value.ToString();
+                textBox_UType.Text = row.Cells[1].Value.ToString();
+                textBox_UAge.Text = row.Cells[2].Value.ToString();
+                textBox_UName.Text = row.Cells[3].Value.ToString();
+                textBox_UStatus.Text = row.Cells[4].Value.ToString();
+                textBox_UBox.Text = row.Cells[8].Value.ToString();
+                if (textBox_UType.Text.Equals("Horse"))
+                {
+                    textBox_UFood.Text = row.Cells[5].Value.ToString();
+                    textBox_UFoodTwo.Text = row.Cells[6].Value.ToString();
+                    food.Text = "Powerfeed";
+                    UFoodTwo.Text = "Hay";
+                    UFoodTwo.Show();
+                    textBox_UFoodTwo.Show();
+                }
+                else if (textBox_UType.Text.Equals("Hen"))
+                {
+                    textBox_UFood.Text = row.Cells[7].Value.ToString();
+                    UFood.Text = "Oats";
+                    UFoodTwo.Hide();
+                    textBox_UFoodTwo.Hide();
+                }
+                else
+                {
+                    textBox_UFood.Text = row.Cells[5].Value.ToString();
+                    UFood.Text = "Powerfeed";
+                    textBox_UFoodTwo.Hide();
+                    UFoodTwo.Hide();
+                }
+
+            }
+
+
+        }
+
     }
 }
