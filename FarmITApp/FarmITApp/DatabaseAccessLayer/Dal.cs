@@ -118,6 +118,50 @@ namespace FarmITApp.DatabaseAccessLayer
 
         }
 
+        public List<Box> GetAllBoxes()
+        {
+            try
+            {
+                List<Box> list = context.Box.ToList();
+                if (list.Count > 0)
+                {
+                    return list;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch
+            {
+                //Exception
+                return null;
+            }
+            }
+
+            public List<Building> GetAllBuildings()
+        {
+            try
+            {
+                List<Building> list = context.Building.ToList();
+                if (list.Count > 0)
+                {
+                    return list;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch
+            {
+                //Exception
+                return null;
+            }
+
+        }
+    }
+
         public List<Animal> GetAllAnimalsWhere(string status)
         {
             try
@@ -139,6 +183,7 @@ namespace FarmITApp.DatabaseAccessLayer
             }
 
         }
+
         public List<Animal> GetAnimalsByType(string type)
         {
             try
