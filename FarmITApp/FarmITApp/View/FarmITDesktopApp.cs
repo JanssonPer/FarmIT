@@ -33,52 +33,25 @@ namespace FarmITApp.View
         private void FarmITDesktopApp_Load(object sender, EventArgs e)
         {
             List<Animal> aL = controller.GetAllAnimals();
+            List<Food> fL = controller.GetAllFood();
+
             combo_FindType.Text = "Cow";
             textBox_Type.Text = "Cow";
             textBox_Status.Text = "Healthy";
             Food pf = controller.GetFood("1");
             Food oat = controller.GetFood("2");
             Food hay = controller.GetFood("3");
-            chart_Food.Series["Food Storage"].Points.AddXY("Powerfeed", pf.Amount);
-            chart_Food.Series["Food Storage"].Points.AddXY("Hay", oat.Amount);
-            chart_Food.Series["Food Storage"].Points.AddXY("Oats", hay.Amount);
+            chart_Food.Series["Food types"].Points.AddXY("Powerfeed", pf.Amount);
+            chart_Food.Series["Food types"].Points.AddXY("Hay", oat.Amount);
+            chart_Food.Series["Food types"].Points.AddXY("Oats", hay.Amount);
             label_Hay.Text = "" + hay.Amount;
             label_Oats.Text = "" + oat.Amount;
             label_Powerfeed.Text = "" + pf.Amount;
 
             dataGrid_Animal.DataSource = ConvertAnimalToDatatable(aL);
+            dataGrid_Food.DataSource = ConvertFoodToDatatable(fL);
             
         }
-        public DataTable ConvertAnimalToDatatable(List<Animal> list)
-        {
-            DataTable dt = new DataTable();
-            dt.Columns.Add("Id");
-            dt.Columns.Add("Type");
-            dt.Columns.Add("Age");
-            dt.Columns.Add("Name");
-            dt.Columns.Add("Status");
-            dt.Columns.Add("Powerfeed");
-            dt.Columns.Add("Hay");
-            dt.Columns.Add("Oats");
-            dt.Columns.Add("IdBox");
-            foreach (var Animal in list)
-            {
-                var row = dt.NewRow();
-
-                row["Id"] = Animal.IdAnimal;
-                row["Type"] = Animal.TypeAnimal;
-                row["Age"] = Animal.Age;
-                row["Name"] = Animal.Name;
-                row["Status"] = Animal.StatusAnimal;
-                row["Powerfeed"] = Animal.AmountOfPowerfeed;
-                row["Hay"] = Animal.AmountOfHay;
-                row["Oats"] = Animal.AmountOfOats;
-                row["IdBox"] = Animal.IdBox;
-                dt.Rows.Add(row);
-            }
-            return dt;
-        }
-
         private void button_FindById_Click(object sender, EventArgs e)
         {
 
@@ -210,7 +183,7 @@ namespace FarmITApp.View
             textBox_FoodTwo.Text = "";
             textBox_Name.Text = "";
             textBox_Age.Text = "";
-            textBox_BoxId.Text = "";
+            textBox_Box.Text = "";
         }
 
         private void combo_FindType_SelectedIndexChanged(object sender, EventArgs e)
@@ -250,9 +223,9 @@ namespace FarmITApp.View
             label_Hay.Text = "" + hay.Amount;
             label_Oats.Text = "" + oat.Amount;
             label_Powerfeed.Text = "" + pf.Amount;
-            chart_Food.Series["Food Storage"].Points.ElementAt(0).SetValueXY("Powerfeed", pf.Amount);
-            chart_Food.Series["Food Storage"].Points.ElementAt(1).SetValueXY("Hay", oat.Amount);
-            chart_Food.Series["Food Storage"].Points.ElementAt(2).SetValueXY("Oats", hay.Amount);
+            chart_Food.Series["Food types"].Points.ElementAt(0).SetValueXY("Powerfeed", pf.Amount);
+            chart_Food.Series["Food types"].Points.ElementAt(1).SetValueXY("Hay", oat.Amount);
+            chart_Food.Series["Food types"].Points.ElementAt(2).SetValueXY("Oats", hay.Amount);
             chart_Food.Series[0].Points.ResumeUpdates();
             try
             {
@@ -272,7 +245,7 @@ namespace FarmITApp.View
             try
             {
                 a.Age = textBox_Age.Text;
-                a.IdBox = textBox_BoxId.Text;
+                a.IdBox = textBox_Box.Text;
                 a.Name = textBox_Name.Text;
                 a.StatusAnimal = textBox_Status.Text;
                 a.TypeAnimal = textBox_Type.Text;
@@ -294,7 +267,7 @@ namespace FarmITApp.View
                 textBox_Message.Text = a.TypeAnimal + " created";
                 textBox_Message.Show();
                 textBox_Age.Text = "";
-                textBox_BoxId.Text = "";
+                textBox_Box.Text = "";
                 textBox_Food.Text = "";
                 textBox_FoodTwo.Text = "";
                 textBox_Type.Text = "";
@@ -345,6 +318,113 @@ namespace FarmITApp.View
                     UFoodTwo.Hide();
                 }
             }
+        }
+
+        private void button_OrderFood_Click(object sender, EventArgs e)
+        {
+            Food tmpF = controller.GetFood(textBox_FId.Text);
+            int newAmount = int.Parse(textBox_Amount.Text) + int.Parse(textBox_OrderAmount.Text);
+            if (newAmount >= 1000)
+            {
+                textBox_Message.Show();
+                textBox_Message.Text = "You ordered to much, no space in storage";
+            }
+            else
+            {
+                tmpF.Amount = newAmount;
+                textBox_Amount.Text = "" + tmpF.Amount;
+                List<Food> fL = controller.GetAllFood();
+                dataGrid_Food.DataSource = ConvertFoodToDatatable(fL);
+                textBox_Message.Show();
+                textBox_Message.Text = "Order sent";
+                controller.UpdateFood(tmpF);
+
+            }
+        }
+
+        private void dataGrid_Food_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                
+                DataGridViewRow row = dataGrid_Food.Rows[e.RowIndex];
+                textBox_FId.Text = row.Cells[0].Value.ToString();
+                textBox_FType.Text = row.Cells[1].Value.ToString();
+                textBox_Amount.Text = row.Cells[2].Value.ToString();
+                label_BuyMoreFood.Text = "Buy more "+ row.Cells[1].Value.ToString();
+            }
+        }
+        public DataTable ConvertAnimalToDatatable(List<Animal> list)
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Id");
+            dt.Columns.Add("Type");
+            dt.Columns.Add("Age");
+            dt.Columns.Add("Name");
+            dt.Columns.Add("Status");
+            dt.Columns.Add("Powerfeed");
+            dt.Columns.Add("Hay");
+            dt.Columns.Add("Oats");
+            dt.Columns.Add("IdBox");
+            foreach (var Animal in list)
+            {
+                var row = dt.NewRow();
+
+                row["Id"] = Animal.IdAnimal;
+                row["Type"] = Animal.TypeAnimal;
+                row["Age"] = Animal.Age;
+                row["Name"] = Animal.Name;
+                row["Status"] = Animal.StatusAnimal;
+                row["Powerfeed"] = Animal.AmountOfPowerfeed;
+                row["Hay"] = Animal.AmountOfHay;
+                row["Oats"] = Animal.AmountOfOats;
+                row["IdBox"] = Animal.IdBox;
+                dt.Rows.Add(row);
+            }
+            return dt;
+        }
+        public DataTable ConvertFoodToDatatable(List<Food> list)
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Id");
+            dt.Columns.Add("Type");
+            dt.Columns.Add("Amount");
+            foreach (var Food in list)
+            {
+                var row = dt.NewRow();
+                row["Id"] = Food.IdFood;
+                row["Type"] = Food.TypeFood;
+                row["Amount"] = Food.Amount;
+                dt.Rows.Add(row);
+            }
+            return dt;
+        }
+        public DataTable ConvertBoxToDatatable(List<Box> list)
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Box Id");
+            dt.Columns.Add("Building Id");
+            foreach (var Box in list)
+            {
+                var row = dt.NewRow();
+                row["Box Id"] = Box.IdBox;
+                row["Building Id"] = Box.IdBuilding;
+                dt.Rows.Add(row);
+            }
+            return dt;
+        }
+        public DataTable ConvertBuildingToDatatable(List<Building> list)
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Building Id");
+ 
+            foreach (var Building in list)
+            {
+                var row = dt.NewRow();
+                row["Building Id"] = Building.IdBuilding;
+                dt.Rows.Add(row);
+            }
+            return dt;
         }
     }
 }
