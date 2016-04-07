@@ -34,8 +34,8 @@ namespace FarmITApp.View
         {
             List<Animal> aL = controller.GetAllAnimals();
             List<Food> fL = controller.GetAllFood();
-            List<Building> buL = controller.GetAllBuildings();
-            List<Box> bL = controller.GetAllBoxes();
+          //  List<Building> buL = controller.GetAllBuildings();
+          //  List<Box> bL = controller.GetAllBoxes();
 
             combo_FindType.Text = "Cow";
             textBox_Type.Text = "Cow";

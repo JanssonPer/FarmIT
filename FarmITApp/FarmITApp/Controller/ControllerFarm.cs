@@ -78,6 +78,30 @@ namespace FarmITApp.ControllerFarm
                 return null;
             }
         }
+        public List<Box> GetAllBuildings()
+        {
+            try
+            {
+                return dal.GetAllBuildings();
+            }
+            catch
+            {
+                //Exception
+                return null;
+            }
+        }
+        public List<Box> GetAllBoxes()
+        {
+            try
+            {
+                return dal.GetAllBoxes();
+            }
+            catch
+            {
+                //Exception
+                return null;
+            }
+        }
 
         public List<Animal> GetAllAnimalsWhere(String status)
         {
