@@ -21,7 +21,7 @@ namespace FarmITApp.View
         public FarmITDesktopApp()
         {
             InitializeComponent();
-           
+
 
         }
 
@@ -34,8 +34,8 @@ namespace FarmITApp.View
         {
             List<Animal> aL = controller.GetAllAnimals();
             List<Food> fL = controller.GetAllFood();
-          //  List<Building> buL = controller.GetAllBuildings();
-          //  List<Box> bL = controller.GetAllBoxes();
+            //  List<Building> buL = controller.GetAllBuildings();
+            //  List<Box> bL = controller.GetAllBoxes();
 
             combo_FindType.Text = "Cow";
             textBox_Type.Text = "Cow";
@@ -52,7 +52,7 @@ namespace FarmITApp.View
 
             dataGrid_Animal.DataSource = ConvertAnimalToDatatable(aL);
             dataGrid_Food.DataSource = ConvertFoodToDatatable(fL);
-            
+
         }
         private void button_FindById_Click(object sender, EventArgs e)
         {
@@ -133,7 +133,7 @@ namespace FarmITApp.View
                     List<Animal> listType = controller.GetAnimalsById(textBox_UId.Text);
                     dataGrid_Animal.DataSource = ConvertAnimalToDatatable(listType);
                 }
-                catch 
+                catch
                 {
                     textBox_Message.Show();
                     textBox_Message.Text = "No animal updated";
@@ -233,7 +233,7 @@ namespace FarmITApp.View
             {
                 // foood tabellen ska också updateras GLÖM EJ !!!!!
             }
-               catch
+            catch
             {
                 textBox_Message.Show();
             }
@@ -348,12 +348,11 @@ namespace FarmITApp.View
         {
             if (e.RowIndex >= 0)
             {
-                
                 DataGridViewRow row = dataGrid_Food.Rows[e.RowIndex];
                 textBox_FId.Text = row.Cells[0].Value.ToString();
                 textBox_FType.Text = row.Cells[1].Value.ToString();
                 textBox_Amount.Text = row.Cells[2].Value.ToString();
-                label_BuyMoreFood.Text = "Buy more "+ row.Cells[1].Value.ToString();
+                label_BuyMoreFood.Text = "Buy more " + row.Cells[1].Value.ToString();
             }
         }
         public DataTable ConvertAnimalToDatatable(List<Animal> list)
@@ -419,7 +418,7 @@ namespace FarmITApp.View
         {
             DataTable dt = new DataTable();
             dt.Columns.Add("Building Id");
- 
+
             foreach (var Building in list)
             {
                 var row = dt.NewRow();
@@ -431,12 +430,21 @@ namespace FarmITApp.View
 
         private void dataGrid_Building_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGrid_Building.Rows[e.RowIndex];
+                textBox_UBuildingId.Text = row.Cells[0].Value.ToString();
+            }
         }
 
         private void dataGrid_Box_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGrid_Box.Rows[e.RowIndex];
+                textBox_UBoxId.Text = row.Cells[0].Value.ToString();
+                textBox_UBuildingId.Text = row.Cells[1].Value.ToString();
+            }
         }
     }
 }

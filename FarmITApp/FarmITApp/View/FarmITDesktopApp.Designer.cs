@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.button_Reset = new System.Windows.Forms.Button();
             this.foodTwo = new System.Windows.Forms.Label();
             this.textBox_FoodTwo = new System.Windows.Forms.TextBox();
@@ -97,8 +97,8 @@
             this.tabPage_Box_Buildings = new System.Windows.Forms.TabPage();
             this.label_BBOne = new System.Windows.Forms.Label();
             this.label_BBTwo = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_UBoxId = new System.Windows.Forms.TextBox();
+            this.textBox_UBuildingId = new System.Windows.Forms.TextBox();
             this.dataGrid_Box = new System.Windows.Forms.DataGridView();
             this.dataGrid_Building = new System.Windows.Forms.DataGridView();
             this.tabPage_Create = new System.Windows.Forms.TabPage();
@@ -361,37 +361,37 @@
             this.chart_Food.BorderlineColor = System.Drawing.Color.Violet;
             this.chart_Food.BorderSkin.BorderColor = System.Drawing.Color.BlanchedAlmond;
             this.chart_Food.BorderSkin.PageColor = System.Drawing.Color.Violet;
-            chartArea1.AlignmentOrientation = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.None;
-            chartArea1.AlignmentStyle = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentStyles.None;
-            chartArea1.Area3DStyle.Inclination = 20;
-            chartArea1.Area3DStyle.IsRightAngleAxes = false;
-            chartArea1.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
-            chartArea1.Area3DStyle.Rotation = 20;
-            chartArea1.Area3DStyle.WallWidth = 1;
-            chartArea1.AxisX.MajorGrid.Enabled = false;
-            chartArea1.AxisY.MajorGrid.Enabled = false;
-            chartArea1.AxisY.Maximum = 1000D;
-            chartArea1.AxisY.ScaleBreakStyle.LineColor = System.Drawing.Color.Transparent;
-            chartArea1.AxisY.ScaleBreakStyle.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
-            chartArea1.BackColor = System.Drawing.Color.Transparent;
-            chartArea1.BackImageTransparentColor = System.Drawing.Color.BurlyWood;
-            chartArea1.BackImageWrapMode = System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.Scaled;
-            chartArea1.BackSecondaryColor = System.Drawing.Color.CornflowerBlue;
-            chartArea1.BorderColor = System.Drawing.Color.Transparent;
-            chartArea1.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
-            chartArea1.Name = "ChartArea1";
-            this.chart_Food.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart_Food.Legends.Add(legend1);
+            chartArea2.AlignmentOrientation = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.None;
+            chartArea2.AlignmentStyle = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentStyles.None;
+            chartArea2.Area3DStyle.Inclination = 20;
+            chartArea2.Area3DStyle.IsRightAngleAxes = false;
+            chartArea2.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
+            chartArea2.Area3DStyle.Rotation = 20;
+            chartArea2.Area3DStyle.WallWidth = 1;
+            chartArea2.AxisX.MajorGrid.Enabled = false;
+            chartArea2.AxisY.MajorGrid.Enabled = false;
+            chartArea2.AxisY.Maximum = 1000D;
+            chartArea2.AxisY.ScaleBreakStyle.LineColor = System.Drawing.Color.Transparent;
+            chartArea2.AxisY.ScaleBreakStyle.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+            chartArea2.BackColor = System.Drawing.Color.Transparent;
+            chartArea2.BackImageTransparentColor = System.Drawing.Color.BurlyWood;
+            chartArea2.BackImageWrapMode = System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.Scaled;
+            chartArea2.BackSecondaryColor = System.Drawing.Color.CornflowerBlue;
+            chartArea2.BorderColor = System.Drawing.Color.Transparent;
+            chartArea2.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea2.Name = "ChartArea1";
+            this.chart_Food.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart_Food.Legends.Add(legend2);
             this.chart_Food.Location = new System.Drawing.Point(268, 77);
             this.chart_Food.Name = "chart_Food";
             this.chart_Food.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chart_Food.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.DarkSeaGreen};
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Food types";
-            this.chart_Food.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Food types";
+            this.chart_Food.Series.Add(series2);
             this.chart_Food.Size = new System.Drawing.Size(501, 310);
             this.chart_Food.TabIndex = 0;
             this.chart_Food.Text = "chart_Food";
@@ -796,8 +796,8 @@
             // 
             this.tabPage_Box_Buildings.Controls.Add(this.label_BBOne);
             this.tabPage_Box_Buildings.Controls.Add(this.label_BBTwo);
-            this.tabPage_Box_Buildings.Controls.Add(this.textBox2);
-            this.tabPage_Box_Buildings.Controls.Add(this.textBox1);
+            this.tabPage_Box_Buildings.Controls.Add(this.textBox_UBoxId);
+            this.tabPage_Box_Buildings.Controls.Add(this.textBox_UBuildingId);
             this.tabPage_Box_Buildings.Controls.Add(this.dataGrid_Box);
             this.tabPage_Box_Buildings.Controls.Add(this.dataGrid_Building);
             this.tabPage_Box_Buildings.Location = new System.Drawing.Point(4, 22);
@@ -826,20 +826,20 @@
             this.label_BBTwo.Text = "IdBox";
             this.label_BBTwo.Visible = false;
             // 
-            // textBox2
+            // textBox_UBoxId
             // 
-            this.textBox2.Location = new System.Drawing.Point(465, 154);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 38;
-            this.textBox2.Visible = false;
+            this.textBox_UBoxId.Location = new System.Drawing.Point(465, 154);
+            this.textBox_UBoxId.Name = "textBox_UBoxId";
+            this.textBox_UBoxId.Size = new System.Drawing.Size(100, 20);
+            this.textBox_UBoxId.TabIndex = 38;
+            this.textBox_UBoxId.Visible = false;
             // 
-            // textBox1
+            // textBox_UBuildingId
             // 
-            this.textBox1.Location = new System.Drawing.Point(465, 109);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 37;
+            this.textBox_UBuildingId.Location = new System.Drawing.Point(465, 109);
+            this.textBox_UBuildingId.Name = "textBox_UBuildingId";
+            this.textBox_UBuildingId.Size = new System.Drawing.Size(100, 20);
+            this.textBox_UBuildingId.TabIndex = 37;
             // 
             // dataGrid_Box
             // 
@@ -1031,8 +1031,8 @@
         private System.Windows.Forms.TextBox textBox_FId;
         private System.Windows.Forms.Label label_BBOne;
         private System.Windows.Forms.Label label_BBTwo;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_UBoxId;
+        private System.Windows.Forms.TextBox textBox_UBuildingId;
         private System.Windows.Forms.DataGridView dataGrid_Box;
         private System.Windows.Forms.DataGridView dataGrid_Building;
     }
