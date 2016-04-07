@@ -108,37 +108,48 @@ namespace FarmITApp.View
             try
             {
                 Animal a = controller.GetAnimal(textBox_UId.Text);
+
                 a.Age = textBox_UAge.Text;
                 a.Name = textBox_UName.Text;
                 a.TypeAnimal = textBox_UType.Text;
                 a.StatusAnimal = textBox_UStatus.Text;
                 a.IdBox = textBox_UBox.Text;
-                if (a.TypeAnimal.Equals("Horse"))
+                Box b = controller.GetBox(textBox_UBox.Text);
+                if (b != null)
                 {
-                    a.AmountOfPowerfeed = int.Parse(textBox_UFood.Text);
-                    a.AmountOfHay = int.Parse(textBox_UFoodTwo.Text);
-                }
-                else if (a.TypeAnimal.Equals("Hen"))
-                {
-                    a.AmountOfOats = int.Parse(textBox_UFood.Text);
+
+                    if (a.TypeAnimal.Equals("Horse"))
+                    {
+                        a.AmountOfPowerfeed = int.Parse(textBox_UFood.Text);
+                        a.AmountOfHay = int.Parse(textBox_UFoodTwo.Text);
+                    }
+                    else if (a.TypeAnimal.Equals("Hen"))
+                    {
+                        a.AmountOfOats = int.Parse(textBox_UFood.Text);
+                    }
+                    else
+                    {
+                        a.AmountOfPowerfeed = int.Parse(textBox_UFood.Text);
+                    }
+
+                    controller.UpdateAnimal(a);
+                    textBox_Message.Show();
+                    textBox_Message.Text = "Animal updated";
+                    try
+                    {
+                        List<Animal> listType = controller.GetAnimalsById(textBox_UId.Text);
+                        dataGrid_Animal.DataSource = ConvertAnimalToDatatable(listType);
+                    }
+                    catch
+                    {
+                        textBox_Message.Show();
+                        textBox_Message.Text = "No animal updated";
+                    }
                 }
                 else
                 {
-                    a.AmountOfPowerfeed = int.Parse(textBox_UFood.Text);
-                }
-
-                controller.UpdateAnimal(a);
-                textBox_Message.Show();
-                textBox_Message.Text = "Animal updated";
-                try
-                {
-                    List<Animal> listType = controller.GetAnimalsById(textBox_UId.Text);
-                    dataGrid_Animal.DataSource = ConvertAnimalToDatatable(listType);
-                }
-                catch
-                {
                     textBox_Message.Show();
-                    textBox_Message.Text = "No animal updated";
+                    textBox_Message.Text = "No box found";
                 }
             }
             catch
@@ -233,7 +244,8 @@ namespace FarmITApp.View
             chart_Food.Series[0].Points.ResumeUpdates();
             try
             {
-                // foood tabellen ska också updateras GLÖM EJ !!!!!
+                List<Food> fL = controller.GetAllFood();
+                dataGrid_Food.DataSource = ConvertFoodToDatatable(fL);
             }
             catch
             {
@@ -342,7 +354,16 @@ namespace FarmITApp.View
                 textBox_Message.Show();
                 textBox_Message.Text = "Order sent";
                 controller.UpdateFood(tmpF);
-
+                Food pf = controller.GetFood("1");
+                Food oat = controller.GetFood("2");
+                Food hay = controller.GetFood("3");
+                label_Hay.Text = "" + hay.Amount;
+                label_Oats.Text = "" + oat.Amount;
+                label_Powerfeed.Text = "" + pf.Amount;
+                chart_Food.Series["Food types"].Points.ElementAt(0).SetValueXY("Powerfeed", pf.Amount);
+                chart_Food.Series["Food types"].Points.ElementAt(1).SetValueXY("Hay", oat.Amount);
+                chart_Food.Series["Food types"].Points.ElementAt(2).SetValueXY("Oats", hay.Amount);
+                chart_Food.Series[0].Points.ResumeUpdates();
             }
         }
 
@@ -350,6 +371,7 @@ namespace FarmITApp.View
         {
             if (e.RowIndex >= 0)
             {
+                button_OrderFood.Show();
                 DataGridViewRow row = dataGrid_Food.Rows[e.RowIndex];
                 textBox_FId.Text = row.Cells[0].Value.ToString();
                 textBox_FType.Text = row.Cells[1].Value.ToString();
@@ -453,6 +475,6 @@ namespace FarmITApp.View
             }
         }
 
-       
+
     }
 }
