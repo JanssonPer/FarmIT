@@ -34,6 +34,8 @@ namespace FarmITApp.View
         {
             List<Animal> aL = controller.GetAllAnimals();
             List<Food> fL = controller.GetAllFood();
+            List<Building> buL = controller.GetAllBuildings();
+            List<Box> bL = controller.GetAllBoxes();
 
             combo_FindType.Text = "Cow";
             textBox_Type.Text = "Cow";
@@ -425,6 +427,16 @@ namespace FarmITApp.View
                 dt.Rows.Add(row);
             }
             return dt;
+        }
+
+        private void dataGrid_Building_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGrid_Box_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
