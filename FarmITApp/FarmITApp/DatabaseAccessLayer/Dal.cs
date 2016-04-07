@@ -158,31 +158,29 @@ namespace FarmITApp.DatabaseAccessLayer
                 //Exception
                 return null;
             }
-
-        }
     }
 
-        public List<Animal> GetAllAnimalsWhere(string status)
+    public List<Animal> GetAllAnimalsWhere(string status)
+    {
+        try
         {
-            try
+            List<Animal> list = context.Animal.Where(r => r.StatusAnimal == status).ToList();
+            if (list.Count > 0)
             {
-                List<Animal> list = context.Animal.Where(r => r.StatusAnimal == status).ToList();
-                if (list.Count > 0)
-                {
-                    return list;
-                }
-                else
-                {
-                    return null;
-                }
+                return list;
             }
-            catch
+            else
             {
-                //Exception
                 return null;
             }
-
         }
+        catch
+        {
+            //Exception
+            return null;
+        }
+    }
+        
 
         public List<Animal> GetAnimalsByType(string type)
         {
