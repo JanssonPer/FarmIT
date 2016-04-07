@@ -59,6 +59,21 @@ namespace FarmITApp.DatabaseAccessLayer
 
         }
 
+        public Building GetBuilding(String id)
+        {
+            try
+            {
+                Building b = context.Building.SingleOrDefault(r => r.IdBuilding == id);
+                return b;
+            }
+            catch
+            {
+                //Exception
+                return null;
+            }
+
+        }
+
         public List<Animal> GetAllAnimals()
         {
             try
