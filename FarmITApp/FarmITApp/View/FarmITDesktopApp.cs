@@ -453,9 +453,6 @@ namespace FarmITApp.View
             }
         }
 
-        private void button_UpdateBB_Click(object sender, EventArgs e)
-        {
-            
-        }
+       
     }
 }
