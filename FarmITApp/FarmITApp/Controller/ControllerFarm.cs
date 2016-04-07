@@ -78,7 +78,7 @@ namespace FarmITApp.ControllerFarm
                 return null;
             }
         }
-        public List<Box> GetAllBuildings()
+        public List<Building> GetAllBuildings()
         {
             try
             {

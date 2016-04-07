@@ -34,8 +34,8 @@ namespace FarmITApp.View
         {
             List<Animal> aL = controller.GetAllAnimals();
             List<Food> fL = controller.GetAllFood();
-            //  List<Building> buL = controller.GetAllBuildings();
-            //  List<Box> bL = controller.GetAllBoxes();
+            List<Building> buL = controller.GetAllBuildings();
+            List<Box> bL = controller.GetAllBoxes();
 
             combo_FindType.Text = "Cow";
             textBox_Type.Text = "Cow";
@@ -52,6 +52,8 @@ namespace FarmITApp.View
 
             dataGrid_Animal.DataSource = ConvertAnimalToDatatable(aL);
             dataGrid_Food.DataSource = ConvertFoodToDatatable(fL);
+            dataGrid_Building.DataSource = ConvertBuildingToDatatable(buL);
+            dataGrid_Box.DataSource = ConvertBoxToDatatable(bL);
 
         }
         private void button_FindById_Click(object sender, EventArgs e)
@@ -434,6 +436,8 @@ namespace FarmITApp.View
             {
                 DataGridViewRow row = dataGrid_Building.Rows[e.RowIndex];
                 textBox_UBuildingId.Text = row.Cells[0].Value.ToString();
+                textBox_UBoxId.Hide();
+                label_BBTwo.Hide();
             }
         }
 
@@ -444,7 +448,14 @@ namespace FarmITApp.View
                 DataGridViewRow row = dataGrid_Box.Rows[e.RowIndex];
                 textBox_UBoxId.Text = row.Cells[0].Value.ToString();
                 textBox_UBuildingId.Text = row.Cells[1].Value.ToString();
+                textBox_UBoxId.Show();
+                label_BBTwo.Show();
             }
+        }
+
+        private void button_UpdateBB_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
