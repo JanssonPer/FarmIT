@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FarmITDesktopApp));
             this.button_Reset = new System.Windows.Forms.Button();
             this.foodTwo = new System.Windows.Forms.Label();
             this.textBox_FoodTwo = new System.Windows.Forms.TextBox();
@@ -105,6 +106,14 @@
             this.button_Create = new System.Windows.Forms.Button();
             this.label_BoxId = new System.Windows.Forms.Label();
             this.textBox_Box = new System.Windows.Forms.TextBox();
+            this.pictureBox_Hen = new System.Windows.Forms.PictureBox();
+            this.pictureBox_Pig = new System.Windows.Forms.PictureBox();
+            this.pictureBox_Cow = new System.Windows.Forms.PictureBox();
+            this.pictureBox_Horse = new System.Windows.Forms.PictureBox();
+            this.pictureBox_Chorse = new System.Windows.Forms.PictureBox();
+            this.pictureBox_Ccow = new System.Windows.Forms.PictureBox();
+            this.pictureBox_Cpig = new System.Windows.Forms.PictureBox();
+            this.pictureBox_Chen = new System.Windows.Forms.PictureBox();
             this.tabMenu.SuspendLayout();
             this.tabPage_Info.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_Food)).BeginInit();
@@ -118,11 +127,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Box)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Building)).BeginInit();
             this.tabPage_Create.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Hen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Pig)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Cow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Horse)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Chorse)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Ccow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Cpig)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Chen)).BeginInit();
             this.SuspendLayout();
             // 
             // button_Reset
             // 
-            this.button_Reset.Location = new System.Drawing.Point(381, 377);
+            this.button_Reset.Location = new System.Drawing.Point(361, 369);
             this.button_Reset.Name = "button_Reset";
             this.button_Reset.Size = new System.Drawing.Size(75, 23);
             this.button_Reset.TabIndex = 16;
@@ -133,7 +150,7 @@
             // foodTwo
             // 
             this.foodTwo.AutoSize = true;
-            this.foodTwo.Location = new System.Drawing.Point(378, 348);
+            this.foodTwo.Location = new System.Drawing.Point(358, 340);
             this.foodTwo.Name = "foodTwo";
             this.foodTwo.Size = new System.Drawing.Size(52, 13);
             this.foodTwo.TabIndex = 14;
@@ -142,7 +159,7 @@
             // 
             // textBox_FoodTwo
             // 
-            this.textBox_FoodTwo.Location = new System.Drawing.Point(439, 345);
+            this.textBox_FoodTwo.Location = new System.Drawing.Point(419, 337);
             this.textBox_FoodTwo.Name = "textBox_FoodTwo";
             this.textBox_FoodTwo.Size = new System.Drawing.Size(121, 20);
             this.textBox_FoodTwo.TabIndex = 8;
@@ -151,7 +168,7 @@
             // food
             // 
             this.food.AutoSize = true;
-            this.food.Location = new System.Drawing.Point(378, 312);
+            this.food.Location = new System.Drawing.Point(358, 304);
             this.food.Name = "food";
             this.food.Size = new System.Drawing.Size(31, 13);
             this.food.TabIndex = 12;
@@ -160,7 +177,7 @@
             // label_Age
             // 
             this.label_Age.AutoSize = true;
-            this.label_Age.Location = new System.Drawing.Point(378, 242);
+            this.label_Age.Location = new System.Drawing.Point(358, 234);
             this.label_Age.Name = "label_Age";
             this.label_Age.Size = new System.Drawing.Size(26, 13);
             this.label_Age.TabIndex = 11;
@@ -169,7 +186,7 @@
             // label_Name
             // 
             this.label_Name.AutoSize = true;
-            this.label_Name.Location = new System.Drawing.Point(378, 204);
+            this.label_Name.Location = new System.Drawing.Point(358, 196);
             this.label_Name.Name = "label_Name";
             this.label_Name.Size = new System.Drawing.Size(35, 13);
             this.label_Name.TabIndex = 10;
@@ -178,7 +195,7 @@
             // label_Id
             // 
             this.label_Id.AutoSize = true;
-            this.label_Id.Location = new System.Drawing.Point(378, 166);
+            this.label_Id.Location = new System.Drawing.Point(358, 158);
             this.label_Id.Name = "label_Id";
             this.label_Id.Size = new System.Drawing.Size(16, 13);
             this.label_Id.TabIndex = 9;
@@ -187,7 +204,7 @@
             // label_Status
             // 
             this.label_Status.AutoSize = true;
-            this.label_Status.Location = new System.Drawing.Point(378, 126);
+            this.label_Status.Location = new System.Drawing.Point(358, 118);
             this.label_Status.Name = "label_Status";
             this.label_Status.Size = new System.Drawing.Size(37, 13);
             this.label_Status.TabIndex = 8;
@@ -195,21 +212,21 @@
             // 
             // textBox_Name
             // 
-            this.textBox_Name.Location = new System.Drawing.Point(439, 201);
+            this.textBox_Name.Location = new System.Drawing.Point(419, 193);
             this.textBox_Name.Name = "textBox_Name";
             this.textBox_Name.Size = new System.Drawing.Size(121, 20);
             this.textBox_Name.TabIndex = 4;
             // 
             // textBox_Age
             // 
-            this.textBox_Age.Location = new System.Drawing.Point(439, 239);
+            this.textBox_Age.Location = new System.Drawing.Point(419, 231);
             this.textBox_Age.Name = "textBox_Age";
             this.textBox_Age.Size = new System.Drawing.Size(121, 20);
             this.textBox_Age.TabIndex = 5;
             // 
             // textBox_Food
             // 
-            this.textBox_Food.Location = new System.Drawing.Point(439, 309);
+            this.textBox_Food.Location = new System.Drawing.Point(419, 301);
             this.textBox_Food.Name = "textBox_Food";
             this.textBox_Food.Size = new System.Drawing.Size(121, 20);
             this.textBox_Food.TabIndex = 7;
@@ -223,7 +240,7 @@
             "Healthy",
             "Sick",
             "Gluefactory"});
-            this.textBox_Status.Location = new System.Drawing.Point(439, 123);
+            this.textBox_Status.Location = new System.Drawing.Point(419, 115);
             this.textBox_Status.Name = "textBox_Status";
             this.textBox_Status.Size = new System.Drawing.Size(121, 21);
             this.textBox_Status.TabIndex = 2;
@@ -238,7 +255,7 @@
             "Pig",
             "Horse",
             "Hen"});
-            this.textBox_Type.Location = new System.Drawing.Point(439, 83);
+            this.textBox_Type.Location = new System.Drawing.Point(419, 75);
             this.textBox_Type.Name = "textBox_Type";
             this.textBox_Type.Size = new System.Drawing.Size(121, 21);
             this.textBox_Type.TabIndex = 1;
@@ -248,7 +265,7 @@
             // 
             this.textBox_Id.BackColor = System.Drawing.Color.White;
             this.textBox_Id.Enabled = false;
-            this.textBox_Id.Location = new System.Drawing.Point(439, 163);
+            this.textBox_Id.Location = new System.Drawing.Point(419, 155);
             this.textBox_Id.Name = "textBox_Id";
             this.textBox_Id.Size = new System.Drawing.Size(121, 20);
             this.textBox_Id.TabIndex = 3;
@@ -256,7 +273,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(399, 40);
+            this.label2.Location = new System.Drawing.Point(379, 32);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(161, 25);
             this.label2.TabIndex = 1;
@@ -265,7 +282,7 @@
             // label_Type
             // 
             this.label_Type.AutoSize = true;
-            this.label_Type.Location = new System.Drawing.Point(378, 86);
+            this.label_Type.Location = new System.Drawing.Point(358, 78);
             this.label_Type.Name = "label_Type";
             this.label_Type.Size = new System.Drawing.Size(31, 13);
             this.label_Type.TabIndex = 0;
@@ -296,6 +313,10 @@
             // tabPage_Info
             // 
             this.tabPage_Info.BackColor = System.Drawing.Color.White;
+            this.tabPage_Info.Controls.Add(this.pictureBox_Horse);
+            this.tabPage_Info.Controls.Add(this.pictureBox_Cow);
+            this.tabPage_Info.Controls.Add(this.pictureBox_Pig);
+            this.tabPage_Info.Controls.Add(this.pictureBox_Hen);
             this.tabPage_Info.Controls.Add(this.label_Oats);
             this.tabPage_Info.Controls.Add(this.label_Powerfeed);
             this.tabPage_Info.Controls.Add(this.label_Hay);
@@ -311,7 +332,7 @@
             // label_Oats
             // 
             this.label_Oats.AutoSize = true;
-            this.label_Oats.Location = new System.Drawing.Point(462, 377);
+            this.label_Oats.Location = new System.Drawing.Point(469, 377);
             this.label_Oats.Name = "label_Oats";
             this.label_Oats.Size = new System.Drawing.Size(29, 13);
             this.label_Oats.TabIndex = 5;
@@ -329,7 +350,7 @@
             // label_Hay
             // 
             this.label_Hay.AutoSize = true;
-            this.label_Hay.Location = new System.Drawing.Point(537, 377);
+            this.label_Hay.Location = new System.Drawing.Point(546, 377);
             this.label_Hay.Name = "label_Hay";
             this.label_Hay.Size = new System.Drawing.Size(26, 13);
             this.label_Hay.TabIndex = 3;
@@ -361,37 +382,37 @@
             this.chart_Food.BorderlineColor = System.Drawing.Color.Violet;
             this.chart_Food.BorderSkin.BorderColor = System.Drawing.Color.BlanchedAlmond;
             this.chart_Food.BorderSkin.PageColor = System.Drawing.Color.Violet;
-            chartArea3.AlignmentOrientation = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.None;
-            chartArea3.AlignmentStyle = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentStyles.None;
-            chartArea3.Area3DStyle.Inclination = 20;
-            chartArea3.Area3DStyle.IsRightAngleAxes = false;
-            chartArea3.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
-            chartArea3.Area3DStyle.Rotation = 20;
-            chartArea3.Area3DStyle.WallWidth = 1;
-            chartArea3.AxisX.MajorGrid.Enabled = false;
-            chartArea3.AxisY.MajorGrid.Enabled = false;
-            chartArea3.AxisY.Maximum = 1000D;
-            chartArea3.AxisY.ScaleBreakStyle.LineColor = System.Drawing.Color.Transparent;
-            chartArea3.AxisY.ScaleBreakStyle.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
-            chartArea3.BackColor = System.Drawing.Color.Transparent;
-            chartArea3.BackImageTransparentColor = System.Drawing.Color.BurlyWood;
-            chartArea3.BackImageWrapMode = System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.Scaled;
-            chartArea3.BackSecondaryColor = System.Drawing.Color.CornflowerBlue;
-            chartArea3.BorderColor = System.Drawing.Color.Transparent;
-            chartArea3.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
-            chartArea3.Name = "ChartArea1";
-            this.chart_Food.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart_Food.Legends.Add(legend3);
+            chartArea1.AlignmentOrientation = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.None;
+            chartArea1.AlignmentStyle = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentStyles.None;
+            chartArea1.Area3DStyle.Inclination = 20;
+            chartArea1.Area3DStyle.IsRightAngleAxes = false;
+            chartArea1.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
+            chartArea1.Area3DStyle.Rotation = 20;
+            chartArea1.Area3DStyle.WallWidth = 1;
+            chartArea1.AxisX.MajorGrid.Enabled = false;
+            chartArea1.AxisY.MajorGrid.Enabled = false;
+            chartArea1.AxisY.Maximum = 1000D;
+            chartArea1.AxisY.ScaleBreakStyle.LineColor = System.Drawing.Color.Transparent;
+            chartArea1.AxisY.ScaleBreakStyle.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+            chartArea1.BackColor = System.Drawing.Color.Transparent;
+            chartArea1.BackImageTransparentColor = System.Drawing.Color.BurlyWood;
+            chartArea1.BackImageWrapMode = System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.Scaled;
+            chartArea1.BackSecondaryColor = System.Drawing.Color.CornflowerBlue;
+            chartArea1.BorderColor = System.Drawing.Color.Transparent;
+            chartArea1.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea1.Name = "ChartArea1";
+            this.chart_Food.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart_Food.Legends.Add(legend1);
             this.chart_Food.Location = new System.Drawing.Point(268, 77);
             this.chart_Food.Name = "chart_Food";
             this.chart_Food.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chart_Food.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.DarkSeaGreen};
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Food types";
-            this.chart_Food.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Food types";
+            this.chart_Food.Series.Add(series1);
             this.chart_Food.Size = new System.Drawing.Size(501, 310);
             this.chart_Food.TabIndex = 0;
             this.chart_Food.Text = "chart_Food";
@@ -875,6 +896,10 @@
             // 
             this.tabPage_Create.AllowDrop = true;
             this.tabPage_Create.BackColor = System.Drawing.Color.White;
+            this.tabPage_Create.Controls.Add(this.pictureBox_Chorse);
+            this.tabPage_Create.Controls.Add(this.pictureBox_Ccow);
+            this.tabPage_Create.Controls.Add(this.pictureBox_Cpig);
+            this.tabPage_Create.Controls.Add(this.pictureBox_Chen);
             this.tabPage_Create.Controls.Add(this.button_Create);
             this.tabPage_Create.Controls.Add(this.label_BoxId);
             this.tabPage_Create.Controls.Add(this.textBox_Box);
@@ -903,7 +928,7 @@
             // 
             // button_Create
             // 
-            this.button_Create.Location = new System.Drawing.Point(485, 377);
+            this.button_Create.Location = new System.Drawing.Point(465, 369);
             this.button_Create.Name = "button_Create";
             this.button_Create.Size = new System.Drawing.Size(75, 23);
             this.button_Create.TabIndex = 9;
@@ -914,7 +939,7 @@
             // label_BoxId
             // 
             this.label_BoxId.AutoSize = true;
-            this.label_BoxId.Location = new System.Drawing.Point(378, 277);
+            this.label_BoxId.Location = new System.Drawing.Point(358, 269);
             this.label_BoxId.Name = "label_BoxId";
             this.label_BoxId.Size = new System.Drawing.Size(34, 13);
             this.label_BoxId.TabIndex = 18;
@@ -922,10 +947,98 @@
             // 
             // textBox_Box
             // 
-            this.textBox_Box.Location = new System.Drawing.Point(439, 274);
+            this.textBox_Box.Location = new System.Drawing.Point(419, 266);
             this.textBox_Box.Name = "textBox_Box";
             this.textBox_Box.Size = new System.Drawing.Size(121, 20);
             this.textBox_Box.TabIndex = 6;
+            // 
+            // pictureBox_Hen
+            // 
+            this.pictureBox_Hen.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Hen.Image")));
+            this.pictureBox_Hen.Location = new System.Drawing.Point(47, 48);
+            this.pictureBox_Hen.Name = "pictureBox_Hen";
+            this.pictureBox_Hen.Size = new System.Drawing.Size(155, 179);
+            this.pictureBox_Hen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_Hen.TabIndex = 6;
+            this.pictureBox_Hen.TabStop = false;
+            this.pictureBox_Hen.Click += new System.EventHandler(this.pictureBox_Hen_Click);
+            // 
+            // pictureBox_Pig
+            // 
+            this.pictureBox_Pig.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Pig.Image")));
+            this.pictureBox_Pig.Location = new System.Drawing.Point(47, 233);
+            this.pictureBox_Pig.Name = "pictureBox_Pig";
+            this.pictureBox_Pig.Size = new System.Drawing.Size(155, 179);
+            this.pictureBox_Pig.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_Pig.TabIndex = 7;
+            this.pictureBox_Pig.TabStop = false;
+            this.pictureBox_Pig.Click += new System.EventHandler(this.pictureBox_Pig_Click);
+            // 
+            // pictureBox_Cow
+            // 
+            this.pictureBox_Cow.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Cow.Image")));
+            this.pictureBox_Cow.Location = new System.Drawing.Point(775, 233);
+            this.pictureBox_Cow.Name = "pictureBox_Cow";
+            this.pictureBox_Cow.Size = new System.Drawing.Size(155, 179);
+            this.pictureBox_Cow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_Cow.TabIndex = 8;
+            this.pictureBox_Cow.TabStop = false;
+            this.pictureBox_Cow.Click += new System.EventHandler(this.pictureBox_Cow_Click);
+            // 
+            // pictureBox_Horse
+            // 
+            this.pictureBox_Horse.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Horse.Image")));
+            this.pictureBox_Horse.Location = new System.Drawing.Point(775, 48);
+            this.pictureBox_Horse.Name = "pictureBox_Horse";
+            this.pictureBox_Horse.Size = new System.Drawing.Size(155, 179);
+            this.pictureBox_Horse.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_Horse.TabIndex = 9;
+            this.pictureBox_Horse.TabStop = false;
+            this.pictureBox_Horse.Click += new System.EventHandler(this.pictureBox_Horse_Click);
+            // 
+            // pictureBox_Chorse
+            // 
+            this.pictureBox_Chorse.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Chorse.Image")));
+            this.pictureBox_Chorse.Location = new System.Drawing.Point(775, 48);
+            this.pictureBox_Chorse.Name = "pictureBox_Chorse";
+            this.pictureBox_Chorse.Size = new System.Drawing.Size(155, 179);
+            this.pictureBox_Chorse.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_Chorse.TabIndex = 22;
+            this.pictureBox_Chorse.TabStop = false;
+            this.pictureBox_Chorse.Click += new System.EventHandler(this.pictureBox_Chorse_Click);
+            // 
+            // pictureBox_Ccow
+            // 
+            this.pictureBox_Ccow.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Ccow.Image")));
+            this.pictureBox_Ccow.Location = new System.Drawing.Point(775, 233);
+            this.pictureBox_Ccow.Name = "pictureBox_Ccow";
+            this.pictureBox_Ccow.Size = new System.Drawing.Size(155, 179);
+            this.pictureBox_Ccow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_Ccow.TabIndex = 21;
+            this.pictureBox_Ccow.TabStop = false;
+            this.pictureBox_Ccow.Click += new System.EventHandler(this.pictureBox_Ccow_Click);
+            // 
+            // pictureBox_Cpig
+            // 
+            this.pictureBox_Cpig.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Cpig.Image")));
+            this.pictureBox_Cpig.Location = new System.Drawing.Point(47, 233);
+            this.pictureBox_Cpig.Name = "pictureBox_Cpig";
+            this.pictureBox_Cpig.Size = new System.Drawing.Size(155, 179);
+            this.pictureBox_Cpig.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_Cpig.TabIndex = 20;
+            this.pictureBox_Cpig.TabStop = false;
+            this.pictureBox_Cpig.Click += new System.EventHandler(this.pictureBox_Cpig_Click);
+            // 
+            // pictureBox_Chen
+            // 
+            this.pictureBox_Chen.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Chen.Image")));
+            this.pictureBox_Chen.Location = new System.Drawing.Point(47, 48);
+            this.pictureBox_Chen.Name = "pictureBox_Chen";
+            this.pictureBox_Chen.Size = new System.Drawing.Size(155, 179);
+            this.pictureBox_Chen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_Chen.TabIndex = 19;
+            this.pictureBox_Chen.TabStop = false;
+            this.pictureBox_Chen.Click += new System.EventHandler(this.pictureBox_Chen_Click);
             // 
             // FarmITDesktopApp
             // 
@@ -957,6 +1070,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Building)).EndInit();
             this.tabPage_Create.ResumeLayout(false);
             this.tabPage_Create.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Hen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Pig)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Cow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Horse)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Chorse)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Ccow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Cpig)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Chen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1037,5 +1158,13 @@
         private System.Windows.Forms.TextBox textBox_UBuildingId;
         private System.Windows.Forms.DataGridView dataGrid_Box;
         private System.Windows.Forms.DataGridView dataGrid_Building;
+        private System.Windows.Forms.PictureBox pictureBox_Pig;
+        private System.Windows.Forms.PictureBox pictureBox_Horse;
+        private System.Windows.Forms.PictureBox pictureBox_Cow;
+        public System.Windows.Forms.PictureBox pictureBox_Hen;
+        private System.Windows.Forms.PictureBox pictureBox_Chorse;
+        private System.Windows.Forms.PictureBox pictureBox_Ccow;
+        private System.Windows.Forms.PictureBox pictureBox_Cpig;
+        public System.Windows.Forms.PictureBox pictureBox_Chen;
     }
 }

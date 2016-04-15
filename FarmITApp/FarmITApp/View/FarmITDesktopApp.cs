@@ -475,6 +475,48 @@ namespace FarmITApp.View
             }
         }
 
+        private void pictureBox_Hen_Click(object sender, EventArgs e)
+        {
+            tabMenu.SelectTab(2);
+            textBox_Type.Text = "Hen";
+        }
 
+        private void pictureBox_Pig_Click(object sender, EventArgs e)
+        {
+            tabMenu.SelectTab(2);
+            textBox_Type.Text = "Pig";
+        }
+
+        private void pictureBox_Cow_Click(object sender, EventArgs e)
+        {
+            tabMenu.SelectTab(2);
+            textBox_Type.Text = "Cow";
+        }
+
+        private void pictureBox_Horse_Click(object sender, EventArgs e)
+        {
+            tabMenu.SelectTab(2);
+            textBox_Type.Text = "Horse";
+        }
+
+        private void pictureBox_Chen_Click(object sender, EventArgs e)
+        {
+            textBox_Type.Text = "Hen";
+        }
+
+        private void pictureBox_Cpig_Click(object sender, EventArgs e)
+        {
+            textBox_Type.Text = "Pig";
+        }
+
+        private void pictureBox_Ccow_Click(object sender, EventArgs e)
+        {
+            textBox_Type.Text = "Cow";
+        }
+
+        private void pictureBox_Chorse_Click(object sender, EventArgs e)
+        {
+            textBox_Type.Text = "Horse";
+        }
     }
 }
